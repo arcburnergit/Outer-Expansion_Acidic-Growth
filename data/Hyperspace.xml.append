@@ -1,0 +1,242 @@
+<FTL>
+<mod:findLike type="scripts" limit="1" reverse="false">
+  <mod-append:script>data/oe_scripts/core.lua</mod-append:script>
+</mod:findLike>
+
+<mod:findLike type="ships" limit="1" reverse="false">
+  	<mod:findLike type="shipOrder">
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+			<!-- -->
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+
+		<mod-append:empty/>
+		<mod-append:empty/>
+	</mod:findLike>
+</mod:findLike>
+
+<mod:findLike type="crew" limit="1" reverse="false">
+	<mod-append:race name="oe_acid_worker">
+		<resistsMindControl>true</resistsMindControl>
+		<maxHealth>100</maxHealth>
+		<canSuffocate>false</canSuffocate>
+		<damageMultiplier>0.75</damageMultiplier>
+		<repairSpeed>1.5</repairSpeed>
+		<moveSpeedMultiplier>1.5</moveSpeedMultiplier>
+		<deathSounds>
+			<deathSound>sysExplosion</deathSound>
+		</deathSounds>
+		<powerEffect>
+			<cooldown>30</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerSounds>
+				<powerSound>cultivatorSpore</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<inCombat/>
+				<extraConditions type="or" textId="power_not_ready_teleporting_or_stunned">
+					<repairingSystem>true</repairingSystem>
+					<fighting>true</fighting> 
+					<sabotaging>true</sabotaging>
+				</extraConditions>
+			</req>
+			<buttonText>GAS</buttonText>
+			<tooltip>[COOLDOWN:30s]
+Release Acidic Gas into the current room, which lasts 10 seconds.
+- Gas causes a hull breach every 5 seconds.
+- Gas Damages connected doors, causing them to break open temporarily.
+			</tooltip>
+			<cooldownColor r="50" g="166" b="31"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		</powerEffect>
+	</mod-append:race>
+	<mod-append:race name="oe_acid_soldier">
+		<resistsMindControl>true</resistsMindControl>
+		<maxHealth>150</maxHealth>
+		<canSuffocate>false</canSuffocate>
+		<damageMultiplier>1.25</damageMultiplier>
+		<repairSpeed>1</repairSpeed>
+		<deathSounds>
+			<deathSound>sysExplosion</deathSound>
+		</deathSounds>
+		<powerEffect>
+			<cooldown>20</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerSounds>
+				<powerSound>cultivatorSpore</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<inCombat/>
+				<extraConditions type="or" textId="power_not_ready_teleporting_or_stunned">
+					<repairingSystem>true</repairingSystem>
+					<fighting>true</fighting> 
+					<sabotaging>true</sabotaging>
+				</extraConditions>
+			</req>
+			<buttonText>GAS</buttonText>
+			<tooltip>[COOLDOWN:20s]
+Release Acidic Gas into the current room, which lasts 10 seconds.
+- Gas causes a hull breach every 5 seconds.
+- Gas Damages connected doors, causing them to break open temporarily.
+			</tooltip>
+			<cooldownColor r="50" g="166" b="31"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+		</powerEffect>
+	</mod-append:race>
+	<mod-append:race name="oe_acid_bill">
+		<resistsMindControl>true</resistsMindControl>
+		<maxHealth>150</maxHealth>
+		<canSuffocate>false</canSuffocate>
+		<damageMultiplier>1.5</damageMultiplier>
+		<repairSpeed>1.5</repairSpeed>
+		<deathSounds>
+			<deathSound>sysExplosion</deathSound>
+		</deathSounds>
+		<powerEffect>
+			<cooldown>20</cooldown>
+			<jumpCooldown>full</jumpCooldown>
+			<powerSounds>
+				<powerSound>cultivatorSpore</powerSound>
+			</powerSounds>
+			<req type="enemy">
+				<inCombat/>
+				<extraConditions type="or" textId="power_not_ready_teleporting_or_stunned">
+					<repairingSystem>true</repairingSystem>
+					<fighting>true</fighting> 
+					<sabotaging>true</sabotaging>
+				</extraConditions>
+			</req>
+			<buttonText>GAS</buttonText>
+			<tooltip>[COOLDOWN:20s]
+Release a unique form of Acidic Gas into the current room, which lasts 10 seconds.
+- Gas heals all allies for 4.8hp/s.
+- Gas increases combat damage and repair speed of all allies by 1.5x.
+			</tooltip>
+			<cooldownColor r="50" g="166" b="31"/>
+			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
+			<roomStatBoosts>
+				<statBoost name="healAmount">
+					<boostType>FLAT</boostType>
+					<amount>4.8</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<droneTarget>CREW</droneTarget>
+                    <duration>10</duration>
+					<jumpClear>true</jumpClear>
+					<maxStacks>1</maxStacks>
+					<priority>10000</priority>
+					<blackList>
+						<human_technician_drone/>
+						<zoltan_osmian_hologram/>
+						<repair/> <!--TRC-->
+					</blackList>
+					<roomAnim renderLayer="2">                                                    
+						<anim animType="default" animBorder="2">oe_invisible</anim>                                                 
+							<tileAnim>oe_acid_bill_tile_anim</tileAnim>  
+					</roomAnim>
+				</statBoost>
+				<statBoost name="damageMultiplier">
+					<boostType>MULT</boostType>
+					<amount>1.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<droneTarget>CREW</droneTarget>
+                    <duration>10</duration>
+					<jumpClear>true</jumpClear>
+					<maxStacks>1</maxStacks>
+					<priority>10000</priority>
+					<blackList>
+						<human_technician_drone/>
+						<zoltan_osmian_hologram/>
+						<repair/>
+					</blackList>
+				</statBoost>
+				<statBoost name="repairSpeed">
+					<boostType>MULT</boostType>
+					<amount>1.5</amount>
+					<shipTarget>ALL</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>true</affectsSelf>
+					<droneTarget>CREW</droneTarget>
+                    <duration>10</duration>
+					<jumpClear>true</jumpClear>
+					<maxStacks>1</maxStacks>
+					<priority>10000</priority>
+					<blackList>
+						<human_technician_drone/>
+						<zoltan_osmian_hologram/>
+						<repair/>
+					</blackList>
+				</statBoost>
+			</roomStatBoosts>
+		</powerEffect>
+	</mod-append:race>
+</mod:findLike>
+
+<mod:findLike type="achievements" limit="1" reverse="false">
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="The Outer Cluster"/>
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="Unique Crew (OE)"/>
+		<mod-append:achievement name="ACH_OE_CREW_BILL">
+			<name>Bill</name>
+			<secretDescription>Attempt to reunite a lost limb with their "body."</secretDescription>
+			<description>Attempt to reunite Bill with the Acidic Growth.</description>
+			<header>Character Recruited</header>
+			<icon>ach_oe_crew_bill</icon>
+			<sound>achievement</sound>
+		</mod-append:achievement>
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="Loot Transports (OE)"/>
+		<mod-append:achievement name="ACH_TRANS_OE_ACID">
+			<name>Acidic Transport</name>
+			<secretDescription>Obtain the loot from the Acidic loot transport.</secretDescription>
+			<description>Obtain the Acidic Barrage from the Acidic loot transport.</description>
+			<icon>ach_trans_oe_acid</icon>
+			<header>Loot Acquired</header>
+		</mod-append:achievement>
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="Renegade Cruisers (OE)"/>
+		<mod-append:achievement name="ACH_OE_REN_ACID">
+			<name>No Such Thing as Too Many Guns</name>
+			<description>Defeat the Acidic Destroyer B Renegade and get the Acid Splasher.</description>
+			<icon>renegade_oe_acid</icon>
+			<header>Renegade Defeated</header>
+		</mod-append:achievement>
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="Music (OE)"/>
+		<mod-append:achievement name="MUSIC_OE_ACID">
+			<name>Acidic</name>
+			<description id="jukebox_unlocked" />
+			<secretDescription id="jukebox_locked" />
+			<header id="jukebox_header" />
+			<icon>music_unlocked</icon>
+			<variable name="juke_oe_acid" amount="1" />
+			<multiDifficulty>false</multiDifficulty>
+		</mod-append:achievement>
+	</mod:findWithChildLike>
+	<mod:findWithChildLike type="page" child-type="section">
+		<mod:selector text="Thest's Boons (OE)"/>
+		<mod-append:achievement name="ACH_BOON_OE_ACID">
+			<name>Boon of Growth</name>
+			<secretDescription>Receive the Boon of Growth from Thest.</secretDescription>
+			<description>Show an Acidic crewmember to Thest. 
+			While in effect; Acidic crew heal twice as fast and cannot be stunned.</description>
+			<header>Boon Received</header>
+			<icon>ach_boon_oe_acid</icon>
+			<multiDifficulty>false</multiDifficulty>
+		</mod-append:achievement>
+	</mod:findWithChildLike>
+</mod:findLike>
+</FTL>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FTL>
+<text name="map_icon_oe_acid_nebula">ACIDIC</text>
+<text name="map_icon_oe_acid_nebula_distress">DISTRESS</text>
+<text name="map_icon_oe_acid_nebula_core">ACIDIC CORE [!]</text>
+<text name="map_icon_oe_acid_nebula_shipyard">ACIDIC SHIPYARD</text>
+
+<text name="atlas_oe_acid">Name: Acidic Origins
+Type: Hostile (Nebula)
+Unique: True
+Dominant Faction: The Acidic Growth
+Rebel Threat Level: Low
+Locations of Interest: Central Acidic Shipyards
+    
+The Acidic Origins are a dangerous place, only the most extreme ships survive the Acidic nebula, and that isn't even considering trying to survive the Acidic ships themselves.</text>
+
+<text name="ship_PLAYER_SHIP_OE_ACID_BILL_unlock">Consult the advice of a certain Acidic outcast about a certain artifact to unlock this ship.</text>
+
+<text name="ship_PLAYER_SHIP_OE_ACID_ARTY_unlock">Help an Acidic outcast to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_ARTY_2_unlock">Get to Sector 5 with the Acidic Cruiser Type A to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_ARTY_3_unlock">Get to Sector 5 with the Acidic Cruiser Type B or beat the game with the Acidic Cruiser Type A to unlock this ship.</text>
+
+<text name="ship_PLAYER_SHIP_OE_ACID_LONG_unlock">Find the central shipyards of the Acidic Growth to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_LONG_2_unlock">Get to Sector 5 with the Acidic Destroyer Type A to unlock this ship.</text>
+<text name="ship_PLAYER_SHIP_OE_ACID_LONG_3_unlock">Get to Sector 5 with the Acidic Destroyer Type B or beat the game with the Acidic Destroyer Type A to unlock this ship.</text>
+</FTL>

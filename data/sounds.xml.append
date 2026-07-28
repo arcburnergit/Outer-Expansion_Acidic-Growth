@@ -1,0 +1,9 @@
+<FTL>
+<music>
+	<track>
+		<name>oe_acidic</name> <!--Music by lizzard-->
+		<explore>oe_MUS_AcidicExplore.ogg</explore>
+		<combat>oe_MUS_AcidicBattle.ogg</combat>
+	</track>
+</music>
+</FTL>

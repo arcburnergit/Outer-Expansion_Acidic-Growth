@@ -1,0 +1,12 @@
+<FTL>
+<mod:findName type="event" name="STORAGE_CHECK_JUKEBOX">
+	<mod-append:choice hidden="true" req="juke_oe_acid">
+		<text>[style[color:A47DAB]]OE: Acidic[[/style]]
+Composed by: Lizzard</text>
+		<event>
+			<playMusic>oe_acidic</playMusic>
+			<loadEvent>STORAGE_CHECK_JUKEBOX</loadEvent>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+</FTL>

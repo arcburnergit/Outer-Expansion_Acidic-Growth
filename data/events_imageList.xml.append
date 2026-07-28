@@ -1,0 +1,72 @@
+<FTL>
+<imageList name="BACK_SECTOR_AEA_ACID">
+	<img w="1280" h="720">stars_sectors/bg_slug.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_ACIDICNEBULA">
+	<img w="1280" h="720">stars_acid/low_nebula.png</img>
+</imageList>
+
+<imageList name="BACK_SECTOR_AEA_NECRO">
+	<img w="1280" h="720">stars_sectors/bg_separatist.png</img>
+</imageList>
+
+<imageList name="PLANET_AEA_ACID_STATION">
+	<img w="289" h="121">stars_acid/station.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_LINK_AEA_NECRO_WHALE">
+	<img w="1280" h="720">stars_necro/bg_linkwhale.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_NECRO_SANCTUM">
+	<img w="1280" h="720">stars_necro/bg_necro_sanctum.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_OLD_1_START">
+	<img w="1280" h="720">stars_old/bg_old_1_start.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_OLD_2_START">
+	<img w="1280" h="720">stars_sectors/bg_jerry.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_OLD_UNIQUE_1">
+	<img w="1280" h="720">stars_old/bg_old_unique_1.png</img>
+</imageList>
+<imageList name="BACK_EVENT_AEA_OLD_UNIQUE_2">
+	<img w="1280" h="720">stars_old/bg_old_unique_2.png</img>
+</imageList>
+<imageList name="BACK_EVENT_AEA_OLD_UNIQUE_3">
+	<img w="1280" h="720">stars_old/bg_old_unique_3.png</img>
+</imageList>
+<imageList name="BACK_EVENT_AEA_OLD_UNIQUE_4">
+	<img w="1280" h="720">stars_old/bg_old_unique_4.png</img>
+</imageList>
+<imageList name="BACK_EVENT_AEA_OLD_UNIQUE_5">
+	<img w="1280" h="720">stars_old/bg_old_unique_5.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_OLD_2_END">
+	<img w="1280" h="720">stars_old/bg_old_2_end.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_CONSPIRACY">
+	<img w="1280" h="720">stars_cult/aea_factory_base.png</img>
+</imageList>
+
+<imageList name="BACK_EVENT_AEA_BIRDDD">
+	<img w="1280" h="720">stars_bird/bg_bird_moon.png</img>
+</imageList>
+
+<imageList name="BACK_AEA_DARKNESS">
+	<img w="1280" h="720">stars_hazard/darkness.png</img>
+</imageList>
+
+<imageList name="PLANET_AEA_STAR">
+	<img w="414" h="690">stars_old/planet_aea_star.png</img>
+</imageList>
+<imageList name="PLANET_AEA_HOLE">
+	<img w="414" h="690">stars_old/planet_aea_hole.png</img>
+</imageList>
+</FTL>

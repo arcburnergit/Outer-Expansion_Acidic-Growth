@@ -1,0 +1,626 @@
+<!--effects-->
+<FTL>
+
+<animSheet name="oe_acid_effect_tile" w="35" h="35" fw="35" fh="35">effects/oe_acid_effect_tile.png</animSheet>
+<anim name="oe_acid_effect_tile">
+	<sheet>oe_acid_effect_tile</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+
+<animSheet name="oe_acid_effect_tile_anim" w="140" h="35" fw="35" fh="35">effects/oe_acid_effect_tile_anim.png</animSheet>
+<anim name="oe_acid_effect_tile_anim">
+	<sheet>oe_acid_effect_tile_anim</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>4</time>
+</anim>
+
+<animSheet name="oe_acid_wall" w="175" h="35" fw="35" fh="35">effects/oe_acid_wall.png</animSheet>
+<anim name="oe_acid_wall">
+	<sheet>oe_acid_wall</sheet>
+	<desc length="5" x="0" y="0"/>
+	<time>0.2</time>
+</anim>
+
+<animSheet name="oe_acid_tile_anim" w="140" h="35" fw="35" fh="35">effects/oe_acid_tile_anim.png</animSheet>
+<anim name="oe_acid_tile_anim">
+	<sheet>oe_acid_tile_anim</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>1</time>
+</anim>
+<animSheet name="oe_acid_tile2_anim" w="140" h="35" fw="35" fh="35">effects/oe_acid_tile2_anim.png</animSheet>
+<anim name="oe_acid_tile2_anim">
+	<sheet>oe_acid_tile2_anim</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>1</time>
+</anim>
+<animSheet name="oe_acid_wall_anim" w="140" h="35" fw="35" fh="35">effects/oe_acid_wall_anim.png</animSheet>
+<anim name="oe_acid_wall_anim">
+	<sheet>oe_acid_wall_anim</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>1</time>
+</anim>
+<animSheet name="oe_acid_bill_tile_anim" w="140" h="35" fw="35" fh="35">effects/oe_acid_bill_tile_anim.png</animSheet>
+<anim name="oe_acid_bill_tile_anim">
+	<sheet>oe_acid_bill_tile_anim</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>1</time>
+</anim>
+</FTL>
+
+<!--Projectiles-->
+<FTL>
+<animSheet name="oe_proj_acid_laser" w="200" h="20" fw="50" fh="20">projectiles/oe_proj_acid_laser.png</animSheet>
+
+<anim name="oe_proj_acid_laser">
+	<sheet>oe_proj_acid_laser</sheet>
+	<desc length="4" x="0" y="0" />
+	<time>0.5</time>
+</anim>
+
+<animSheet name="oe_proj_acid_big" w="60" h="20" fw="60" fh="20">projectiles/oe_proj_acid_big.png</animSheet>
+<anim name="oe_proj_acid_big">
+	<sheet>oe_proj_acid_big</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.3</time>
+</anim>
+
+
+<animSheet name="oe_proj_acid_ion" w="24" h="24" fw="24" fh="24">projectiles/oe_proj_acid_ion.png</animSheet>
+<anim name="oe_proj_acid_ion">
+	<sheet>oe_proj_acid_ion</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.3</time>
+</anim>
+
+</FTL>
+
+<!--Weapons-->
+<FTL>
+
+<animSheet name="oe_laser_acid_1" w="210" h="52" fw="21" fh="52">weapons_acid/oe_laser_acid_1.png</animSheet>
+<weaponAnim name="oe_laser_acid_1">
+	<sheet>oe_laser_acid_1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="13" y="4" />
+	<mountPoint x="4" y="36" />
+</weaponAnim>
+<animSheet name="oe_laser_acid_1_elite" w="210" h="52" fw="21" fh="52">weapons_acid/oe_laser_acid_1_elite.png</animSheet>
+<weaponAnim name="oe_laser_acid_1_elite">
+	<sheet>oe_laser_acid_1_elite</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="13" y="4" />
+	<mountPoint x="4" y="36" />
+</weaponAnim>
+
+<animSheet name="oe_laser_acid_2" w="280" h="60" fw="28" fh="60">weapons_acid/oe_laser_acid_2.png</animSheet>
+<weaponAnim name="oe_laser_acid_2">
+	<sheet>oe_laser_acid_2</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="19" y="6" />
+	<mountPoint x="4" y="45" />
+</weaponAnim>
+<animSheet name="oe_laser_acid_2_elite" w="280" h="60" fw="28" fh="60">weapons_acid/oe_laser_acid_2_elite.png</animSheet>
+<weaponAnim name="oe_laser_acid_2_elite">
+	<sheet>oe_laser_acid_2_elite</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="19" y="6" />
+	<mountPoint x="4" y="45" />
+</weaponAnim>
+
+<animSheet name="oe_laser_acid_3" w="396" h="77" fw="33" fh="77">weapons_acid/oe_laser_acid_3.png</animSheet>
+<weaponAnim name="oe_laser_acid_3">
+	<sheet>oe_laser_acid_3</sheet>
+	<desc length="12" x="0" y="0" />
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint x="20" y="6" />
+	<mountPoint x="4" y="55" />
+</weaponAnim>
+<animSheet name="oe_laser_acid_3_elite" w="396" h="77" fw="33" fh="77">weapons_acid/oe_laser_acid_3_elite.png</animSheet>
+<weaponAnim name="oe_laser_acid_3_elite">
+	<sheet>oe_laser_acid_3_elite</sheet>
+	<desc length="12" x="0" y="0" />
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint x="20" y="6" />
+	<mountPoint x="4" y="55" />
+</weaponAnim>
+
+<animSheet name="oe_laser_acid_super" w="456" h="93" fw="38" fh="93">weapons_acid/oe_laser_acid_super.png</animSheet>
+<weaponAnim name="oe_laser_acid_super">
+	<sheet>oe_laser_acid_super</sheet>
+	<desc length="12" x="0" y="0" />
+	<chargedFrame>7</chargedFrame>
+	<fireFrame>9</fireFrame>
+	<firePoint x="25" y="9" />
+	<mountPoint x="4" y="69" />
+</weaponAnim>
+
+<animSheet name="oe_laser_acid_super_base" w="56" h="38" fw="56" fh="38">weapons_acid/oe_laser_acid_super_base.png</animSheet>
+<anim name="oe_laser_acid_super_base">
+    <sheet>oe_laser_acid_super_base</sheet>
+    <desc length="1" x="0" y="0" />
+    <time>1</time>
+</anim>
+
+<animSheet name="oe_beam_acid_1" w="350" h="60" fw="35" fh="60">weapons_acid/oe_beam_acid_1.png</animSheet>
+<weaponAnim name="oe_beam_acid_1">
+	<sheet>oe_beam_acid_1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="21" y="30" />
+	<mountPoint x="4" y="47" />
+	<chargeImage>weapons_acid/oe_beam_acid_1_glow.png</chargeImage>
+</weaponAnim>
+<animSheet name="oe_beam_acid_1_elite" w="350" h="60" fw="35" fh="60">weapons_acid/oe_beam_acid_1_elite.png</animSheet>
+<weaponAnim name="oe_beam_acid_1_elite">
+	<sheet>oe_beam_acid_1_elite</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>5</fireFrame>
+	<firePoint x="21" y="30" />
+	<mountPoint x="4" y="47" />
+	<chargeImage>weapons_acid/oe_beam_acid_1_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="oe_ion_acid_1" w="320" h="56" fw="32" fh="56">weapons_acid/oe_ion_acid_1.png</animSheet>
+<weaponAnim name="oe_ion_acid_1">
+	<sheet>oe_ion_acid_1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint x="19" y="6" />
+	<mountPoint x="4" y="37" />
+	<chargeImage>weapons_acid/oe_ion_acid_1_glow.png</chargeImage>
+</weaponAnim>
+
+<animSheet name="oe_ion_acid_1_elite" w="320" h="56" fw="32" fh="56">weapons_acid/oe_ion_acid_1_elite.png</animSheet>
+<weaponAnim name="oe_ion_acid_1_elite">
+	<sheet>oe_ion_acid_1_elite</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint x="19" y="6" />
+	<mountPoint x="4" y="37" />
+	<chargeImage>weapons_acid/oe_ion_acid_1_glow.png</chargeImage>
+</weaponAnim>
+
+
+<animSheet name="oe_laser_acid_1" w="210" h="52" fw="21" fh="52">weapons_acid/oe_laser_acid_1.png</animSheet>
+<weaponAnim name="oe_laser_acid_1">
+	<sheet>oe_laser_acid_1</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="13" y="4" />
+	<mountPoint x="4" y="36" />
+</weaponAnim>
+
+<animSheet name="oe_laser_acid_2" w="280" h="60" fw="28" fh="60">weapons_acid/oe_laser_acid_2.png</animSheet>
+<weaponAnim name="oe_laser_acid_2">
+	<sheet>oe_laser_acid_2</sheet>
+	<desc length="10" x="0" y="0" />
+	<chargedFrame>6</chargedFrame>
+	<fireFrame>8</fireFrame>
+	<firePoint x="19" y="6" />
+	<mountPoint x="4" y="45" />
+</weaponAnim>
+</FTL>
+
+<!--Crew-->
+<FTL>
+<animSheet name="oe_acid_worker" w="490" h="420" fw="35" fh="35">people/oe_acid_worker_base.png</animSheet>
+<anim name="oe_acid_worker_clone">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="5" x="0" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_death_right">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_worker_death_left">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_worker_walk_down">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_walk_right">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_walk_up">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_walk_left">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_shoot_down">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="3" x="0" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_shoot_right">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="3" x="3" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_shoot_up">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="3" x="9" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_shoot_left">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="3" x="6" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_fire_down">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_worker_fire_right">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_worker_fire_up">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_worker_fire_left">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_worker_repair">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="9" x="5" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_punch_up">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="6" x="0" y="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_punch_down">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="6" x="0" y="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_type_right">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_type_left">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="4" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_type_up">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_type_down">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="4" x="0" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_worker_teleport">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="6" x="2" y="0" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_worker_portrait">
+	<sheet>oe_acid_worker</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+<!--
+*********************************************************************************************************
+                   BATTLE MK 1
+*********************************************************************************************************
+-->
+<animSheet name="oe_acid_soldier" w="490" h="420" fw="35" fh="35">people/oe_acid_soldier_base.png</animSheet>
+<anim name="oe_acid_soldier_clone">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="5" x="0" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_death_right">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_soldier_death_left">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_soldier_walk_down">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_walk_right">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_walk_up">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_walk_left">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_shoot_down">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="3" x="0" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_shoot_right">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="3" x="3" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_shoot_up">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="3" x="9" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_shoot_left">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="3" x="6" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_fire_down">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_soldier_fire_right">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_soldier_fire_up">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_soldier_fire_left">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_soldier_repair">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="9" x="5" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_punch_up">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="6" x="0" y="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_punch_down">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="6" x="0" y="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_type_right">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_type_left">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="4" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_type_up">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_type_down">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="4" x="0" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_soldier_teleport">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="6" x="2" y="0" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_soldier_portrait">
+	<sheet>oe_acid_soldier</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+
+
+<!-- 
+*********************************************************************************************************
+                   BATTLE MK 2
+*********************************************************************************************************
+-->
+
+<!-- 
+*********************************************************************************************************
+                   BATTLE MK 2
+*********************************************************************************************************
+-->
+
+<animSheet name="oe_acid_bill" w="490" h="420" fw="35" fh="35">people/oe_acid_bill_base.png</animSheet>
+<anim name="oe_acid_bill_clone">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="5" x="0" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_death_right">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_bill_death_left">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="6" x="0" y="2" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_acid_bill_walk_down">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_walk_right">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="11" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_walk_up">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_walk_left">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="10" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_shoot_down">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="3" x="0" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_shoot_right">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="3" x="3" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_shoot_up">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="3" x="9" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_shoot_left">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="3" x="6" y="5" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_fire_down">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_bill_fire_right">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_bill_fire_up">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="6" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_bill_fire_left">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_bill_repair">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="9" x="5" y="1" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_punch_up">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="6" x="0" y="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_punch_down">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="6" x="0" y="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_type_right">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_type_left">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="4" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_type_up">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="8" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_type_down">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="4" x="0" y="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_acid_bill_teleport">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="6" x="2" y="0" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_acid_bill_portrait">
+	<sheet>oe_acid_bill</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>1</time>
+</anim>
+</FTL>
+
+<!--Renegades-->
+<FTL>
+<animSheet name="oe_laser_acid_boss" w="324" h="86" fw="36" fh="86">weapons_acid/oe_laser_acid_boss.png</animSheet>
+<weaponAnim name="oe_laser_acid_boss">
+	<sheet>oe_laser_acid_boss</sheet>
+	<desc length="9" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint x="27" y="14" />
+	<mountPoint x="3" y="55" />
+</weaponAnim>
+<animSheet name="oe_laser_acid_boss_chaos" w="324" h="86" fw="36" fh="86">weapons_acid/oe_laser_acid_boss_chaos.png</animSheet>
+<weaponAnim name="oe_laser_acid_boss_chaos">
+	<sheet>oe_laser_acid_boss_chaos</sheet>
+	<desc length="9" x="0" y="0" />
+	<chargedFrame>4</chargedFrame>
+	<fireFrame>7</fireFrame>
+	<firePoint x="27" y="14" />
+	<mountPoint x="3" y="55" />
+</weaponAnim>
+</FTL>
