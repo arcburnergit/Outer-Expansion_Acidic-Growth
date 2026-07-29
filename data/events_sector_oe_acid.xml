@@ -22,7 +22,7 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-<event name="FINISH_BEACON_AEA_ACID">
+<event name="FINISH_BEACON_OE_ACID">
 	<text id="finish_beacon" />
 	<choice hidden="true">
 		<text>Explore.</text>
@@ -45,61 +45,61 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
-<eventList name="CLEARING_AEA_ACID">
-	<event load="HOSTILE_AEA_ACID" />
-	<event load="DISTRESS_AEA_ACID" />
-	<event load="AEA_ACID_SCOUT_CLEARING" />
+<eventList name="CLEARING_OE_ACID">
+	<event load="HOSTILE_OE_ACID" />
+	<event load="DISTRESS_OE_ACID" />
+	<event load="OE_ACID_SCOUT_CLEARING" />
 </eventList>
-<eventList name="HOSTILE_AEA_ACID">
-	<event load="ENCOUNTER_AEA_ACID_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_PIRATE_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_REBEL_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_ORCHID_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_COALITION_CLEARING" />
+<eventList name="HOSTILE_OE_ACID">
+	<event load="ENCOUNTER_OE_ACID_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_PIRATE_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_REBEL_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_ORCHID_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_COALITION_CLEARING" />
 </eventList>
 
-<event name="ENCOUNTER_AEA_ACID_CLEARING" unique="true">
-	<text load="TEXT_AEA_ACID_CLEARING" />
-	<ship load="SHIP_AEA_ACID_FIGHT" hostile="true" />
+<event name="ENCOUNTER_OE_ACID_CLEARING" unique="true">
+	<text load="TEXT_OE_ACID_CLEARING" />
+	<ship load="SHIP_OE_ACID_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="TEXT_AEA_ACID_CLEARING">
+<textList name="TEXT_OE_ACID_CLEARING">
 	<text>Its unusual for the Acidic Growth to be found outside of their nebulae. However, it appears to have decided you're a threat and is moving in to attack!</text>
 	<text>The ship at this beacon is of Acidic Growth origin. It's unclear what they're doing outside a nebula: reconnaissance, or just lost? You don't get to ask them though, since their weapons are online and charging!</text>
 </textList>
 
-<event name="ENCOUNTER_AEA_ACID_PIRATE_CLEARING">
-	<text load="TEXT_AEA_ACID_PIRATE_CLEARING" />
+<event name="ENCOUNTER_OE_ACID_PIRATE_CLEARING">
+	<text load="TEXT_OE_ACID_PIRATE_CLEARING" />
 	<ship load="SHIP_PIRATE_ALL" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="TEXT_AEA_ACID_PIRATE_CLEARING">
+<textList name="TEXT_OE_ACID_PIRATE_CLEARING">
 	<text>There appears to be a pirate ship nearby. Be on your guard; anyone trying to hunt in Acidic territory is either formidable or deeply stupid, and in space, either can be dangerous.</text>
 	<text>"We knew anyone foolish enough to try and sneak through an Acidic nebula would stick to open space. Yield your goods, and we may let you live." You cut the transmission in lieu of a response.</text>
 	<text>Before you can take a moment's rest from the ever-present nebulas in this sector, a pirate ship appears behind you and opens fire.</text>
 </textList>
 
-<event name="ENCOUNTER_AEA_ACID_REBEL_CLEARING">
-	<text load="TEXT_AEA_ACID_REBEL_CLEARING" />
+<event name="ENCOUNTER_OE_ACID_REBEL_CLEARING">
+	<text load="TEXT_OE_ACID_REBEL_CLEARING" />
 	<ship load="SHIP_REBEL_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="TEXT_AEA_ACID_REBEL_CLEARING">
+<textList name="TEXT_OE_ACID_REBEL_CLEARING">
 	<text>As you arrive at the beacon, a hostile ship immediately registers on your scanners. You didn't expect to see Rebels extending their reach into the unknown regions of Acidic territory. Charge the weapons!</text>
 	<text>You jump into empty space and are relieved to see your sensors blink back to life. However, you are less pleased to see them immediately register a Rebel ship on an approach vector!</text>
 	<text>You receive a message from a nearby ship, "Looks like our intelligence was correct! You can't escape us by traveling into unknown territory... No one can hide from the Rebellion!"</text>
 </textList>
 
-<event name="ENCOUNTER_AEA_ACID_ORCHID_CLEARING" unique="true">
+<event name="ENCOUNTER_OE_ACID_ORCHID_CLEARING" unique="true">
 	<text>It appears the orchids are taking their duty as the Acidic Growth's only ally seriously. They move in to take you out.</text>
 	<ship load="SHIP_ORCHID_FIGHT" hostile="true" />
 	<choice hidden="true">
@@ -108,31 +108,31 @@
 	</choice>
 </event> 
 
-<event name="ENCOUNTER_AEA_ACID_COALITION_CLEARING">
-	<text load="TEXT_AEA_ACID_COALITION_CLEARING" />
+<event name="ENCOUNTER_OE_ACID_COALITION_CLEARING">
+	<text load="TEXT_OE_ACID_COALITION_CLEARING" />
 	<ship load="LIST_SHIPS_COALITION_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="TEXT_AEA_ACID_COALITION_CLEARING">
+<textList name="TEXT_OE_ACID_COALITION_CLEARING">
 	<text>Knowing Acidic Growth are hidden away in nebulae, Coalition unsurprisingly took interest in their sectors. This ship seems to be scouting territory, but when it notices you it attacks.</text>
 	<text>"You Fed dumb! Thought to moving outside acid? We waiting! Our space!" It's not theirs, but arguing with Coalition would be like talking to a brick wall. </text>
 	<text>Coalition is the enemy of many, including Acidic Growth and Orchids occupying this sector... But now, it seems, it chose to be an enemy to specifically you.</text>
 </textList>
 
-<eventList name="DISTRESS_AEA_ACID">
-	<event load="DISTRESS_REFUGEE_AEA_ACID_MV" />
-	<event load="DISTRESS_AEA_ACID_MANTIS_MV" />
+<eventList name="DISTRESS_OE_ACID">
+	<event load="DISTRESS_REFUGEE_OE_ACID_MV" />
+	<event load="DISTRESS_OE_ACID_MANTIS_MV" />
 </eventList>
 
-<event name="DISTRESS_REFUGEE_AEA_ACID_MV" unique="true">
+<event name="DISTRESS_REFUGEE_OE_ACID_MV" unique="true">
 	<distressBeacon />
 	<text>You have encountered a refugee ship drifting in space. It looks as if it was fleeing the Rebel advance and ran out of fuel. Its distress beacon is active, but you're not sure anyone is on board.</text>
 	<choice>
 		<text>Hail them.</text>
-		<event load="REFUGEE_HAIL_LIST_AEA_ACID_MV" />
+		<event load="REFUGEE_HAIL_LIST_OE_ACID_MV" />
 	</choice>
 	<choice>
 		<text>Ignore the refugees.</text>
@@ -149,11 +149,11 @@
 		</event>
 	</choice>
 </event> 
-<eventList name="REFUGEE_HAIL_LIST_AEA_ACID_MV">
+<eventList name="REFUGEE_HAIL_LIST_OE_ACID_MV">
 	<event load="REFUGEE_TRADER" />
 	<event>
 		<text>As you hail the refugee ship, an Acidic ship jumps into the system... it was chasing it off its territory, and now it has found you instead!</text>
-		<ship load="SHIP_AEA_ACID_REFUGEE" hostile="true" />
+		<ship load="SHIP_OE_ACID_REFUGEE" hostile="true" />
 		<choice hidden="true">
 			<text>Continue...</text>
 			<event load="COMBAT_CHECK" />
@@ -161,13 +161,13 @@
 	</event>
 </eventList>
 
-<event name="DISTRESS_AEA_ACID_MANTIS_MV" unique="true">
+<event name="DISTRESS_OE_ACID_MANTIS_MV" unique="true">
 	<text>The distress call appears to be emanating from a Slug ship caught in open space by an Acidic vessel. They contact you on emergency frequencies: "Pleassse, we'll give you all we have if you sssave ussss!"</text>
 	<choice hidden="true">
 		<text>Attack the Acidic ship.</text>
 		<event>
 			<text>You lock onto the Acidic ship and engage.</text>
-			<ship load="SHIP_AEA_ACID_DISTRESS_ACIDIC" hostile="true" />
+			<ship load="SHIP_OE_ACID_DISTRESS_ACIDIC" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -178,7 +178,7 @@
 		<text>Attack the Slug ship.</text>
 		<event>
 			<text>You move to finish what the Acidic Growth has started.</text>
-			<ship load="SHIP_AEA_ACID_DISTRESS_ACIDIC_SLUG" hostile="true" />
+			<ship load="SHIP_OE_ACID_DISTRESS_ACIDIC_SLUG" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -200,7 +200,7 @@
 		</event>
 	</choice>
 </event>
-<eventList name="AEA_ACID_DISTRESS_ACIDIC_SURRENDER">
+<eventList name="OE_ACID_DISTRESS_ACIDIC_SURRENDER">
 	<event>
 		<text>It doesn't look like they can stand much more damage. After a few shots, their ship breaks apart, and you move in to loot the remains.</text>
 		<autoReward level="RANDOM">standard</autoReward>
@@ -211,24 +211,24 @@
 	</event>
 </eventList>
 
-<event name="AEA_ACID_SCOUT_CLEARING" unique="true">
+<event name="OE_ACID_SCOUT_CLEARING" unique="true">
 	<text>It seems like an Acidic Growth ship, likely a scout, is at this beacon. They don't seem hostile, despite noticing you the moment you jumped in. "You, outsider. Growth, expands. Sent, on a mission, to survey. Map data, you have?"</text>
-	<ship load="SHIP_AEA_ACID_FIGHT_SCOUT_CLEARING" hostile="false"/>
+	<ship load="SHIP_OE_ACID_FIGHT_SCOUT_CLEARING" hostile="false"/>
 	<choice hidden="true">
 		<text>Attack them!</text>
 		<event>
 			<text>The Acidic ship is confused, but not unprepared. It seems like they're trying to retreat back into the nebula!</text>
 			<ship hostile="true"/>
-			<queueEvent>MORALITY_UPDATE_AEA_ACID_FIGHT</queueEvent>
+			<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
 		</event>
 	</choice>
 	<choice hidden="true" req="sensors" lvl="3">
 		<text>(Advanced Sensors) Share the data you collected.</text>
-		<event load="AEA_ACID_SCOUT_CLEARING_REWARD" />
+		<event load="OE_ACID_SCOUT_CLEARING_REWARD" />
 	</choice>
 	<choice hidden="true" req="ADV_SCANNERS">
 		<text>(Long-Ranged Scanners) Share the data you collected.</text>
-		<event load="AEA_ACID_SCOUT_CLEARING_REWARD" />
+		<event load="OE_ACID_SCOUT_CLEARING_REWARD" />
 	</choice>
 	<choice hidden="true">
 		<text>We don't.</text>
@@ -245,26 +245,26 @@
 		</event>
 	</choice>
 </event>
-<event name="AEA_ACID_SCOUT_CLEARING_REWARD">
+<event name="OE_ACID_SCOUT_CLEARING_REWARD">
 	<text>The Acidic vessel thanks you for the data and transports over some scrap as thanks.</text>
 	<autoReward level="MED">scrap_only</autoReward>
-	<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>
+	<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 </event>
 
-<eventList name="CLEARING_AEA_ACID_UNIQUE">
-	<event load="HOSTILE_AEA_ACID_UNIQUE_CLEARING" />
-	<event load="DISTRESS_AEA_ACID_UNIQUE_CLEARING" />
-	<event load="AEA_ACID_SCOUT_CLEARING" />
+<eventList name="CLEARING_OE_ACID_UNIQUE">
+	<event load="HOSTILE_OE_ACID_UNIQUE_CLEARING" />
+	<event load="DISTRESS_OE_ACID_UNIQUE_CLEARING" />
+	<event load="OE_ACID_SCOUT_CLEARING" />
 </eventList>
-<eventList name="HOSTILE_AEA_ACID_UNIQUE_CLEARING">
-	<event load="ENCOUNTER_AEA_ACID_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_PIRATE_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_REBEL_CLEARING" />
-	<event load="ENCOUNTER_AEA_ACID_ORCHID_CLEARING" />
+<eventList name="HOSTILE_OE_ACID_UNIQUE_CLEARING">
+	<event load="ENCOUNTER_OE_ACID_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_PIRATE_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_REBEL_CLEARING" />
+	<event load="ENCOUNTER_OE_ACID_ORCHID_CLEARING" />
 </eventList>
 
-<eventList name="DISTRESS_AEA_ACID_UNIQUE_CLEARING">
-	<event load="DISTRESS_REFUGEE_AEA_ACID_MV" />
+<eventList name="DISTRESS_OE_ACID_UNIQUE_CLEARING">
+	<event load="DISTRESS_REFUGEE_OE_ACID_MV" />
 	<event load="DISTRESS_SLUG_MANTIS_MV" />
 </eventList>
 <!--
@@ -275,15 +275,15 @@
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
 
-<eventList name="NEBULA_ITEMS_AEA_ACID">
-	<event load="NEBULA_AEA_ACID_HIGH_PRICE" />
-	<event load="NEBULA_AEA_ACID_MYSTERIOUS_TECH" />
-	<event load="NEBULA_AEA_ACID_WRECK" />
-	<event load="NEBULA_AEA_ACID_GUN_UPGRADE" />
+<eventList name="NEBULA_ITEMS_OE_ACID">
+	<event load="NEBULA_OE_ACID_HIGH_PRICE" />
+	<event load="NEBULA_OE_ACID_MYSTERIOUS_TECH" />
+	<event load="NEBULA_OE_ACID_WRECK" />
+	<event load="NEBULA_OE_ACID_GUN_UPGRADE" />
 </eventList>
-<event name="NEBULA_AEA_ACID_HIGH_PRICE" unique="true">   
+<event name="NEBULA_OE_ACID_HIGH_PRICE" unique="true">   
 	<text>A large Acidic vessel is sitting dormant. After a moment, it hails you, offering the services of one of them in return for scrap.</text>
-	<ship load="SHIP_AEA_ACID_TRANSPORT_NORMAL" hostile="false" />
+	<ship load="SHIP_OE_ACID_TRANSPORT_NORMAL" hostile="false" />
 	<environment type="nebula" />
 	<choice>
 		<text>Accept the offer.</text>
@@ -292,21 +292,21 @@
             <item_modify>
                 <item type="scrap" min="-60" max="-60"/>
             </item_modify>
-            <crewMember amount="1" class="aea_acid_worker">Acidic Worker</crewMember>
+            <crewMember amount="1" class="oe_acid_worker">Acidic Worker</crewMember>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event/>
 			</choice>
 		</event>
 	</choice>
-	<choice req="rep_aea_acid" lvl="-9999" max_lvl="-1">
+	<choice req="rep_oe_acid" lvl="-9999" max_lvl="-1">
 		<text>(Positive Acidic Reputation) Accept the discounted offer.</text>
 		<event>
 			<text>You send over your scrap, and shortly thereafter a strange drone with a glass dome teleports onto your ship. It appears that's how Acidic Growth transports itself.</text>
 			<item_modify>
 				<item type="scrap" min="-40" max="-40" />
 			</item_modify>
-            <crewMember amount="1" class="aea_acid_worker">Acidic Worker</crewMember>
+            <crewMember amount="1" class="oe_acid_worker">Acidic Worker</crewMember>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event/>
@@ -318,7 +318,7 @@
 		<event>
 			<text>Instead of replying, you power your weapons and engage the ship.</text>
             <ship hostile="true"/>
-			<queueEvent>MORALITY_UPDATE_AEA_ACID_FIGHT</queueEvent>
+			<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -340,13 +340,13 @@
 <!-- 
 Remake this event
 -->
-<event name="NEBULA_AEA_ACID_MYSTERIOUS_TECH" unique="true">   
+<event name="NEBULA_OE_ACID_MYSTERIOUS_TECH" unique="true">   
 	<text>You're hailed by a Hektar ship hiding deep in this nebula. "Hello captain, that issss one fine vesssel. However, we have sssome tech that we asssure you will make your ssship even better!"</text>
 	<ship load="SHIP_HEKTAR_GENERIC" hostile="false" />
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Purchase their tech for 15 scrap.</text>
-		<event load="NEBULA_AEA_ACID_MYSTERIOUS_TECH_PURCHASE" />
+		<event load="NEBULA_OE_ACID_MYSTERIOUS_TECH_PURCHASE" />
 	</choice>
 	<choice hidden="true">
 		<text>No thanks.</text>
@@ -363,7 +363,7 @@ Remake this event
 		</event>
 	</choice>
 </event>
-<eventList name="NEBULA_AEA_ACID_MYSTERIOUS_TECH_PURCHASE">
+<eventList name="NEBULA_OE_ACID_MYSTERIOUS_TECH_PURCHASE">
 	<event>
 		<text>"Enjoy! And remember, no refundsss!" The Slugs beam after having installed a strange red button on your ship.</text>
 		<augment name="COMBAT_PANIC_BUTTON" />
@@ -380,7 +380,7 @@ Remake this event
 	</event>
 </eventList>
 
-<event name="NEBULA_AEA_ACID_GUN_UPGRADE" unique="true">   
+<event name="NEBULA_OE_ACID_GUN_UPGRADE" unique="true">   
 	<text>You're hailed by an Acidic ship, "Outsider. Tests, we wish to perform. Weapon, can you donate? Combine technology, we will. Combined, we will return." You can probably get Acidic technology here, if you have the right weapon.</text>
 	<environment type="nebula" />
 	<choice hidden="true" req="LASER_BURST_1">
@@ -390,7 +390,7 @@ Remake this event
             <remove name="LASER_BURST_1"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -401,7 +401,7 @@ Remake this event
             <remove name="LASER_BURST_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -412,7 +412,7 @@ Remake this event
             <remove name="LASER_CHAINGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -423,7 +423,7 @@ Remake this event
             <remove name="LASER_CHARGEGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -434,7 +434,7 @@ Remake this event
             <remove name="LASER_CHARGE_CHAIN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -445,7 +445,7 @@ Remake this event
             <remove name="LASER_HEAVY_1"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -456,7 +456,7 @@ Remake this event
             <remove name="LASER_HEAVY_PIERCE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -467,7 +467,7 @@ Remake this event
             <remove name="LASER_HEAVY_CHAINGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -478,7 +478,7 @@ Remake this event
             <remove name="LASER_STUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -489,7 +489,7 @@ Remake this event
             <remove name="LASER_HULL_1"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -500,7 +500,7 @@ Remake this event
             <remove name="LASER_HULL_CHAINGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -511,7 +511,7 @@ Remake this event
             <remove name="LASER_LIGHT"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1"/>
             </choice>
         </event>
 	</choice>
@@ -522,7 +522,7 @@ Remake this event
             <remove name="LASER_PARTICLE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -534,7 +534,7 @@ Remake this event
             <remove name="LASER_BURST_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -545,7 +545,7 @@ Remake this event
             <remove name="LASER_CHARGEGUN_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -556,7 +556,7 @@ Remake this event
             <remove name="LASER_HEAVY_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -567,7 +567,7 @@ Remake this event
             <remove name="LASER_HULL_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -578,7 +578,7 @@ Remake this event
             <remove name="LASER_CHAINGUN_DAMAGE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -589,7 +589,7 @@ Remake this event
             <remove name="LASER_LIGHT_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -600,7 +600,7 @@ Remake this event
             <remove name="LASER_PIERCE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -611,7 +611,7 @@ Remake this event
             <remove name="LASER_FROST_1"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -622,7 +622,7 @@ Remake this event
             <remove name="LASER_PARTICLE_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2"/>
             </choice>
         </event>
 	</choice>
@@ -634,7 +634,7 @@ Remake this event
             <remove name="LASER_BURST_5"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -645,7 +645,7 @@ Remake this event
             <remove name="LASER_CHARGEGUN_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -656,7 +656,7 @@ Remake this event
             <remove name="LASER_HEAVY_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -667,7 +667,7 @@ Remake this event
             <remove name="LASER_HULL_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -678,7 +678,7 @@ Remake this event
             <remove name="LASER_CHAINGUN_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -689,7 +689,7 @@ Remake this event
             <remove name="LASER_PIERCE_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -700,7 +700,7 @@ Remake this event
             <remove name="LASER_PIERCE_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -711,7 +711,7 @@ Remake this event
             <remove name="LASER_FROST_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3"/>
             </choice>
         </event>
 	</choice>
@@ -723,7 +723,7 @@ Remake this event
             <remove name="BEAM_PARTICLE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -734,7 +734,7 @@ Remake this event
             <remove name="BEAM_LONG"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -745,7 +745,7 @@ Remake this event
             <remove name="BEAM_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -756,7 +756,7 @@ Remake this event
             <remove name="BEAM_ADAPT"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -767,7 +767,7 @@ Remake this event
             <remove name="BEAM_HULL"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -778,7 +778,7 @@ Remake this event
             <remove name="BEAM_STUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -789,7 +789,7 @@ Remake this event
             <remove name="BEAM_PIERCE"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -800,7 +800,7 @@ Remake this event
             <remove name="BEAM_MINING"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1"/>
             </choice>
         </event>
 	</choice>
@@ -812,7 +812,7 @@ Remake this event
             <remove name="ION_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -823,7 +823,7 @@ Remake this event
             <remove name="ION_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -834,7 +834,7 @@ Remake this event
             <remove name="ION_3"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -845,7 +845,7 @@ Remake this event
             <remove name="ION_HEAVY"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -856,7 +856,7 @@ Remake this event
             <remove name="ION_TRI"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -867,7 +867,7 @@ Remake this event
             <remove name="ION_CHAINGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -878,7 +878,7 @@ Remake this event
             <remove name="ION_CHARGEGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -889,7 +889,7 @@ Remake this event
             <remove name="ION_STUN_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -900,7 +900,7 @@ Remake this event
             <remove name="ION_STUN_HEAVY"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -911,7 +911,7 @@ Remake this event
             <remove name="ION_STUN_CHARGEGUN"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -922,7 +922,7 @@ Remake this event
             <remove name="ION_PIERCE_2"/>
             <choice>
                 <text>Continue...</text>
-                <event load="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1"/>
+                <event load="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1"/>
             </choice>
         </event>
 	</choice>
@@ -943,10 +943,10 @@ Remake this event
 	</choice>
 </event>
 
-<eventList name="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L1">
+<eventList name="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L1">
     <event>
         <text>A short while later you receive your weapon back. It appears to have been extensively modified by the Acidic Growth.</text>
-        <weapon name="AEA_LASER_ACID_1"/>
+        <weapon name="OE_LASER_ACID_1"/>
         <choice>
             <text>Continue...</text>
             <event/>
@@ -954,10 +954,10 @@ Remake this event
     </event>
 </eventList>
 
-<eventList name="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L2">
+<eventList name="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L2">
     <event>
         <text>A short while later you receive your weapon back. It appears to have been extensively modified by the Acidic Growth.</text>
-        <weapon name="AEA_LASER_ACID_2"/>
+        <weapon name="OE_LASER_ACID_2"/>
         <choice>
             <text>Continue...</text>
             <event/>
@@ -965,10 +965,10 @@ Remake this event
     </event>
 </eventList>
 
-<eventList name="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_L3">
+<eventList name="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_L3">
     <event>
         <text>A short while later you receive your weapon back. It appears to have been extensively modified by the Acidic Growth.</text>
-        <weapon name="AEA_LASER_ACID_3"/>
+        <weapon name="OE_LASER_ACID_3"/>
         <choice>
             <text>Continue...</text>
             <event/>
@@ -976,10 +976,10 @@ Remake this event
     </event>
 </eventList>
 
-<eventList name="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_B1">
+<eventList name="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_B1">
     <event>
         <text>A short while later you receive your weapon back. It appears to have been extensively modified by the Acidic Growth.</text>
-        <weapon name="AEA_BEAM_ACID_1"/>
+        <weapon name="OE_BEAM_ACID_1"/>
         <choice>
             <text>Continue...</text>
             <event/>
@@ -987,10 +987,10 @@ Remake this event
     </event>
 </eventList>
 
-<eventList name="NEBULA_AEA_ACID_GUN_UPGRADE_RESULT_I1">
+<eventList name="NEBULA_OE_ACID_GUN_UPGRADE_RESULT_I1">
     <event>
         <text>A short while later you receive your weapon back. It appears to have been extensively modified by the Acidic Growth.</text>
-        <weapon name="AEA_ION_ACID_1"/>
+        <weapon name="OE_ION_ACID_1"/>
         <choice>
             <text>Continue...</text>
             <event/>
@@ -998,14 +998,14 @@ Remake this event
     </event>
 </eventList>
 
-<event name="NEBULA_AEA_ACID_WRECK">
+<event name="NEBULA_OE_ACID_WRECK">
     <text>You arrive at the beacon to find strange wreck floating nearby.
 
 The wreck is relatively intact. However, it appears to have been riddled with holes.</text>
     <environment type="nebula" />
     <choice hidden="true">
         <text>Examine the wreck.</text>
-        <event load="NEBULA_AEA_ACID_WRECK_LIST"/>
+        <event load="NEBULA_OE_ACID_WRECK_LIST"/>
     </choice>
 	<choice hidden="true">
 		<text>Ignore it.</text>
@@ -1023,15 +1023,15 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 
-<eventList name="NEBULA_AEA_ACID_WRECK_LIST">
-	<event name="NEBULA_AEA_ACID_WRECK_RWEAP">
+<eventList name="NEBULA_OE_ACID_WRECK_LIST">
+	<event name="NEBULA_OE_ACID_WRECK_RWEAP">
         <text>You dock with the wreck and find it completely devoid of life. There is, however, an undamaged weapon cache in the cargo hold. You bring it back and find a pristine weapon inside.</text>
         <weapon name="RANDOM"/>
     </event>
-    <event load="NEBULA_AEA_ACID_WRECK_RWEAP"/>
+    <event load="NEBULA_OE_ACID_WRECK_RWEAP"/>
     <event>
         <text>Just as you're about to dock with the wreck, a vessel jumps to the beacon. It appears to be the vessel responsible for creating this mess.</text>
-        <ship load="SHIP_AEA_ACID_GENERIC" hostile="true" />
+        <ship load="SHIP_OE_ACID_GENERIC" hostile="true" />
         <choice hidden="true">
             <text>Defend yourself!.</text>
             <event>
@@ -1046,19 +1046,19 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
     </event>
 </eventList>
 
-<eventList name="NEBULA_ITEMS_AEA_ACID_UNIQUE">
-	<event load="NEBULA_AEA_ACID_ORKIDS" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_ITEM" />
-	<event load="NEBULA_STORM_AEA_ACID_AUGITEM" />
+<eventList name="NEBULA_ITEMS_OE_ACID_UNIQUE">
+	<event load="NEBULA_OE_ACID_ORKIDS" />
+	<event load="NEBULA_ACIDIC_OE_ACID_ITEM" />
+	<event load="NEBULA_STORM_OE_ACID_AUGITEM" />
 	
-	<event load="NEBULA_AEA_ACID_HIGH_PRICE" />
-	<event load="NEBULA_AEA_ACID_WRECK" />
-	<event load="NEBULA_AEA_ACID_GUN_UPGRADE" />
+	<event load="NEBULA_OE_ACID_HIGH_PRICE" />
+	<event load="NEBULA_OE_ACID_WRECK" />
+	<event load="NEBULA_OE_ACID_GUN_UPGRADE" />
 </eventList>
 
-<event name="NEBULA_AEA_ACID_ORKIDS">
+<event name="NEBULA_OE_ACID_ORKIDS">
     <text>You arrive at the beacon to discover an Orchid vessel lying dormant nearby. It's safe to bet the ship is most likely carrying some special tech. If you can kill the Orchid crew onboard, the cargo will be yours.</text>
-    <ship load="SHIP_AEA_ACID_CARETAKER_FIGHT" hostile="false" />
+    <ship load="SHIP_OE_ACID_CARETAKER_FIGHT" hostile="false" />
 	<environment type="nebula" />
 	<choice>
 		<text>Demand the surrender of their goods.</text>
@@ -1087,10 +1087,10 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
     </choice>
 </event>
 
-<event name="AEA_ACIDIC_NEBULA_TIMER"/>
+<event name="OE_ACIDIC_NEBULA_TIMER"/>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_ITEM">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_ITEM">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -1099,19 +1099,19 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
     <text>You've arrived at the beacon to discover an Acidic Vessel being repaired. It appears to be unarmed and out of action at the moment. The crew repairing the ship hasn't spotted you yet.</text>
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
-    <ship load="SHIP_AEA_ACID_FIGHT" hostile="false"/>
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <ship load="SHIP_OE_ACID_FIGHT" hostile="false"/>
     <choice hidden="true">
         <text>Salvage the vessel.</text>
         <event>
             <text>You dock with the vessel; however, the airlock fails to open. It appears that the Acidic ship has a security system onboard. It'll take a minute to bypass...</text>
-            <triggeredEvent event="NEBULA_ACID_AEA_ACID_ITEM_TIME" time="60" clearOnJump="true">
+            <triggeredEvent event="NEBULA_ACID_OE_ACID_ITEM_TIME" time="60" clearOnJump="true">
                 <triggeredEventBox load="DEFAULT_SMALL" pos="combat">
                     <tooltip>Bypassing Security System...</tooltip>
                     </triggeredEventBox>
                 <timerSounds load="DEFAULT_TIMER_SOUNDS" />
             </triggeredEvent>
-            <triggeredEvent event="NEBULA_ACID_AEA_ACID_ITEM_BOARD" time="10" clearOnJump="true" />
+            <triggeredEvent event="NEBULA_ACID_OE_ACID_ITEM_BOARD" time="10" clearOnJump="true" />
         </event>
     </choice>
 	<choice hidden="true">
@@ -1129,7 +1129,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</event>
 	</choice>
 </event>
-<event name="NEBULA_ACID_AEA_ACID_ITEM_TIME">
+<event name="NEBULA_ACID_OE_ACID_ITEM_TIME">
     <text>You finally make it through and begin salvaging the vessel. You're surprised when you discover an orchid, seemingly trapped onboard. "Who are you- Nevermind, just get me out of here. I thought I was going to die. I think they forgot I was onboard and accidentally locked me in here. Please just take me with you."</text>
     <autoReward level="MED">standard</autoReward>
     <choice>
@@ -1146,18 +1146,18 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
         </event>
     </choice>
 </event>
-<event name="NEBULA_ACID_AEA_ACID_ITEM_BOARD">
+<event name="NEBULA_ACID_OE_ACID_ITEM_BOARD">
     <text>While you were attempting to break into the Acidic vessel, the repair crew has broken into yours!</text>
-    <boarders min="4" max="4" class="aea_acid_worker" />
+    <boarders min="4" max="4" class="oe_acid_worker" />
 </event>
-<event name="NEBULA_STORM_AEA_ACID_AUGITEM" unique="true">
+<event name="NEBULA_STORM_OE_ACID_AUGITEM" unique="true">
 	<text>Right in the middle of an ion storm, you find a strange shipyard. It appears to be operated by the Acidic Growth. However, they aren't hostile. Perhaps you'll be able to make a deal with them.</text>
 	<environment type="storm" />
 	<choice hidden="true">
 		<text>Attack the shipyard!.</text>
 		<event>
 			<text>For some reason you have decided to attack the makeshift shipyard. Though the facility is unarmed, one of their vessels rises to meet you and defend them.</text>
-			<ship load="SHIP_AEA_ACID_AUGITEM" hostile="true" />
+			<ship load="SHIP_OE_ACID_AUGITEM" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -1168,7 +1168,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		<text>Pay them to upgrade your oxygen system.</text>
 		<event>
 			<text>The Acidic Growth quickly installs the upgrades to your oxygen system, making it now capable of both healing and extinguishing fires, depending on the setting.</text>
-			<augment name="AEA_ACID_O2SYS_OFF" />
+			<augment name="OE_ACID_O2SYS_OFF" />
 			<item_modify>
 				<item type="scrap" min="-40" max="-40" />
 			</item_modify>
@@ -1199,23 +1199,23 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->	
 
-<eventList name="NEBULA_NEUTRAL_AEA_ACID">
-	<event load="NEBULA_AEA_ACID_EMPTY_WRECK" />
-	<event load="NEBULA_REFUGEE_AEA_ACID" />
-	<event load="NEBULA_AEA_ACID_REPAIR_YARD" />
+<eventList name="NEBULA_NEUTRAL_OE_ACID">
+	<event load="NEBULA_OE_ACID_EMPTY_WRECK" />
+	<event load="NEBULA_REFUGEE_OE_ACID" />
+	<event load="NEBULA_OE_ACID_REPAIR_YARD" />
 <!--
-	<event load="NEBULA_ACIDIC_AEA_ACID_BADORCHID" />
-	<event load="NEBULA_AEA_ACID_ORCHID" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_CHOOSE_DEATH" />
+	<event load="NEBULA_ACIDIC_OE_ACID_BADORCHID" />
+	<event load="NEBULA_OE_ACID_ORCHID" />
+	<event load="NEBULA_ACIDIC_OE_ACID_CHOOSE_DEATH" />
 -->
-	<event load="NEBULA_ACIDIC_AEA_ACID_PRAETOR_DIPLOMATIC" />
-	<event load="NEBULA_AEA_ACID_ORCHID_RESEARCH" />
-	<event load="NEBULA_AEA_ACID_WARNING" />
+	<event load="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" />
+	<event load="NEBULA_OE_ACID_ORCHID_RESEARCH" />
+	<event load="NEBULA_OE_ACID_WARNING" />
 
-	<event load="NEBULA_AEA_ACID_ARREST" />
+	<event load="NEBULA_OE_ACID_ARREST" />
 </eventList>
 
-<event name="NEBULA_AEA_ACID_EMPTY_WRECK" unique="true">
+<event name="NEBULA_OE_ACID_EMPTY_WRECK" unique="true">
 	<text>A nearby Acidic vessel appears to be abandoned.</text>
 	<environment type="nebula" />
 	<choice hidden="true">
@@ -1224,7 +1224,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 			<text>You step aboard the vessel. It really is empty, but you continue searching.</text>
 			<choice hidden="true">
 				<text>Continue...</text>
-				<event load="NEBULA_AEA_ACID_EMPTY_WRECK_INVEST" />
+				<event load="NEBULA_OE_ACID_EMPTY_WRECK_INVEST" />
 			</choice>
 		</event>
 	</choice>
@@ -1244,7 +1244,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</event>
 	</choice>
 </event>
-<eventList name="NEBULA_AEA_ACID_EMPTY_WRECK_INVEST">
+<eventList name="NEBULA_OE_ACID_EMPTY_WRECK_INVEST">
 	<event>
 		<text>You find the ship devoid of almost anything except for a few crates of fuel.</text>
 		<autoReward level="HIGH">fuel_only</autoReward>
@@ -1254,7 +1254,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 
     To make matters worse, you just manage to detect a series of large asteroids heading your way. You'll have to take them out before they get to you.</text>
         <status type="limit" target="player" system="engines" amount="0" />
-		<ship load="SHIP_AEA_ACID_ASTEROIDS" hostile="true" />
+		<ship load="SHIP_OE_ACID_ASTEROIDS" hostile="true" />
 		<choice hidden="true">
 			<text>Continue...</text>
 			<event load="COMBAT_CHECK_FAIL" />
@@ -1265,7 +1265,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 
     To make matters worse, you just manage to detect a series of large asteriods heading your way. You'll have to take them out before they get to you.</text>
         <status type="limit" target="player" system="engines" amount="0" />
-		<ship load="SHIP_AEA_ACID_ASTEROIDS" hostile="true" />
+		<ship load="SHIP_OE_ACID_ASTEROIDS" hostile="true" />
 		<choice hidden="true">
 			<text>Continue...</text>
 			<event load="COMBAT_CHECK_FAIL" />
@@ -1273,12 +1273,12 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</event>
 </eventList>
 
-<event name="NEBULA_REFUGEE_AEA_ACID"> 
+<event name="NEBULA_REFUGEE_OE_ACID"> 
 	<text>Your sensors have picked up a refugee ship drifting through the system, no doubt one of many fleeing the Rebel advance. It doesn't appear to have detected you... or else it is trying to avoid notice.</text>
 	<environment type="nebula" />
 	<choice>
 		<text>Hail them.</text>
-		<event load="REFUGEE_HAIL_LIST_AEA_ACID" />
+		<event load="REFUGEE_HAIL_LIST_OE_ACID" />
 	</choice>
 	<choice>
 		<text>Ignore the refugees.</text>
@@ -1295,7 +1295,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</event>
 	</choice>
 </event>
-<eventList name="REFUGEE_HAIL_LIST_AEA_ACID">
+<eventList name="REFUGEE_HAIL_LIST_OE_ACID">
 	<event load="REFUGEE_TRADER" />
 	<event>
 		<text>As you hail the refugee ship, a Slug ship jumps into the system... it was hunting the refugee ship for sport, and now they've found you instead!</text>
@@ -1308,8 +1308,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 </eventList>
 
 <!--EVENT UP FOR DELETION-->
-<event name="NEBULA_ACIDIC_AEA_ACID_BADORCHID" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_BADORCHID" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -1317,11 +1317,11 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>Strangely, an Orchid captain hails you from an Acidic vessel. "Captain, you wouldn't happen to have any Acidic Growth with you? We'd offer a reward for you to turn over any of it to be destroyed."</text>
-	<ship load="SHIP_AEA_ACID_ORCHID_ONLY" hostile="false" />
-	<choice hidden="true" req="aea_acid_worker">
+	<ship load="SHIP_OE_ACID_ORCHID_ONLY" hostile="false" />
+	<choice hidden="true" req="oe_acid_worker">
 		<text>(Acidic Worker) Take up their offer.</text>
 		<event>
             <text>You send over your Acidic Worker, the orchids make true to their promise and exterminate the Acidic Growth inside. The Orchids send over the reward as promised.</text>
@@ -1345,8 +1345,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_PRAETOR_DIPLOMATIC" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -1354,10 +1354,10 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>Acidic nebulae usually house their own ships, but this time it's a Praetor vessel. You knew the Gathering is a good ally to the Acidic Growth, but what could such high rank be doing here?</text>
-	<ship load="SHIP_AEA_ACID_PRAETOR_DIPLOMATIC" hostile="false" />
+	<ship load="SHIP_OE_ACID_PRAETOR_DIPLOMATIC" hostile="false" />
 	<choice hidden="true">
 		<text>Hail them.</text>
 		<event>
@@ -1403,7 +1403,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 											<text>Suggest interpreting temperature readings.</text>
 											<event>
 												<text>"This might work. We'll have to spend some time translating it, though... unless you have a solution?"</text>
-												<choice hidden="true" req="LIST_CREW_AEA_ACID">
+												<choice hidden="true" req="LIST_CREW_OE_ACID">
 													<text>(Acidic crew) Augment their translator.</text>
 													<event>
 														<text>Your crew sends over the databanks and explains how to use them. "Thank you, this will be enough."</text>
@@ -1483,8 +1483,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 </event>
 
 <!--EVENT UP FOR DELETION-->
-<event name="NEBULA_ACIDIC_AEA_ACID_CHOOSE_DEATH" unique="true">
-    <beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_CHOOSE_DEATH" unique="true">
+    <beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -1492,14 +1492,14 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>You are immediately hailed by a dangerous-looking Acidic ship guarding a station. "Outsider. Intruding, in our space. Punishment, you choose. Death follows."</text>
 	<choice req="shields" lvl="2" blue="false" max_group="0">
 		<text>Shields.</text>
 		<event>
 			<text>"Offer, acceptable." Your shield power suddenly drops and they charge.</text>
-			<ship load="SHIP_AEA_ACID_STATUS_SHIELDS" hostile="true" />
+			<ship load="SHIP_OE_ACID_STATUS_SHIELDS" hostile="true" />
 			<status type="divide" target="player" system="shields" amount="2" />
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -1526,7 +1526,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		<text>Weapons.</text>
 		<event>
 			<text>"Acceptable, offering." Your weapons system registers a hacking module. You hardly have time to respond before they attack.</text>
-			<ship load="SHIP_AEA_ACID_STATUS_WEAPONS" hostile="true" />
+			<ship load="SHIP_OE_ACID_STATUS_WEAPONS" hostile="true" />
 			<status type="divide" target="player" system="weapons" amount="2" />
 			<choice>
 				<text>Continue...</text>
@@ -1553,7 +1553,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		<text>Oxygen.</text>
 		<event>
 			<text>"It will suffice..." Your life support is sabotaged and they move in to attack.</text>
-			<ship load="SHIP_AEA_ACID_STATUS_OXYGEN" hostile="true" />
+			<ship load="SHIP_OE_ACID_STATUS_OXYGEN" hostile="true" />
 			<status type="divide" target="player" system="oxygen" amount="2" />
 			<choice>
 				<text>Continue...</text>
@@ -1589,7 +1589,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		<text>(Hacking) Counter any hack attempt.</text>
 		<event>
 			<text>"Escaping, punishment? This, won't do. Death, follows." They cut transmission and move in to attack.</text>
-			<ship load="SHIP_AEA_ACID_STATUS_HACKING" hostile="true" />
+			<ship load="SHIP_OE_ACID_STATUS_HACKING" hostile="true" />
 			<status type="limit" target="player" system="hacking" amount="0" />
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -1599,12 +1599,12 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 			
-<event name="NEBULA_AEA_ACID_REPAIR_YARD">
+<event name="NEBULA_OE_ACID_REPAIR_YARD">
 	<text>You arrive to find a small automatic Acidic repair yard. You could probably try to sneak in and hope it repairs you for free. It also appears like you could pay for some repairs.</text>
 	<environment type="nebula" />
     <choice hidden="true">
         <text>Sneak into the queue.</text>
-        <event load="NEBULA_AEA_ACID_REPAIR_SNEAK"/>
+        <event load="NEBULA_OE_ACID_REPAIR_SNEAK"/>
     </choice>
     <choice>
         <text>Purchase 10 hull repair for 30 scrap.</text>
@@ -1631,10 +1631,10 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</event>
 	</choice>
 </event>
-<eventList name="NEBULA_AEA_ACID_REPAIR_SNEAK">
+<eventList name="NEBULA_OE_ACID_REPAIR_SNEAK">
     <event>
         <text>Just as you think you're about to get a free repair job an Acidic ship moves out of the queue behind you and activates their weapons.</text>
-        <ship load="SHIP_AEA_ACID_FIGHT" hostile="true"/>
+        <ship load="SHIP_OE_ACID_FIGHT" hostile="true"/>
         <choice hidden="true">
             <text>Continue...</text>
             <event load="COMBAT_CHECK" />
@@ -1647,7 +1647,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
             <text>Continue...</text>
             <event>
                 <text>Just as you think you're about to get away with it you're intercepted by an Acidic vessel from the other end of the queue.</text>
-                <ship load="SHIP_AEA_ACID_FIGHT" hostile="true"/>
+                <ship load="SHIP_OE_ACID_FIGHT" hostile="true"/>
                 <choice hidden="true">
                     <text>Continue...</text>
                     <event load="COMBAT_CHECK" />
@@ -1662,7 +1662,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
             <text>Continue...</text>
             <event>
                 <text>Just as you think you're about to get away with it you're intercepted by an Acidic vessel from the other end of the queue.</text>
-                <ship load="SHIP_AEA_ACID_FIGHT" hostile="false"/>
+                <ship load="SHIP_OE_ACID_FIGHT" hostile="false"/>
                 <choice hidden="true">
                     <text>Continue...</text>
                     <event>
@@ -1675,7 +1675,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 </eventList>
 
 <!--EVENT UP FOR DELETION-->
-<event name="NEBULA_AEA_ACID_ORCHID" unique="true">
+<event name="NEBULA_OE_ACID_ORCHID" unique="true">
 	<text>A rogue ship awaits you at the beacon. "Laborers for cheap! We have oxygen emitters and those advanced Acidic droids, come take a look!"</text>
 	<environment type="nebula" />
 	<ship hostile="false" load="SHIP_ORCHID_SLAVES" />
@@ -1692,11 +1692,11 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 	<choice>
 		<text>Buy a slave.</text>
-		<event load="NEBULA_AEA_ACID_SLAVER_SLAVES" />
+		<event load="NEBULA_OE_ACID_SLAVER_SLAVES" />
 	</choice>
 	<choice hidden="true" req="LIST_CREW_CARETAKER">
 		<text>(Caretaker Crew) Appeal to the pirates' better interests.</text>
-		<event load="NEBULA_AEA_ACID_SLAVER_CARETAKER" />
+		<event load="NEBULA_OE_ACID_SLAVER_CARETAKER" />
 	</choice>
 	<choice hidden="true">
 		<text>Decline.</text>
@@ -1713,7 +1713,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</event>
 	</choice>
 </event>
-<eventList name="NEBULA_AEA_ACID_SLAVER_SLAVES">
+<eventList name="NEBULA_OE_ACID_SLAVER_SLAVES">
 	<event>
 		<text>"Thanks for your purchase! May your paths be blessed by whatever stupid plant god these things believe in!"</text>
 		<crewMember amount="1" class="orchid" />
@@ -1727,7 +1727,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</event>
 	<event>
 		<text>"Thanks for your purchase! May this robot thing help you in whatever you're doing out here!"</text>
-		<crewMember amount="1" class="aea_acid_worker">Acidic Worker</crewMember>
+		<crewMember amount="1" class="oe_acid_worker">Acidic Worker</crewMember>
 		<item_modify>
 			<item max="-20" min="-30" type="scrap" />
 		</item_modify>
@@ -1748,8 +1748,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</choice>
 	</event>
 </eventList>
-<eventList name="NEBULA_AEA_ACID_SLAVER_CARETAKER">
-	<event name="NEBULA_AEA_ACID_SLAVER_CARETAKER_FAIL">
+<eventList name="NEBULA_OE_ACID_SLAVER_CARETAKER">
+	<event name="NEBULA_OE_ACID_SLAVER_CARETAKER_FAIL">
 		<text>The slavers watch your Orchid's signing in bored bemusement. "Yeah, yeah, that's great and all, but I missed the part where I was supposed to care. I'm not in this business because I give a damn about morals, if you didn't notice. If you're not going to buy something, get lost."</text>
 		<choice hidden="true">
 			<text>Attack the slavers.</text>
@@ -1764,7 +1764,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		</choice>
 		<choice>
 			<text>Change your mind and buy a slave.</text>
-			<event load="NEBULA_AEA_ACID_SLAVER_SLAVES" />
+			<event load="NEBULA_OE_ACID_SLAVER_SLAVES" />
 		</choice>
 		<choice hidden="true">
 			<text>Leave.</text>
@@ -1773,37 +1773,37 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 			</event>
 		</choice>
 	</event>
-	<event load="NEBULA_AEA_ACID_SLAVER_CARETAKER_FAIL" />
+	<event load="NEBULA_OE_ACID_SLAVER_CARETAKER_FAIL" />
 	<event>
 		<text>To your surprise, your Orchid's message seems to touch the pirates. Or maybe not... seems they're just annoyed. "Jeez, okay! I get it, you're people too, bla bla bla. I know the gist. If I'm rude you'll just kill me. I've met Renegades before. Just take the damn plant and leave me alone." The slavers unshackle one of the Orchids and send them your way. Your Caretaker sees to it they adjust to their newfound freedom.</text>
 		<crewMember amount="1" class="orchid" />
 	</event>
 	<event>
 		<text>To your surprise, your Orchid's message seems to touch the pirates. Or maybe not... seems they're just annoyed. "Jeez, okay! I get it, you're people too, bla bla bla. I know the gist. If I'm rude you'll just kill me. I've met Renegades before. Just take this damn robot and leave me alone." The slavers deliver one of the Acidic Workers to your.</text>
-		<crewMember amount="1" class="aea_acid_worker" />
+		<crewMember amount="1" class="oe_acid_worker" />
 	</event>
 </eventList>
 
-<eventList name="NEBULA_NEUTRAL_AEA_ACID_UNIQUE">
-	<event load="NEBULA_AEA_ACID_IMPORTANT_PRISONER" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_LEADER" />
-	<event load="NEBULA_AEA_ACID_WEAPONCACHE" />
+<eventList name="NEBULA_NEUTRAL_OE_ACID_UNIQUE">
+	<event load="NEBULA_OE_ACID_IMPORTANT_PRISONER" />
+	<event load="NEBULA_ACIDIC_OE_ACID_LEADER" />
+	<event load="NEBULA_OE_ACID_WEAPONCACHE" />
 	
-	<event load="NEBULA_AEA_ACID_EMPTY_WRECK" />
-	<event load="NEBULA_REFUGEE_AEA_ACID" />
+	<event load="NEBULA_OE_ACID_EMPTY_WRECK" />
+	<event load="NEBULA_REFUGEE_OE_ACID" />
 <!--
-	<event load="NEBULA_ACIDIC_AEA_ACID_BADORCHID" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_CHOOSE_DEATH" />
+	<event load="NEBULA_ACIDIC_OE_ACID_BADORCHID" />
+	<event load="NEBULA_ACIDIC_OE_ACID_CHOOSE_DEATH" />
 -->
-	<event load="NEBULA_AEA_ACID_REPAIR_YARD" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_PRAETOR_DIPLOMATIC" />
-	<event load="NEBULA_AEA_ACID_ORCHID_RESEARCH" />
-	<event load="NEBULA_AEA_ACID_WARNING" />
+	<event load="NEBULA_OE_ACID_REPAIR_YARD" />
+	<event load="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" />
+	<event load="NEBULA_OE_ACID_ORCHID_RESEARCH" />
+	<event load="NEBULA_OE_ACID_WARNING" />
 </eventList>
 
-<event name="NEBULA_AEA_ACID_IMPORTANT_PRISONER" unique="true">
+<event name="NEBULA_OE_ACID_IMPORTANT_PRISONER" unique="true">
 	<text>An Acidic Elite appears to be protecting a small Orchid Jailer. You aren't certain why, but surely something important must be kept in there?</text>
-	<ship load="SHIP_AEA_ACID_PRISONER_ELITE" hostile="false" />
+	<ship load="SHIP_OE_ACID_PRISONER_ELITE" hostile="false" />
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Attack the elite to get to the Jailer.</text>
@@ -1832,8 +1832,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_LEADER">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_LEADER">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -1841,7 +1841,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <ship load="SHIP_SLUG_ELITE_FIGHT" hostile="false"/>
     <text>You arrive at the scene to find a small Acidic vessel being chased down by an Elite Slug ship. "Outsider. Help, you have? Destroy pursuers, if you might. We will join crew."</text>
@@ -1849,7 +1849,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
         <text>Welcome it aboard.</text>
         <event>
             <text>You pickup the Acidic Soldier and turn to face the Elite Slug vessel.</text>
-            <crewMember amount="1" all_skills="1" class="aea_acid_soldier" >Acidic Soldier</crewMember>
+            <crewMember amount="1" all_skills="1" class="oe_acid_soldier" >Acidic Soldier</crewMember>
             <ship hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -1873,16 +1873,16 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_WEAPONCACHE">
+<event name="NEBULA_OE_ACID_WEAPONCACHE">
     <text>You arrive at the beacon to discover a drifting weapon cache. In the distance however is an approaching Acidic Vessel. You have enough time to fly away and avoid a fight, or you could risk the fight and grab one of the weapons.</text>
-    <ship load="SHIP_AEA_ACID_FIGHT" hostile="false"/>
+    <ship load="SHIP_OE_ACID_FIGHT" hostile="false"/>
     <environment type="nebula" />
     <choice hidden="true">
         <text>Grab a weapon.</text>
         <event>
             <text>You're able to access the cache, however you only have enough time to grab one weapon before being forced to fight.</text>
             <ship hostile="true"/>
-            <store>STORE_AEA_ACID_CACHE</store>
+            <store>STORE_OE_ACID_CACHE</store>
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -1905,7 +1905,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_ORCHID_RESEARCH" unique="true">
+<event name="NEBULA_OE_ACID_ORCHID_RESEARCH" unique="true">
 	<environment type="nebula" />
 	<text>An Orchid station is at this beacon, and you're being contacted - but not by them. "Outsider, finally. Hope, restored. Help?"</text>
 	<choice hidden="true">
@@ -1915,7 +1915,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 			<choice hidden="true">
 				<text>Agree to help and contact the station.</text>
 				<event>
-					<ship load="SHIP_AEA_ACID_ORCHID_RESEARCH" hostile="false"/>
+					<ship load="SHIP_OE_ACID_ORCHID_RESEARCH" hostile="false"/>
 					<text>"Federation? What are you doing here?" A disheveled Orchid asks. You can see several other Orchids walking behind this one, and the whole place seems rather sterile...</text>
 					<choice hidden="true">
 						<text>What are YOU doing here?</text>
@@ -1945,7 +1945,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 												<event>
 													<text>While the Orchid station transports all the tanks of Growth back to the Acidic ship, the latter contacts you again. "Outsider, gratitude. Orchids - allies. You - ally. Future negotiation, with allies, possible. Accept this." Acidic Workers carry over a large amount of scrap.</text>
 													<autoReward level="HIGH">standard</autoReward>
-													<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>
+													<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 												</event>
 											</choice>
 										</event>
@@ -1972,8 +1972,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 				<text>Attack the Acidic ship instead.</text>
 				<event>
 					<text>You don't really know why Orchids would do something like this, but it must be justified. You decide to help them by getting rid of Acidic Growth pestering them.</text>
-					<ship load="SHIP_AEA_ACID_ORCHID_RESEARCH_ACIDIC" hostile="true"/>
-					<queueEvent>MORALITY_UPDATE_AEA_ACID_FIGHT</queueEvent>
+					<ship load="SHIP_OE_ACID_ORCHID_RESEARCH_ACIDIC" hostile="true"/>
+					<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
 				</event>
 			</choice>
 			<choice hidden="true">
@@ -1994,9 +1994,9 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_WARNING">
+<event name="NEBULA_OE_ACID_WARNING">
 	<environment type="nebula" />
-	<ship load="SHIP_AEA_ACID_FIGHT" hostile="false" />
+	<ship load="SHIP_OE_ACID_FIGHT" hostile="false" />
 	<text>As you jump to the beacon, an Acidic ship greets you with its weapons online! However, instead of immediately attacking, the Growth hails you, "Outsider. Our territory. Leave, now."</text>
 	<choice hidden="true">
 		<text>Attack.</text>
@@ -2013,7 +2013,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_ARREST" unique="true">
+<event name="NEBULA_OE_ACID_ARREST" unique="true">
 	<environment type="nebula" />
 	<text>This beacon hosts an unusual sight: a Federation ship on one side, Orchid and Growth on the other, and a Smuggler vessel between them. There seems to be active chatter on the comms.</text>
 	<choice hidden="true">
@@ -2047,13 +2047,13 @@ The Orchid huffs with annoyance, "If that means I never have to talk to you agai
 										<event>
 											<text>When the Orchid captain hears you, they close comms and jump away. The Federation captain sighs, "Well, good thing they decided to move their temper tantrum elsewhere. I thank you for choosing reason; we'll arrest the Smugglers immediately. I know that it's not exactly legal, but I want you to have a weapon from their stores, as a gesture of gratitude. It's Acidic-made, I think. They might be barely sentient by most standards, but if there's something I could give these guys, it's that they're really good at making weapons."</text>
 											<autoReward level="MED">scrap_only</autoReward>
-											<weapon name="GIFTLIST_WEAPONS_ACIDIC"/>
+											<weapon name="GIFTLIST_WEAPONS_OE_ACIDIC"/>
 										</event>
 									</choice>
 									<choice hidden="true">
 										<text>The Orchid captain is right; Acidic Growth should decide by themselves.</text>
 										<event>
-											<jumpEvent>NEBULA_AEA_ACID_ARREST_GROWTH</jumpEvent>
+											<jumpEvent>NEBULA_OE_ACID_ARREST_GROWTH</jumpEvent>
 											<text>The Orchid captain is relieved, "Yes! Yes! I'm glad at least SOME Federation personnel still hasn't tumbled down into a pit of xenophobia. You, captain, should know; you just witnessed how Federation rots from the inside, becoming not unli-" He is interrupted by a grumbling voice, "Fine, fine. I concede. The Growth shall now do whatever it wants with them, and we're leaving." The Federation ship jumps away. 
 
 Orchids are delighted and gift you a little bit of scrap for standing with them. After a minute or so of Orchids talking to Growth on a private channel, they leave too.</text>
@@ -2104,7 +2104,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_ARREST_GROWTH">
+<event name="NEBULA_OE_ACID_ARREST_GROWTH">
 	<text>...You get contacted. "Resolver, yes? This, criminals? We don't know what to do with them." It's Acidic Growth.</text>	
 		<choice hidden="true">
 			<text>You don't know? What was that whole show about then?</text>
@@ -2128,7 +2128,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 					<text>Let them go.</text>
 					<event>
 						<text>"You suggest, leave them? Gratitude." The Acidic ship jumps away, and the Smugglers contact you, "Can't believe we're out of this! Thanks, whoever you are. We were trying to sell Acidic weapons over at Federation market, but got caught. You can have one of those. We will make ourselves sparse, now."</text>
-						<weapon name="GIFTLIST_WEAPONS_ACIDIC"/>
+						<weapon name="GIFTLIST_WEAPONS_OE_ACIDIC"/>
 						<queueEvent>REPUTATION_UPDATE_SMUGGLING_FREE</queueEvent>
 					</event>
 				</choice>
@@ -2143,16 +2143,16 @@ You are now, finally, left alone... well, better than that, even: you've been le
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-<eventList name="NEBULA_DISTRESS_AEA_ACID">
-	<event load="NEBULA_AEA_ACID_DISTRESS_ROCK" />
-	<event load="NEBULA_AEA_ACID_DISTRESS_TRICK" />
-	<event load="NEBULA_AEA_ACID_DISTRESS_QUESTION" />
-	<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2" />
-	<event load="AEA_ACID_DISTRESS_VAMPWEED" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_ORCHID_DISTRESS_PRESSURE" />
+<eventList name="NEBULA_DISTRESS_OE_ACID">
+	<event load="NEBULA_OE_ACID_DISTRESS_ROCK" />
+	<event load="NEBULA_OE_ACID_DISTRESS_TRICK" />
+	<event load="NEBULA_OE_ACID_DISTRESS_QUESTION" />
+	<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2" />
+	<event load="OE_ACID_DISTRESS_VAMPWEED" />
+	<event load="NEBULA_ACIDIC_OE_ACID_ORCHID_DISTRESS_PRESSURE" />
 </eventList>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_ROCK">
+<event name="NEBULA_OE_ACID_DISTRESS_ROCK">
 	<distressBeacon />
     <text>You arrive at the beacon to discover a Rock ship adrift at the beacon. It's unusual to see the Rockmen out this far, and even more unusually this one has ran out of fuel.</text>
     <ship load="SHIP_ROCK_GENERIC" hostile="false"/>
@@ -2194,12 +2194,12 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_TRICK">
+<event name="NEBULA_OE_ACID_DISTRESS_TRICK">
     <distressBeacon />
 	<text>You find an Acidic vessel broadcasting the distress signal and contact them. "Outsider. This is our space. Protect, we must." Apparently the Acidic Growth has unexpectedly setup a trap for trespassers here.</text>
-	<ship load="SHIP_AEA_ACID_GENERIC" hostile="true" />
+	<ship load="SHIP_OE_ACID_GENERIC" hostile="true" />
 	<environment type="nebula" />
-    <choice hidden="true" req="rep_aea_acid" lvl="-9999" max_lvl="-1">
+    <choice hidden="true" req="rep_oe_acid" lvl="-9999" max_lvl="-1">
         <text>(Positive Acidic Reputation) Explain that you're friendly with the Acidic Growth.</text>
         <event>
             <ship hostile="false"/>
@@ -2213,16 +2213,16 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_QUESTION" unique="true">
+<event name="NEBULA_OE_ACID_DISTRESS_QUESTION" unique="true">
 	<distressBeacon />
 	<text>You arrive near the distress beacon's signal.</text>
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_DISTRESS_QUESTION_LIST" />
+		<event load="OE_ACID_DISTRESS_QUESTION_LIST" />
 	</choice>
 </event>
-<eventList name="AEA_ACID_DISTRESS_QUESTION_LIST">
+<eventList name="OE_ACID_DISTRESS_QUESTION_LIST">
 	<event>
 		<text>The beacon's signal is deeper into the the nebula, as you track it you pass by a pair of wrecks, both with strange burns along the sides.</text>
 		<choice hidden="true">
@@ -2231,19 +2231,19 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_TRUE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_TRUE" />
 				</choice>
 				<choice hidden="true">
 					<text>Five.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Seven.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Ask how many wrecks they're looking for.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FAIL" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FAIL" />
 				</choice>
 			</event>
 		</choice>
@@ -2256,19 +2256,19 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Five.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_TRUE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_TRUE" />
 				</choice>
 				<choice hidden="true">
 					<text>Seven.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Ask how many wrecks they're looking for.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FAIL" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FAIL" />
 				</choice>
 			</event>
 		</choice>
@@ -2281,25 +2281,25 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Finally you find the location of the distress beacon, theres a severely damage Acidic vessel. As you get closer you're hailed by the sole surviving occupant of the vessel. "Wrecks, can you tell the amount? We can't leave without confirmation of their death."</text>
 				<choice hidden="true">
 					<text>Two.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Five.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FALSE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FALSE" />
 				</choice>
 				<choice hidden="true">
 					<text>Seven.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_TRUE" />
+					<event load="OE_ACID_DISTRESS_QUESTION_TRUE" />
 				</choice>
 				<choice hidden="true">
 					<text>Ask how many wrecks they're looking for.</text>
-					<event load="AEA_ACID_DISTRESS_QUESTION_FAIL" />
+					<event load="OE_ACID_DISTRESS_QUESTION_FAIL" />
 				</choice>
 			</event>
 		</choice>
 	</event>
 </eventList>
-<event name="AEA_ACID_DISTRESS_QUESTION_FALSE">
+<event name="OE_ACID_DISTRESS_QUESTION_FALSE">
 	<text>"Unfortunate. Outsider, wrong. Supplies, we will take. Mission, we must complete." The Acidic Worker quickly beams aboard and takes some of your supplies before you can react.</text>
 	<item_modify steal="true">
 		<item type="scrap" min="-25" max="-25" />
@@ -2307,26 +2307,26 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<item type="drones" min="-2" max="-1" />
 	</item_modify>
 </event>
-<event name="AEA_ACID_DISTRESS_QUESTION_TRUE">   
+<event name="OE_ACID_DISTRESS_QUESTION_TRUE">   
 	<text>"The mission, complete. Nowhere to go, there is. We will join you on your journey." The Acidic Worker beams aboard and joins your crew!</text>
-	<crewMember amount="1" class="aea_acid_worker" >Acidic Worker</crewMember>  
+	<crewMember amount="1" class="oe_acid_worker" >Acidic Worker</crewMember>  
 </event>
-<event name="AEA_ACID_DISTRESS_QUESTION_FAIL">
+<event name="OE_ACID_DISTRESS_QUESTION_FAIL">
     <text>"We... can not remember..." The communications cut out and you're unable to reacquire it. You decide to cut your losses and salvage some of the wrecks while your jump drive charges.</text>
     <autoReward level="LOW">standard</autoReward>
 </event>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2" unique="true">
+<event name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2" unique="true">
 	<distressBeacon />
 	<text>You are surprised that the acidic ship, the origin of the distress signal, hails you first. "Outsider, we need help. Life support system, broken. Reward promised".</text>
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Risk and send your crew over.</text>
-		<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_CHOICE" />
+		<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHOICE" />
 	</choice>
 	<choice hidden="true" req="BLUELIST_CREW_NO2">
 		<text>(Anaerobic Crew) Don't risk and send your anaerobic crew.</text>
-		<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_CHOICE" />
+		<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHOICE" />
 	</choice>	
 	<choice hidden="true">
 		<text>We can't help.</text>
@@ -2344,27 +2344,27 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_CHOICE">
+<event name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHOICE">
 	<text>Turns out, there was no risk involved: the ship is full of oxygen. You are confused, but that's when you remember Acidic Growth usually outfits its ships with life support system that spreads the growth throughout the ship instead of breathable air. Feeling stupid, you consider your options.</text>
 	<choice hidden="true">
 		<text>Try reconfiguring it.</text>
-		<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_CHANCE" />
+		<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHANCE" />
 	</choice>
-	<choice hidden="true" req="LIST_AUG_AEA_ACID_FILTER">
+	<choice hidden="true" req="LIST_AUG_OE_ACID_FILTER">
 		<text>(Acidic Filtering System) Suggest they copy yours.</text>
 		<event>
 			<text>If the Acidic Growth are grateful, they don't show it. While carrying over the changes, one of the Workers decides to stick with you, seeing your system functions perfectly. When the Growth is done, you receive your promised reward, too.</text>
-			<crewMember amount="1" class="aea_acid_worker" >Acidic Worker</crewMember>
+			<crewMember amount="1" class="oe_acid_worker" >Acidic Worker</crewMember>
 			<autoReward level="MED">standard_no_item</autoReward>	
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
-	<choice hidden="true" req="LIST_CREW_AEA_ACID">
+	<choice hidden="true" req="LIST_CREW_OE_ACID">
 		<text>(Acidic Growth) Send over your Acidic crew to reconfigure it.</text>
 		<event>
 			<text>Your crewmember, being of Acidic Growth origin themselves, is familiar with this tech, and reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true" req="LIST_CREW_ENGI">
@@ -2372,7 +2372,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<event>
 			<text>Your Engi knows just about everything there is to know about technology like this, and reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true" req="human_engineer">
@@ -2380,7 +2380,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<event>
 			<text>Your Engineer studied all forms of life support technology, and so reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true" req="human_technician">
@@ -2388,7 +2388,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<event>
 			<text>There's next to nothing a WI Technician can't fix when it comes to systems, and so they reconfigure it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true" req="shell_mechanic">
@@ -2396,15 +2396,15 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<event>
 			<text>While Shell Mechanics are more known for their nanites, it doesn't mean they don't have a bunch of general knowledge. They reconfigure the life support swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
-	<choice hidden="true" req="LIST_CREW_AEA_BIRD">
+	<choice hidden="true" req="LIST_CREW_OE_BIRD">
 		<text>(Gi) Send your Gi to reconfigure it.</text>
 		<event>
 			<text>Gi know about all sorts of technology, not just drones. They reconfigure the life support swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
-			<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+			<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -2423,22 +2423,22 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<eventList name="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_CHANCE">
-	<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_SUCCESS" />
-	<event load="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_FAIL" />
+<eventList name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHANCE">
+	<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_SUCCESS" />
+	<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_FAIL" />
 </eventList>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_SUCCESS">
+<event name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_SUCCESS">
 	<text>You and your crew mess with life support for a bit and somehow manage to make it work! If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 	<autoReward level="MED">standard_no_item</autoReward>
-	<queueEvent>MORALITY_REMOVE_AEA_ACID</queueEvent>	
+	<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
 </event>
 
-<event name="NEBULA_AEA_ACID_DISTRESS_BROKEN_O2_FAIL">
+<event name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_FAIL">
 	<text>All your attempts to make life support spread the Growth end in failure, and you even manage to break it fully! Now with O2 levels dropping, you have no choice but abandon the task. The Acidic Growth doesn't seem mad, but you probably should jump away from this beacon while they still process this.</text>
 </event>
 
-<event name="AEA_ACID_DISTRESS_VAMPWEED">
+<event name="OE_ACID_DISTRESS_VAMPWEED">
 	<distressBeacon />
 	<text>The origin of distress signal here is an Acidic Vessel in perfect condition. Acidic Growth usually sticks to their nebulae, so one of them staying at a clear beacon for prolonged period of time is indeed weird.</text>
 	<choice hidden="true">
@@ -2482,8 +2482,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_ORCHID_DISTRESS_PRESSURE">
-	<beaconType id="map_icon_aea_acid_nebula_distress" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_ORCHID_DISTRESS_PRESSURE">
+	<beaconType id="map_icon_oe_acid_nebula_distress" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -2515,7 +2515,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 									</choice>
 									<choice hidden="true" req="BLUELIST_CREW_NO2">
 										<text>(Anaerobic Crew) Send your anaerobic crew to try repair breaches.</text>
-										<event load="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC" />
+										<event load="OE_ACID_ORCHID_PRESSURE_ANAEROBIC" />
 									</choice>
 									<choice hidden="true" req="BLUELIST_DRONES_REPAIR_CREW">
 										<text>(Maintenance Drone) Send your drone to repair breaches.</text>
@@ -2561,18 +2561,18 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<eventList name="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC">
-	<event load="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC_SUCCESS" />
-	<event load="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC_FAILURE" />
+<eventList name="OE_ACID_ORCHID_PRESSURE_ANAEROBIC">
+	<event load="OE_ACID_ORCHID_PRESSURE_ANAEROBIC_SUCCESS" />
+	<event load="OE_ACID_ORCHID_PRESSURE_ANAEROBIC_FAILURE" />
 </eventList>
 
-<event name="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC_SUCCESS">
+<event name="OE_ACID_ORCHID_PRESSURE_ANAEROBIC_SUCCESS">
 	<text>Your anaerobic crewmember works fast, and, miraculously, manages to sustain the oxygen in the hallway enough for Orchids to evacuate! Everyone gets on your ship and you move away from the doomed vessel, seeing it buckle under pressure. You promise to drop everyone off at the closest station, but the Orchid you first met volunteers to serve on your ship out of gratitude.</text>
 	<crewMember amount="1" class="orchid_caretaker" />
 	<queueEvent>MORALITY_REMOVE_ORCHID</queueEvent>
 </event>
 
-<event name="AEA_ACID_ORCHID_PRESSURE_ANAEROBIC_FAILURE">
+<event name="OE_ACID_ORCHID_PRESSURE_ANAEROBIC_FAILURE">
 	<text>Your anaerobic crewmember tries as they might, but, in the middle of patching up the hull, the vessel buckles under pressure, the bridge exploding into countless pieces of glass and titanwood, sending the remaining crew flying into space. You manage to save the Orchid you met and your stranded crewmember, but everyone else has been lost. You promise to drop the Orchid off at the closest station.</text>
 </event>
 
@@ -2583,13 +2583,13 @@ You are now, finally, left alone... well, better than that, even: you've been le
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-<eventList name="NEBULA_QUEST_AEA_ACID">
-	<event load="NEBULA_ACIDIC_AEA_ACID_CIV" />
-	<event load="NEBULA_QUEST_AEA_ACID_PIRATE_TRAP" />
+<eventList name="NEBULA_QUEST_OE_ACID">
+	<event load="NEBULA_ACIDIC_OE_ACID_CIV" />
+	<event load="NEBULA_QUEST_OE_ACID_PIRATE_TRAP" />
 </eventList>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_CIV">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_CIV">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -2597,10 +2597,10 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <text>You arrive at the beacon face to face with an Elite Acidic vessel. They don't appear to react to your arrival.</text>
-    <ship load="SHIP_AEA_ACID_ELITE_FIGHT" hostile="false" />
+    <ship load="SHIP_OE_ACID_ELITE_FIGHT" hostile="false" />
     <choice hidden="true">
         <text>Hail the vessel.</text>
         <event>
@@ -2609,8 +2609,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Agree to hunt down the ship.</text>
 				<event>
 					<text>Despite also technically being a trespasser, clearly the Acidic Growth cares much more about dealing with this other ship. They send you the coordinates for the last reported location.</text>
-                    <variable name="aea_acid_friendly" op="set" val="1" />
-					<quest event="NEBULA_AEA_ACID_CIV_HUNT" />
+                    <variable name="oe_acid_friendly" op="set" val="1" />
+					<quest event="NEBULA_OE_ACID_CIV_HUNT" />
 				</event>
 			</choice>
 			<choice hidden="true">
@@ -2655,7 +2655,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 </event>
-<event name="NEBULA_AEA_ACID_CIV_HUNT">
+<event name="NEBULA_OE_ACID_CIV_HUNT">
 	<beaconType id="map_icon_quest" global="true">
 		<color r="69" g="168" b="235" a="1" />
 		<unvisitedTooltip>The Acidic Growth has asked you to pursue a vessel here.</unvisitedTooltip>
@@ -2666,7 +2666,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<text>Follow them.</text>
 		<event>
 			<text>The ship tries desperately to shake you, but you won't relent. At last, they give up and hail you. "Are you one of them? Please grant us mercy, we're just trying to escape!"</text>
-			<ship load="SHIP_AEA_ACID_CIVILIAN" hostile="false" />
+			<ship load="SHIP_OE_ACID_CIVILIAN" hostile="false" />
 			<choice hidden="true">
 				<text>Ignore their pleas and attack.</text>
 				<event>
@@ -2704,20 +2704,20 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 </event>
-<event name="NEBULA_AEA_ACID_CIV_HUNT_WIN">   
+<event name="NEBULA_OE_ACID_CIV_HUNT_WIN">   
 	<text>You jump as the Acidic ship comes out of its hiding place in the nebula before you can even contact them. "Mission, complete. Outsider, praise. The reward, as promised."</text>
 	<autoReward level="MED">standard_no_item</autoReward>
 	<weapon name="RANDOM" />
 </event>
 
-<event name="NEBULA_QUEST_AEA_ACID_PIRATE_TRAP" unique="true">
+<event name="NEBULA_QUEST_OE_ACID_PIRATE_TRAP" unique="true">
 	<text>You arrive to the sight of two Slug ships in communication range. They don't see you.</text>
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Tap their comm frequency.</text>
 		<event>
 			<text>You overhear their conversation and learn they're planning to raid a secret Acidic base in the area. The pair jump off and you note down their target co-ordinates.</text>
-			<quest event="NEBULA_ACIDIC_QUEST_AEA_ACID_PIRATE_TRAP2" />
+			<quest event="NEBULA_ACIDIC_QUEST_OE_ACID_PIRATE_TRAP2" />
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -2735,14 +2735,14 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 </event>
-<event name="NEBULA_ACIDIC_QUEST_AEA_ACID_PIRATE_TRAP2">
+<event name="NEBULA_ACIDIC_QUEST_OE_ACID_PIRATE_TRAP2">
 	<beaconType id="map_icon_quest" global="true">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>Location of a supposed wealthy pirate targeted by a pair of Slug ships.</unvisitedTooltip>
 	</beaconType> 
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 	<text>You catch up with the two Slug ships and they're already carrying out their raid! One is in close combat with an Acidic vessel, the other seems to be heading for a small space cache the vessel was protecting.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -2752,7 +2752,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Engage the Acidic ship.</text>
 				<event>
 					<text>There's money to be made here. The Slugs know that. You turn on the Acidic vessel and intercept it just before they can reach the cache!.</text>
-					<ship load="SHIP_QUEST_AEA_ACID_PIRATE_TRAP1" hostile="true" />
+					<ship load="SHIP_QUEST_OE_ACID_PIRATE_TRAP1" hostile="true" />
 					<choice hidden="true">
 						<text>Continue...</text>
 						<event load="COMBAT_CHECK" />
@@ -2763,7 +2763,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Head for the cache.</text>
 				<event>
 					<text>When he sees you making for the cache the Slug captain hails: "Foolish alienss, no eye for profit. Bessst of luck to you." They jump off, leaving you toe to toe with the Acidic vessel!.</text>
-					<ship load="SHIP_QUEST_AEA_ACID_PIRATE_TRAP2" hostile="true" />
+					<ship load="SHIP_QUEST_OE_ACID_PIRATE_TRAP2" hostile="true" />
 					<choice hidden="true">
 						<text>Continue...</text>
 						<event load="COMBAT_CHECK" />
@@ -2774,7 +2774,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION">
+<event name="NEBULA_OE_QUEST_ACID_COALITION">
 	<environment type="nebula" />
 	<ship load="SHIP_COALITION_ELITE_FIGHT" hostile="false" />
 	<text>A RUES ship is at this beacon. They don't show any signs of hostility.</text>
@@ -2788,19 +2788,19 @@ You are now, finally, left alone... well, better than that, even: you've been le
 					<text>The Slug looks at you for just enough time to make you uncomfortable. "Mercenary work, that'sss what. Acidic gasssesss are not part of Federation, or any sssane individual'sss definition of 'sssapient life'. Need to raid a convoy that passsesss through this sssector. The target is a ssship, that ssshould be captured without, erm, exploding. We'll dissstract the essscort in the meantime. Think you can manage?"</text>
 					<choice hidden="true">
 						<text>We'll manage alright.</text>
-						<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+						<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 					</choice>
 					<choice hidden="true">
 						<text>What's important about that ship?</text>
-						<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE" />
+						<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE" />
 					</choice>
 					<choice hidden="true">
 						<text>We've heard enough. Attack them.</text>
-						<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+						<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 					</choice>
 					<choice hidden="true">
 						<text>We'll pass.</text>
-						<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+						<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 					</choice>
 				</event>
 			</choice>
@@ -2825,13 +2825,13 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_AGREED">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_AGREED">
 	<text>"Good. Sssee you later." The Coalition ship transmits coordinates of the convoy and jumps away.</text>
-	<quest event="NEBULA_AEA_QUEST_ACID_COALITION_2" />
+	<quest event="NEBULA_OE_QUEST_ACID_COALITION_2" />
 	<instantEscape/>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_IGNORE">
 	<text>"Predictable. We'll jussst wait for sssomeone who actually wantsss ssscrap, then." Now that you confirmed the ship's intentions do not include attacking you, you can do something aboard the ship.</text>
 	<choice>
 		<text>Do something onboard the ship.</text>
@@ -2843,117 +2843,117 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE">
 	<text>"Classsified. Jussst make sssure you can get rid of itsss crew. You'll get paid, don't worry."</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 	</choice>
 	<choice hidden="true">
 		<text>Pretty please?</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_BASIC" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_BASIC" />
 	</choice>
 	<choice hidden="true" req="LIST_CREW_COALITION">
 		<text>(Coalition-aligned Crew) We're a Coalition ship, actually.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_CREW" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_CREW" />
 	</choice>
-	<choice hidden="true" req="LIST_CREW_AEA_COALITION_ELITE">
+	<choice hidden="true" req="LIST_CREW_OE_COALITION_ELITE">
 		<text>(Elite Coalition-aligned Crew) We're a Coalition ship, actually.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_ELITE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_ELITE" />
 	</choice>
 	<choice hidden="true">
 		<text>We've heard enough. Attack them.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 	</choice>
 	<choice hidden="true">
 		<text>We'll pass.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 	</choice>
 </event>
 
-<eventList name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_BASIC">
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_BASIC" />
+<eventList name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_BASIC">
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_BASIC" />
 
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_FAIL" />
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_FAIL" />
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_FAIL" />
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_FAIL" />
 </eventList>
 
-<eventList name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_CREW">
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW" />
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW" />
+<eventList name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_CREW">
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW" />
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW" />
 
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_FAIL" />
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_FAIL" />
 </eventList>
 
-<eventList name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_LIST_ELITE">
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_ELITE" />
+<eventList name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_LIST_ELITE">
+	<event load="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_ELITE" />
 </eventList>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_FAIL">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_FAIL">
 	<text>"No. What will it be?"</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 	</choice>
 	<choice hidden="true">
 		<text>We've heard enough. Attack them.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 	</choice>
 	<choice hidden="true">
 		<text>We'll pass.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_BASIC">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_BASIC">
 	<text>The Slug briefly looks around, before beginning to tap away with their pen again. "That'sss pathetic." With a sigh, they stop their fidgeting, "Fine. I don't care. The vesssel intended for capture isss a Cealaformer. If you're not familiar, it'sss a ssship that can ssspread nebula gasssesss on itsss own. Turnsss out, the ssspace mold has thossse too. To be able to sssettle anywhere it wantsss... Kind of dangerousss for sssapient life, don't you think?"</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 	</choice>
 	<choice hidden="true">
 		<text>We've heard enough. Attack them.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 	</choice>
 	<choice hidden="true">
 		<text>We'll pass.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_CREW">
 	<text>The Slug briefly looks around, before beginning to tap away with their pen again. "You're not." With a sigh, they stop their fidgeting, "Fine. I don't care. The vesssel intended for capture isss a Cealaformer. If you're not familiar, it'sss a ssship that can ssspread nebula gasssesss on itsss own. Turnsss out, the ssspace mold has thossse too. To be able to sssettle anywhere it wantsss... Kind of dangerousss for sssapient life, don't you think?"</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 	</choice>
 	<choice hidden="true">
 		<text>We've heard enough. Attack them.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 	</choice>
 	<choice hidden="true">
 		<text>We'll pass.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ELABORATE_SUCCESS_ELITE">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_ELITE">
 	<text>The Slug briefly looks around, before beginning to tap away with their pen again. "Are you... undercover?.." With a sigh, they stop their fidgeting, "Fine. I don't care. The vesssel intended for capture is a Cealaformer. If you're not familiar, it'sss a ssship that can ssspread nebula gasssesss on itsss own. Turnsss out, the ssspace mold has thossse too. To be able to sssettle anywhere it wantsss... Kind of dangerousss for sssapient life, don't you think?"</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_AGREED" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
 	</choice>
 	<choice hidden="true">
 		<text>We've heard enough. Attack them.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_ATTACK" />
 	</choice>
 	<choice hidden="true">
 		<text>We'll pass.</text>
-		<event load="NEBULA_AEA_QUEST_ACID_COALITION_IGNORE" />
+		<event load="NEBULA_OE_QUEST_ACID_COALITION_IGNORE" />
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_ATTACK">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_ATTACK">
 	<text>Now that you know their intentions, you can't let them go. "Aw ssshucks, didn't take you for one to fight for the sssake of sssome irrelevant mold. Charge the gunsss, boysss."</text>
 	<ship hostile="true" />
 	<choice hidden="true">
@@ -2962,9 +2962,9 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_QUEST_ACID_COALITION_2">
+<event name="NEBULA_OE_QUEST_ACID_COALITION_2">
 	<environment type="nebula" />
-	<ship load="SHIP_AEA_ACID_CEALAFORMER" hostile="false" />
+	<ship load="SHIP_OE_ACID_CEALAFORMER" hostile="false" />
 	<beaconType id="map_icon_quest" global="true">
 		<color r="69" g="168" b="235" a="1" />
 		<unvisitedTooltip>The Acidic Growth convoy is passing through here.</unvisitedTooltip>
@@ -2975,7 +2975,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<event>
 			<ship hostile="true" />
 			<text>You prepare to secure the strange vessel.</text>
-			<queueEvent>MORALITY_UPDATE_AEA_ACID_FIGHT</queueEvent>	
+			<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>	
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -2986,10 +2986,10 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<eventList name="NEBULA_QUEST_AEA_ACID_UNIQUE">
-	<event load="NEBULA_ACIDIC_AEA_ACID_CIV" />
-	<event load="NEBULA_QUEST_AEA_ACID_PIRATE_TRAP" />
-	<event load="NEBULA_AEA_QUEST_ACID_COALITION" />
+<eventList name="NEBULA_QUEST_OE_ACID_UNIQUE">
+	<event load="NEBULA_ACIDIC_OE_ACID_CIV" />
+	<event load="NEBULA_QUEST_OE_ACID_PIRATE_TRAP" />
+	<event load="NEBULA_OE_QUEST_ACID_COALITION" />
 </eventList>
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -2998,52 +2998,52 @@ You are now, finally, left alone... well, better than that, even: you've been le
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-<eventList name="NEBULA_HOSTILE_AEA_ACID">
-	<event load="NEBULA_ENCOUNTER_AEA_ACID" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_FIGHT" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_PIRATE" />
+<eventList name="NEBULA_HOSTILE_OE_ACID">
+	<event load="NEBULA_ENCOUNTER_OE_ACID" />
+	<event load="NEBULA_ACIDIC_OE_ACID_FIGHT" />
+	<event load="NEBULA_ACIDIC_OE_ACID_PIRATE" />
 </eventList>
 
-<event name="NEBULA_ENCOUNTER_AEA_ACID">
+<event name="NEBULA_ENCOUNTER_OE_ACID">
 	<loadEventList first="false" generate="true">
-		<event name="NEBULA_ENCOUNTER_AEA_ACID_REGULAR" />
-		<event name="NEBULA_ENCOUNTER_AEA_ACID_STORM" />
+		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
+		<event name="NEBULA_ENCOUNTER_OE_ACID_STORM" />
 	</loadEventList>
 </event>
-<event name="NEBULA_ENCOUNTER_AEA_ACID_REGULAR">
-	<text load="NEBULA_AEA_ACID_FIGHT" />
-	<ship load="SHIP_AEA_ACID_FIGHT" hostile="true" />
+<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR">
+	<text load="NEBULA_OE_ACID_FIGHT" />
+	<ship load="SHIP_OE_ACID_FIGHT" hostile="true" />
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="NEBULA_AEA_ACID_FIGHT">
+<textList name="NEBULA_OE_ACID_FIGHT">
 	<text>At home in the nebula, you barely have time to react when an Acidic vessel emerges from astern!</text>
 	<text>A shiny new Acidic vessel appears in the nebula ahead of you. Too bad you're about to scratch their paint.</text>
 	<text>A strange looking Acidic vessel appears in the nebula. You approach cautiously, unsure of the ship's armaments. Luckily, the Acidic vessel clears the air when weapons spring out of it's hull!</text>
 	<text>You pickup an Acidic vessel approaching. It looks like this one isn't bothering with stealth and is just coming out swinging.</text>
 	<text>As you arrive at the beacon, one of the three circling acidic vessels breaks off to meet you. Prepare for battle.</text>
 </textList>
-<event name="NEBULA_ENCOUNTER_AEA_ACID_STORM" unique="true">
-	<text load="STORM_AEA_ACID_FIGHT" />
-	<ship load="SHIP_AEA_ACID_FIGHT" hostile="true" /> 
+<event name="NEBULA_ENCOUNTER_OE_ACID_STORM" unique="true">
+	<text load="STORM_OE_ACID_FIGHT" />
+	<ship load="SHIP_OE_ACID_FIGHT" hostile="true" /> 
 	<environment type="storm" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
-<textList name="STORM_AEA_ACID_FIGHT">
+<textList name="STORM_OE_ACID_FIGHT">
 	<text>The ion storm here threatens to deactivate your core systems, a fact made all the worse for the impressive Acidic ship waiting for you.</text>
 	<text>You can't help but feel at a disadvantage against the Acidic ship, it seems almost at home in this ion storm.</text>
 	<text>You arrive in the middle of an ion storm. You luckily manage to pickup the Acidic vessel lying in ambush just in time. Prepare for a fight!.</text>
 	<text>You find yourself stuck in the middle of an ion storm with an Acidic ship just a short distance away, refusing all hails. You cautiously try to slip further into the clouds, but they turn suddenly to attack!.</text>	
 </textList>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_FIGHT" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_FIGHT" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3051,18 +3051,18 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>This beacon is embed deeply within the Acidic Growth, and as such it's unsuprising when an Acidic vessel appears from the mist to attack.</text>
-	<ship load="SHIP_AEA_ACID_FIGHT" hostile="true" />
+	<ship load="SHIP_OE_ACID_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_CHECKPOINT_ELITE">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_CHECKPOINT_ELITE">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3070,22 +3070,22 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>It appears the Acidic Growth put a checkpoint at this beacon, to repair their own ships and do quite the opposite to other ones. It noticed you, and you'll likely have to fight through to leave.</text>
-	<ship load="SHIP_AEA_ACID_ELITE_CHECKPOINT" hostile="true" />
+	<ship load="SHIP_OE_ACID_ELITE_CHECKPOINT" hostile="true" />
 	<choice hidden="true">
 		<text>Prepare to defend yourself.</text>
 		<event load="COMBAT_CHECK" />
 	</choice>
-	<choice hidden="true" req="rep_aea_acid" lvl="-2" max_lvl="-1">
+	<choice hidden="true" req="rep_oe_acid" lvl="-2" max_lvl="-1">
 		<text>(Positive Acidic Reputation) Try to appease them by pointing out your good relations.</text>
 		<event>
 			<text>Your pleas seem to work, and the station turns off its weapons. It seems like you'll get no more out of this, but at least you're alive.</text>
 			<ship hostile="false" />
 		</event>
 	</choice>
-	<choice hidden="true" req="rep_aea_acid" lvl="-9999" max_lvl="-3">
+	<choice hidden="true" req="rep_oe_acid" lvl="-9999" max_lvl="-3">
 		<text>(Great Positive Acidic Reputation) Try to appease them by pointing out your good relations.</text>
 		<event>
 			<text>Your pleas seem to work, and the station turns off its weapons. It seems like they recognized you, finally, and share some scrap as an apology.</text>
@@ -3096,7 +3096,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 <event name="NEBULA_ACIDIC_TEST">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3112,8 +3112,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 
-<event name="NEBULA_ACIDIC_AEA_ACID_PIRATE" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_PIRATE" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3121,7 +3121,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>You're surprised to find a ship stranded all the way out here inside of the Acidic Growth, and move in to provide assistance. When you see the pirate insignia on the hull you quickly reconsider.</text>
 	<ship load="SHIP_PIRATE_ALL" hostile="false" />
@@ -3143,22 +3143,22 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 <!-- DEPRECATED EVENT, DELETE LATER
-<event name="NEBULA_AEA_ACID_POISON" unique="true">
+<event name="NEBULA_OE_ACID_POISON" unique="true">
 	<loadEventList seeded="false" first="false" generate="false">
-		<event name="NEBULA_ENCOUNTER_AEA_ACID_REGULAR" req="LIST_CHECK_ANY_CREW" lvl="0" max_lvl="0" />
-		<event name="NEBULA_AEA_ACID_INFECTOR" req="LIST_CHECK_ANY_CREW" lvl="1" />
+		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" req="LIST_CHECK_ANY_CREW" lvl="0" max_lvl="0" />
+		<event name="NEBULA_OE_ACID_INFECTOR" req="LIST_CHECK_ANY_CREW" lvl="1" />
 	</loadEventList>
 </event>
 
-<event name="NEBULA_AEA_ACID_INFECTOR">
+<event name="NEBULA_OE_ACID_INFECTOR">
 	<text>You hear a shout from your crew and come running. A strange bomb has detonated in one of the rooms on your ship, poisoning one of your crew. It appears to have originated from a nearby Acidic vessel. "Thank you for testing our weapon, please let us know when your crewmember dies."</text>
-	<triggeredEvent name="TIMER_AEA_ACID_INFECTOR_POISON" event="AEA_ACID_INFECTOR_DEATH" jumps="1">
+	<triggeredEvent name="TIMER_OE_ACID_INFECTOR_POISON" event="OE_ACID_INFECTOR_DEATH" jumps="1">
 		<triggeredEventBox load="DEFAULT_JUMPS">
 			<warning flash="false" />
 			<tooltip>Your crewmember has been poisoned. If you jump away without curing them, they'll die.</tooltip>
 		</triggeredEventBox>
 	</triggeredEvent>
-	<ship load="SHIP_AEA_ACID_INFECTOR" hostile="false" />
+	<ship load="SHIP_OE_ACID_INFECTOR" hostile="false" />
 	<environment type="nebula" />
 	<choice hidden="true">
 		<text>Attack them, they might have the antidote onboard!</text>
@@ -3175,7 +3175,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<text>Buy the antidote.</text>
 		<event>
 			<text>"Offer is acceptable, it would have been preferable to properly test the weapon."</text>
-			<clearTriggeredEvent name="TIMER_AEA_ACID_INFECTOR_POISON" />
+			<clearTriggeredEvent name="TIMER_OE_ACID_INFECTOR_POISON" />
 			<item_modify>
 				<item type="scrap" min="-25" max="-25" />
 			</item_modify>
@@ -3185,7 +3185,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		<text>(Upg. Medbay) Cure your crew.</text>
 		<event>
 			<text>Luckily you're able to treat your crew. The Acidic vessel appears almost pleased by the news. "Thank you for testing our weapon, we will use this data to improve it for the future."</text>
-			<clearTriggeredEvent name="TIMER_AEA_ACID_INFECTOR_POISON" />
+			<clearTriggeredEvent name="TIMER_OE_ACID_INFECTOR_POISON" />
 			<autoReward level="MED">scrap_only</autoReward>
 		</event>
 	</choice>
@@ -3193,7 +3193,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
         <text>Let your crewmember die of the poison.</text>
         <event>
             <text>You let the Acidic vessel know of the outcome, it appears pleased by the results. "Thank you for testing our weapon, we will use this data to improve it for the future."</text>
-			<clearTriggeredEvent name="TIMER_AEA_ACID_INFECTOR_POISON" />
+			<clearTriggeredEvent name="TIMER_OE_ACID_INFECTOR_POISON" />
 			<autoReward level="MED">scrap_only</autoReward>
             <removeCrew>
                 <clone>true</clone>
@@ -3202,7 +3202,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
         </event>
     </choice>
 </event>
-<event name="AEA_ACID_INFECTOR_DEATH">
+<event name="OE_ACID_INFECTOR_DEATH">
 	<text>Your crew buckles over in pain, gasping for air. Without the antidote there's nothing you can do but watch them die.</text>
 	<removeCrew>
 		<clone>true</clone>
@@ -3212,7 +3212,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 -->
 
 <!-- LACKING EVENT MECHANICS: ACIDIC CLOUDS APPEAR ON YOUR SHIP FOR 1 MINUTE
-<event name="NEBULA_AEA_ACID_WEAPON_TEST">
+<event name="NEBULA_OE_ACID_WEAPON_TEST">
 	<environment type="nebula" />
 	<text>This beacon houses a strange-looking Acidic vessel, equipped with some kind of weaponry you don't immediately recognize. Regardless, those guns are massive; hailing them could be risky.</text>
 	<choice hidden="true">
@@ -3257,23 +3257,23 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_WEAPON_TEST_COMPLETE">
+<event name="NEBULA_OE_ACID_WEAPON_TEST_COMPLETE">
 	<text>The test has been complete. Captain of the Acidic vessel seems grateful. "Outsider, gratitude. Weaponry, efficient. Reward, accept."</text>
 	<autoReward level="HIGH">standard</autoReward>
 </event>
 -->
 
-<eventList name="NEBULA_HOSTILE_AEA_ACID_UNIQUE">
-	<event load="NEBULA_ENCOUNTER_AEA_ACID_HACKER" />
+<eventList name="NEBULA_HOSTILE_OE_ACID_UNIQUE">
+	<event load="NEBULA_ENCOUNTER_OE_ACID_HACKER" />
 	
-	<event load="NEBULA_ENCOUNTER_AEA_ACID" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_FIGHT" />
+	<event load="NEBULA_ENCOUNTER_OE_ACID" />
+	<event load="NEBULA_ACIDIC_OE_ACID_FIGHT" />
 
-	<event load="NEBULA_ACIDIC_AEA_ACID_CHECKPOINT_ELITE" />
-	<event load="NEBULA_ACIDIC_AEA_ACID_HIDEANDSEEK" />
+	<event load="NEBULA_ACIDIC_OE_ACID_CHECKPOINT_ELITE" />
+	<event load="NEBULA_ACIDIC_OE_ACID_HIDEANDSEEK" />
 </eventList>
 
-<event name="NEBULA_ENCOUNTER_AEA_ACID_HACKER" unique="true">
+<event name="NEBULA_ENCOUNTER_OE_ACID_HACKER" unique="true">
 	<text>The Slug Hackers are surprisingly rare, even in Slug territory. Despite this, you seem to have had the misfortune to have encountered one at this beacon.</text>
 	<ship load="SHIP_HACKER" hostile="true" />
 	<environment type="nebula" />
@@ -3283,8 +3283,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_HIDEANDSEEK" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_HIDEANDSEEK" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3295,183 +3295,183 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	<text>The nebula is thick here, but you still see hull of an elite Acidic vessel passing nearby. It's likely it's protecting this beacon, and the fight might be inevitable; you can only get advantage on it.</text>
 	<choice hidden="true">
 		<text>Try to follow it.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_1" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_1" />
 	</choice>
 	<choice hidden="true" req="cloaking" lvl="1">
 		<text>(Cloaking) Hide using your cloak.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_CLOAK" />
+		<event load="OE_ACID_HIDEANDSEEK_CLOAK" />
 	</choice>
 	<choice hidden="true">
 		<text>Try to hide.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_WAIT_LIST" />
+		<event load="OE_ACID_HIDEANDSEEK_WAIT_LIST" />
 	</choice>
 </event>
 
-<eventList name="AEA_ACID_HIDEANDSEEK_LIST_1">
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_1_1" />
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_1_2" />
+<eventList name="OE_ACID_HIDEANDSEEK_LIST_1">
+	<event load="OE_ACID_HIDEANDSEEK_LIST_1_1" />
+	<event load="OE_ACID_HIDEANDSEEK_LIST_1_2" />
 </eventList>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_1_1">
+<event name="OE_ACID_HIDEANDSEEK_LIST_1_1">
 	<text>The elite vessel turns right.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_1_1_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_1_1_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_1_2">
+<event name="OE_ACID_HIDEANDSEEK_LIST_1_2">
 	<text>The elite vessel turns left.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_1_2_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_1_2_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_1_1_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_1_1_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_2" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_2" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_1_2_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_1_2_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_2" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_2" />
 	</choice>
 </event>
 
-<eventList name="AEA_ACID_HIDEANDSEEK_LIST_2">
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_2_1" />
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_2_2" />
+<eventList name="OE_ACID_HIDEANDSEEK_LIST_2">
+	<event load="OE_ACID_HIDEANDSEEK_LIST_2_1" />
+	<event load="OE_ACID_HIDEANDSEEK_LIST_2_2" />
 </eventList>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_2_1">
+<event name="OE_ACID_HIDEANDSEEK_LIST_2_1">
 	<text>The elite vessel turns right.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_2_1_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_2_1_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_2_2">
+<event name="OE_ACID_HIDEANDSEEK_LIST_2_2">
 	<text>The elite vessel turns left.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_2_2_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_2_2_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_2_1_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_2_1_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_3" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_3" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_2_2_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_2_2_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_3" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_3" />
 	</choice>
 </event>
 
-<eventList name="AEA_ACID_HIDEANDSEEK_LIST_3">
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_3_1" />
-	<event load="AEA_ACID_HIDEANDSEEK_LIST_3_2" />
+<eventList name="OE_ACID_HIDEANDSEEK_LIST_3">
+	<event load="OE_ACID_HIDEANDSEEK_LIST_3_1" />
+	<event load="OE_ACID_HIDEANDSEEK_LIST_3_2" />
 </eventList>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_3_1">
+<event name="OE_ACID_HIDEANDSEEK_LIST_3_1">
 	<text>The elite vessel turns right.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_3_1_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_3_1_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_3_2">
+<event name="OE_ACID_HIDEANDSEEK_LIST_3_2">
 	<text>The elite vessel turns left.</text>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LIST_3_2_CHOICE" />
+		<event load="OE_ACID_HIDEANDSEEK_LIST_3_2_CHOICE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_3_1_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_3_1_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_ADVANTAGE" />
+		<event load="OE_ACID_HIDEANDSEEK_ADVANTAGE" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LIST_3_2_CHOICE">
+<event name="OE_ACID_HIDEANDSEEK_LIST_3_2_CHOICE">
 	<text>Where do you follow?</text>
 	<choice hidden="true">
 		<text>Right.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_LOST" />
+		<event load="OE_ACID_HIDEANDSEEK_LOST" />
 	</choice>
 	<choice hidden="true">
 		<text>Left.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_ADVANTAGE" />
+		<event load="OE_ACID_HIDEANDSEEK_ADVANTAGE" />
 	</choice>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_LOST">
+<event name="OE_ACID_HIDEANDSEEK_LOST">
 	<text>It seems like you have gotten lost. Nothing to do but wait.</text>
 	<choice hidden="true" req="cloaking" lvl="1">
 		<text>(Cloaking) Hide using your cloak.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_CLOAK" />
+		<event load="OE_ACID_HIDEANDSEEK_CLOAK" />
 	</choice>
 	<choice hidden="true">
 		<text>Wait.</text>
-		<event load="AEA_ACID_HIDEANDSEEK_WAIT_LIST" />
+		<event load="OE_ACID_HIDEANDSEEK_WAIT_LIST" />
 	</choice>
 </event>
 
-<eventList name="AEA_ACID_HIDEANDSEEK_WAIT_LIST">
-	<event load="AEA_ACID_HIDEANDSEEK_NOTFOUND" />
+<eventList name="OE_ACID_HIDEANDSEEK_WAIT_LIST">
+	<event load="OE_ACID_HIDEANDSEEK_NOTFOUND" />
 
-	<event load="AEA_ACID_HIDEANDSEEK_FOUND" />	
-	<event load="AEA_ACID_HIDEANDSEEK_FOUND" />	
+	<event load="OE_ACID_HIDEANDSEEK_FOUND" />	
+	<event load="OE_ACID_HIDEANDSEEK_FOUND" />	
 </eventList>
 
-<event name="AEA_ACID_HIDEANDSEEK_NOTFOUND">
+<event name="OE_ACID_HIDEANDSEEK_NOTFOUND">
 	<text>Due to some sort of miracle, you haven't been found. You should jump away from this beacon, and fast.</text>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_CLOAK">
+<event name="OE_ACID_HIDEANDSEEK_CLOAK">
 	<text>Your cloaking system proves effective, and you manage to stay hidden long enough to charge FTL drive. Nevertheless, you should jump away from this beacon, and fast.</text>
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_FOUND">
+<event name="OE_ACID_HIDEANDSEEK_FOUND">
 	<text>A powerful shot pierces your hull, leaving marks of erosion behind. You've been found.</text>
-	<ship load="SHIP_AEA_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true" />
+	<ship load="SHIP_OE_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true" />
 	<damage amount="3" system="engines" effect="breach"/>
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -3479,9 +3479,9 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>	
 </event>
 
-<event name="AEA_ACID_HIDEANDSEEK_ADVANTAGE">
+<event name="OE_ACID_HIDEANDSEEK_ADVANTAGE">
 	<text>You followed the elite vessel perfectly, and gained an advantage! You fire a shot through its defenses before it can notice you. They have been weakened, but there's still battle ahead.</text>
-	<ship load="SHIP_AEA_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true" />
+	<ship load="SHIP_OE_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true" />
 	<enemyDamage amount="3" system="engines" effect="breach"/>
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -3496,8 +3496,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
-<event name="NEBULA_ACIDIC_ENCOUNTER_AEA_ACID_ELITE" unique="true">
-	<beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_ENCOUNTER_OE_ACID_ELITE" unique="true">
+	<beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3505,10 +3505,10 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>You find yourself deep within the Acidic Growth at this beacon. The Acidic Elite here seems to take your intrusion in their territory as an insult, and have decided to remove you from it.</text>
-	<ship load="SHIP_AEA_ACID_ELITE_FIGHT" hostile="true" />
+	<ship load="SHIP_OE_ACID_ELITE_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="COMBAT_CHECK" />
@@ -3522,13 +3522,13 @@ You are now, finally, left alone... well, better than that, even: you've been le
     <text>The distress beacon here appears to be broadcasting through a clearing in the nebula. Following it, you come across a rogue planet drifting through the abyss. Scans indicate that something has crashed on the surface.</text>
     <img planet="PLANET_WATER" />
     <status type="loss" target="player" system="sensors" amount="1" />
-    <choice req="loc_found_aea_acid_factory" lvl="0" hidden="true" max_group="0" blue="false">
+    <choice req="loc_found_oe_acid_factory" lvl="0" hidden="true" max_group="0" blue="false">
         <text>Investigate.</text>
-        <event load="DISTRESS_AEA_ACID_INVESTIGATE" />
+        <event load="DISTRESS_OE_ACID_INVESTIGATE" />
     </choice>
-    <choice req="loc_found_aea_acid_factory" lvl="1" hidden="true" max_group="0" blue="false">
+    <choice req="loc_found_oe_acid_factory" lvl="1" hidden="true" max_group="0" blue="false">
         <text>Investigate.</text>
-        <event load="DISTRESS_AEA_ACID_INVESTIGATE_BORING" />
+        <event load="DISTRESS_OE_ACID_INVESTIGATE_BORING" />
     </choice> 
     <choice req="pilot" lvl="1" hidden="true" max_group="1" blue="false">
         <text>Ignore the wreck.</text>
@@ -3546,8 +3546,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="DISTRESS_AEA_ACID_INVESTIGATE" unique="true">
-	<variable name="loc_found_aea_acid_factory" op="set" val="1" />
+<event name="DISTRESS_OE_ACID_INVESTIGATE" unique="true">
+	<variable name="loc_found_oe_acid_factory" op="set" val="1" />
 	<text>You pilot closer to the planet. As you get closer you manage to make out the crater on the surface, however instead of a crashed star ship you find a strange factory. It appears however that something crashed into the factory, causing the distress beacon.</text>
 	<choice>
 		<text>Land and explore the factory.</text>
@@ -3562,7 +3562,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 					</item_modify>
 					<choice hidden="true">
 						<text>Continue...</text>
-						<event load="AEA_ACIDIC_LEADER_FIND" />
+						<event load="OE_ACIDIC_LEADER_FIND" />
 					</choice>
 				</event>
 			</choice>
@@ -3575,7 +3575,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 					</item_modify>
 					<choice hidden="true">
 						<text>Continue...</text>
-						<event load="AEA_ACIDIC_LEADER_FIND" />
+						<event load="OE_ACIDIC_LEADER_FIND" />
 					</choice>
 				</event>
 			</choice>
@@ -3588,7 +3588,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 					</item_modify>
 					<choice hidden="true">
 						<text>Continue...</text>
-						<event load="AEA_ACIDIC_LEADER_FIND" />
+						<event load="OE_ACIDIC_LEADER_FIND" />
 					</choice>
 				</event>
 			</choice>
@@ -3602,7 +3602,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 </event>
-<event name="AEA_ACIDIC_LEADER_FIND">
+<event name="OE_ACIDIC_LEADER_FIND">
 	<text>Eventually you arrive in a control room of sorts, and in the middle of it you find a single surviving Acidic Worker, however there's something off about this soldier, the normally green acidic growth has turned purple, you're not sure what this means but you go over to make contact.</text>
 	<choice hidden="true">
 		<text>Hello?.</text>
@@ -3619,9 +3619,9 @@ You are now, finally, left alone... well, better than that, even: you've been le
                             <item_modify>
                                 <item type="scrap" min="-20" max="-20" />
                             </item_modify>
-                            <variable name="coords_aea_bill" op="set" val="1" />
-                            <variable name="aea_acid_friendly" op="set" val="1" />
-                            <variable name="aea_acid_bill" op="set" val="1" />
+                            <variable name="coords_oe_bill" op="set" val="1" />
+                            <variable name="oe_acid_friendly" op="set" val="1" />
+                            <variable name="oe_acid_bill" op="set" val="1" />
                         </event>
                     </choice>
                     <choice hidden="false">
@@ -3637,7 +3637,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 
-<event name="DISTRESS_AEA_ACID_INVESTIGATE_BORING">
+<event name="DISTRESS_OE_ACID_INVESTIGATE_BORING">
 	<text>Feeling a strange sense of deja-vu, you pilot closer to the planet. Alas, nothing remains but an empty factory, devoid of life.</text>
 	<autoReward level="MED">standard</autoReward>
 </event>
@@ -3654,8 +3654,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 -->
 
-<event name="NEBULA_ACIDIC_AEA_ACID_BILL_MEET" unique="true">
-    <beaconType id="map_icon_aea_acid_nebula" global="false">
+<event name="NEBULA_ACIDIC_OE_ACID_BILL_MEET" unique="true">
+    <beaconType id="map_icon_oe_acid_nebula" global="false">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3663,10 +3663,10 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <text>In the middle of the Acidic Growth you discover a strange ship floating through the nebula.</text>
-    <choice hidden="true" req="aea_acid_bill">
+    <choice hidden="true" req="oe_acid_bill">
         <text>You identify the ship as belonging to Bill.</text>
         <event load="OPTION_INVALID"/>
     </choice>
@@ -3674,7 +3674,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
         <text>Contact the ship.</text>
         <event>
             <text>Just as you're about to make contact, an Acidic vessel comes flying out of the nebula to immediately eviscerate the strange ship. The acidic vessel then turns it's murderous intent on you, prepare for combat.</text>
-            <ship load="SHIP_AEA_ACID_BILL_MEET" hostile="true" />
+            <ship load="SHIP_OE_ACID_BILL_MEET" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
@@ -3697,30 +3697,30 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_BILL_JOIN1">
+<event name="NEBULA_OE_ACID_BILL_JOIN1">
     <text>You move in the scoop up the Acidic Worker, as you're doing so you notice that the normally green Acidic Growth is a shade of purple.</text>
-    <choice hidden="true" req="aea_acid_bill" lvl="1" blue="false">
+    <choice hidden="true" req="oe_acid_bill" lvl="1" blue="false">
         <text>You recognise the Acidic Worker as Bill.</text>
-        <event name="NEBULA_AEA_ACID_BILL_HELP">
+        <event name="NEBULA_OE_ACID_BILL_HELP">
             <text>"Well I'm trying to get to the Acidic core, Hopefully I'll be able to reintergrate with the Acidic Growth once im there. The only problem is that I don't have a ship anymore, do you think you can take me there?"</text>
             <choice hidden="true">
                 <text>Sure we can.</text>
                 <event>
                     <text>"Thanks! I'll upload the coordinates to your computer."</text>
-                    <quest event="NEBULA_ACIDIC_AEA_ACID_BILL_CORE">
+                    <quest event="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
                         <nebulaBeacon>true</nebulaBeacon>
-                        <nebulaEvent>NEBULA_ACIDIC_AEA_ACID_BILL_CORE</nebulaEvent>
+                        <nebulaEvent>NEBULA_ACIDIC_OE_ACID_BILL_CORE</nebulaEvent>
                         <createNebula>false</createNebula>
                     </quest>
                 </event>
             </choice>
         </event>
     </choice>
-    <choice hidden="true" req="aea_acid_bill" lvl="1" blue="false">
+    <choice hidden="true" req="oe_acid_bill" lvl="1" blue="false">
         <text>Throw them back into the void of space.</text>
         <event/>
     </choice>
-    <choice hidden="true" req="aea_acid_bill" lvl="0" max_lvl="0" blue="false">
+    <choice hidden="true" req="oe_acid_bill" lvl="0" max_lvl="0" blue="false">
         <text>Continue...</text>
         <event>
             <text>Strangely the Acidic Worker begins to tell you it's story, apparently it's become seperated from the Acidic Growth somehow and has been trying to rejoin it.</text>
@@ -3730,7 +3730,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
                     <text>"Hmmm, I don't think I'm quite the Acidic Growth anymore, I suppose you can call me Bill, I've always liked the name Bill."</text>
                     <choice hidden="true">
                         <text>"What can we do to help?"</text>
-                        <event load="NEBULA_AEA_ACID_BILL_HELP"/>
+                        <event load="NEBULA_OE_ACID_BILL_HELP"/>
                     </choice>
                 </event>
             </choice>
@@ -3738,8 +3738,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_BILL_CORE">
-    <beaconType id="map_icon_aea_acid_nebula_core" global="true">
+<event name="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
+    <beaconType id="map_icon_oe_acid_nebula_core" global="true">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>The Core of the Acidic Growth, this is the original location where the Acidic Growth formed, and as such has the highest concentration of Acidic Growth in the sector.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -3747,12 +3747,12 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <text>You've arrived at the Acidic Core, an extremely dense Acidic Nebula, the location where the Acidic Growth originally formed. It's so dense that it's hard for the Acidic Growth to guard it, they do try however.</text>
     <choice hidden="true">
         <text>Continue...</text>
-        <event name="NEBULA_AEA_ACID_BILL_RELEASE">
+        <event name="NEBULA_OE_ACID_BILL_RELEASE">
             <text>You sneak towards the densest part of the nebula, before releasing bill out into the Acidic Growth.</text>
             <choice hidden="true">
                 <text>Continue...</text>
@@ -3760,19 +3760,19 @@ You are now, finally, left alone... well, better than that, even: you've been le
                     <text>You watch as bill attempts to reintergrate with the Acidic Growth. Strangely the Acidic Growth around him is turning red, and even black in some sections. You're not sure exactly what's happening but it doesn't seem good.</text>
                     <choice>
                         <text>Continue...</text>
-                        <event name="NEBULA_AEA_ACID_BILL_BOSS">
+                        <event name="NEBULA_OE_ACID_BILL_BOSS">
                             <text>It appears that the Acidic Growth around bill is dying, and you're no the only one who's noticed. Your weak sensors manage to pickup a massive Acidic vessel careening towards you. You give bill a few more moments but you're forced to scoop bill back up before the Acidic vessel runs you over.</text>
                             <choice>
                                 <text>Continue...</text>
                                 <event>
-                                    <ship load="SHIP_AEA_ACID_BILL_BOSS" hostile="true"/>
+                                    <ship load="SHIP_OE_ACID_BILL_BOSS" hostile="true"/>
                                     <text>"I can't believe it, It rejected me, I rejected me." Bill is silent for a moment. "I don't know what to do anymore, what is my purpose, why do I exist?"</text>
                                     <choice hidden="true">
                                         <text>Offer bill a place on your crew.</text>
                                         <event>
                                             <text>"That sounds fun, whats our first mission captain?" Exasperated, you gesture at the rapidly approaching Acidic vessel, you wonder if bringing bill on is such a good idea afterall.</text>
-                                            <crewMember amount="1" all_skills="1" class="aea_acid_bill">Bill</crewMember>
-											<achievement silent="false">ACH_AEA_CREW_BILL</achievement>
+                                            <crewMember amount="1" all_skills="1" class="oe_acid_bill">Bill</crewMember>
+											<achievement silent="false">ACH_OE_CREW_BILL</achievement>
                                             <choice hidden="true">
                                                 <text>Continue...</text>
                                                 <event load="COMBAT_CHECK" />
@@ -3799,16 +3799,16 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_SHIPYARD" unique="true">
-    <beaconType id="map_icon_aea_acid_nebula_shipyard" global="true">
+<event name="NEBULA_ACIDIC_OE_ACID_SHIPYARD" unique="true">
+    <beaconType id="map_icon_oe_acid_nebula_shipyard" global="true">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
 		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
 	</beaconType>
-	<img back="BACK_EVENT_ACIDICNEBULA" planet="PLANET_AEA_ACID_STATION" />
+	<img back="BACK_EVENT_ACIDICNEBULA" planet="PLANET_OE_ACID_STATION" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <text>You've arrived at the beacon, one of the few marked locations in Acidic space. This shipyard was where the first Acidic vessels were constructed and today it serves as the main diplomatic quarters between the Acidic Growth and the Orchids.</text>
     <choice hidden="true">
@@ -3821,7 +3821,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
                     <text>Surprisingly the bribe works, the orchid that confronted you even logs you in the system as visitors.</text>
                     <choice hidden="true">
                         <text>Continue...</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB"/>
                     </choice>
                 </event>
             </choice>
@@ -3831,37 +3831,37 @@ You are now, finally, left alone... well, better than that, even: you've been le
                     <text>The orchid seems a bit suspicious but doesn't push it, you're able to continue moving through the shipyard.</text>
                     <choice hidden="true">
                         <text>Continue...</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB"/>
                     </choice>
                 </event>
             </choice>
-            <choice hidden="true" req="aea_acid_bill">
+            <choice hidden="true" req="oe_acid_bill">
                 <text>(Acidic Outcast) Have Bill pose as captain.</text>
                 <event>
                     <text>The orchid seems a bit suspicious but doesn't push it, you're able to continue moving through the shipyard.</text>
                     <choice hidden="true">
                         <text>Continue...</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB"/>
                     </choice>
                 </event>
             </choice>
-            <choice hidden="true" req="aea_acid_worker">
+            <choice hidden="true" req="oe_acid_worker">
                 <text>(Acidic Worker) Have your Acidic Worker pose as captain.</text>
                 <event>
                     <text>The orchid seems a bit suspicious but doesn't push it, you're able to continue moving through the shipyard.</text>
                     <choice hidden="true">
                         <text>Continue...</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB"/>
                     </choice>
                 </event>
             </choice>
-            <choice hidden="true" req="aea_acid_soldier">
+            <choice hidden="true" req="oe_acid_soldier">
                 <text>(Acidic Soldier) Have your Acidic Soldier pose as captain.</text>
                 <event>
                     <text>The orchid seems a bit suspicious but doesn't push it, you're able to continue moving through the shipyard.</text>
                     <choice hidden="true">
                         <text>Continue...</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB"/>
                     </choice>
                 </event>
             </choice>
@@ -3897,91 +3897,91 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD">
-    <loadEvent>NEBULA_AEA_ACID_SHIPYARD_HUB</loadEvent>
+<event name="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD">
+    <loadEvent>NEBULA_OE_ACID_SHIPYARD_HUB</loadEvent>
 </event>
 
-<event name="NEBULA_AEA_ACID_SHIPYARD_HUB">
+<event name="NEBULA_OE_ACID_SHIPYARD_HUB">
     <text>Eventually you make your way to the Acidic only section of the shipyard. You have three options for direction, the right leads to the engineering bays, the middle leads to a control room, while the left leads to the laboratories.</text>
-    <choice hidden="true" req="aea_acid_lab_visited" blue="false" lvl="0" max_lvl="0">
+    <choice hidden="true" req="oe_acid_lab_visited" blue="false" lvl="0" max_lvl="0">
         <text>Head to the laboratories.</text>
         <event>
             <text>You enter the laboratories, luckily they appear to be mostly abandoned, you're able to avoid contact with any Acidic Soldiers. Eventually you find something of interest, A massive weapon appears to be underconstruction here, it appears almost finished, it's only missing a barrel.</text>
-            <variable name="aea_acid_lab_visited" op="set" val="1" />
+            <variable name="oe_acid_lab_visited" op="set" val="1" />
             <choice>
                 <text>Take the weapon and search for a barrel.</text>
                 <event>
-                    <weapon name="AEA_LASER_ACID_SUPER_BASE"/>
+                    <weapon name="OE_LASER_ACID_SUPER_BASE"/>
                     <text>You grab the weapon before searching the area for an appropriate barrel, Unfortunately you can't find one.</text>
                     <choice hidden="true">
                         <text>Return back the way you came.</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
                     </choice>
                 </event>
             </choice>
             <choice hidden="true">
                 <text>Return back the way you came.</text>
-                <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
             </choice>
         </event>
     </choice>
-    <choice hidden="true" req="aea_acid_lab_visited" blue="false" lvl="1">
+    <choice hidden="true" req="oe_acid_lab_visited" blue="false" lvl="1">
         <text>Head to the laboratories. (ALREADY VISITED).</text>
         <event load="OPTION_INVALID"/>
     </choice>
-    <choice hidden="true" req="aea_acid_con_visited" blue="false" lvl="0" max_lvl="0">
+    <choice hidden="true" req="oe_acid_con_visited" blue="false" lvl="0" max_lvl="0">
         <text>Head to the control room.</text>
         <event>
             <text>You enter the control room, luckily it's unmanned at the moment, Unfortunately you aren't able to access anything due to your lack of authorization, you are able to see the coordinates of a transport carrying something important for an ongoing project, however you aren't entirely sure what it is.</text>
-            <variable name="aea_acid_con_visited" op="set" val="1" />
+            <variable name="oe_acid_con_visited" op="set" val="1" />
             <choice>
                 <text>Download the coordinates.</text>
                 <event>
                     <text>You quickly download the coordinates to your ship.</text>
-                    <quest event="NEBULA_ACIDIC_AEA_ACID_TRANSPORT_BARREL">
+                    <quest event="NEBULA_ACIDIC_OE_ACID_TRANSPORT_BARREL">
                         <nebulaBeacon>true</nebulaBeacon>
-                        <nebulaEvent>NEBULA_ACIDIC_AEA_ACID_TRANSPORT_BARREL</nebulaEvent>
+                        <nebulaEvent>NEBULA_ACIDIC_OE_ACID_TRANSPORT_BARREL</nebulaEvent>
                         <createNebula>false</createNebula>
                     </quest>
                     <choice hidden="true">
                         <text>Return back the way you came.</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
                     </choice>
                 </event>
             </choice>
             <choice hidden="true">
                 <text>Return back the way you came.</text>
-                <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
             </choice>
         </event>
     </choice>
-    <choice hidden="true" req="aea_acid_con_visited" blue="false" lvl="1">
+    <choice hidden="true" req="oe_acid_con_visited" blue="false" lvl="1">
         <text>Head to the control room. (ALREADY VISITED).</text>
         <event load="OPTION_INVALID"/>
     </choice>
-    <choice hidden="true" req="aea_acid_eng_visited" blue="false" lvl="0" max_lvl="0">
+    <choice hidden="true" req="oe_acid_eng_visited" blue="false" lvl="0" max_lvl="0">
         <text>Head to the engineering bays.</text>
         <event>
             <text>You enter the engineering bays and find several ships being worked on by Acidic Workers, you're able to sneak your way around the edge of the room and access a small storage area, Unfortunately the only thing in storage is an Acidic upgrade package.</text>
-            <variable name="aea_acid_eng_visited" op="set" val="1" />
+            <variable name="oe_acid_eng_visited" op="set" val="1" />
             <choice>
                 <text>Take the upgrade kit.</text>
                 <event>
-                    <augment name="AEA_ACID_O2SYS_OFF"/>
+                    <augment name="OE_ACID_O2SYS_OFF"/>
                     <text>You grab the upgrade package.</text>
                     <choice hidden="true">
                         <text>Return back the way you came.</text>
-                        <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                        <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
                     </choice>
                 </event>
             </choice>
             <choice hidden="true">
                 <text>Return back the way you came.</text>
-                <event load="NEBULA_AEA_ACID_SHIPYARD_HUB_LOAD"/>
+                <event load="NEBULA_OE_ACID_SHIPYARD_HUB_LOAD"/>
             </choice>
         </event>
     </choice>
-    <choice hidden="true" req="aea_acid_eng_visited" blue="false" lvl="1">
+    <choice hidden="true" req="oe_acid_eng_visited" blue="false" lvl="1">
         <text>Head to the engineering bays. (ALREADY VISITED).</text>
         <event load="OPTION_INVALID"/>
     </choice>
@@ -3989,7 +3989,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
         <text>Head back to your ship.</text>
         <event>
             <text>As you get back to your ship, you can hear alarms going off on the station, it appears that someone finally noticed your intrusion. As you undock from the station an Elite Acidic ship intercepts you.</text>
-            <ship load="SHIP_AEA_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true"/>
+            <ship load="SHIP_OE_ACID_ELITE_FIGHT_NOSURRENDER" hostile="true"/>
             <choice hidden="true">
                 <text>Continue...</text>
                 <event load="COMBAT_CHECK" />
@@ -3998,9 +3998,9 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
-<event name="NEBULA_ACIDIC_AEA_ACID_TRANSPORT_BARREL">
+<event name="NEBULA_ACIDIC_OE_ACID_TRANSPORT_BARREL">
 	<preventQuest />
-	<beaconType id="map_icon_transport_aea_acid" global="true">
+	<beaconType id="map_icon_transport_oe_acid" global="true">
 		<color r="138" g="237" b="31" a="1"/>
 		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
 		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
@@ -4008,10 +4008,10 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="AEA_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
 	<text>This beacon hosts an Acidic transport. It's safe to bet the ship is most likely carrying the special tech for the project in the lab. If you can kill the acidic growth onboard, the cargo will be yours.</text>
-	<ship load="SHIP_AEA_ACID_TRANSPORT_BARREL" hostile="false" />
+	<ship load="SHIP_OE_ACID_TRANSPORT_BARREL" hostile="false" />
 	<choice>
 		<text>Demand the surrender of the goods.</text>
 		<event>

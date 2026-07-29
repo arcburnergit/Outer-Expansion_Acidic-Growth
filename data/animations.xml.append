@@ -194,27 +194,6 @@
 	<mountPoint x="4" y="37" />
 	<chargeImage>weapons_acid/oe_ion_acid_1_glow.png</chargeImage>
 </weaponAnim>
-
-
-<animSheet name="oe_laser_acid_1" w="210" h="52" fw="21" fh="52">weapons_acid/oe_laser_acid_1.png</animSheet>
-<weaponAnim name="oe_laser_acid_1">
-	<sheet>oe_laser_acid_1</sheet>
-	<desc length="10" x="0" y="0" />
-	<chargedFrame>6</chargedFrame>
-	<fireFrame>8</fireFrame>
-	<firePoint x="13" y="4" />
-	<mountPoint x="4" y="36" />
-</weaponAnim>
-
-<animSheet name="oe_laser_acid_2" w="280" h="60" fw="28" fh="60">weapons_acid/oe_laser_acid_2.png</animSheet>
-<weaponAnim name="oe_laser_acid_2">
-	<sheet>oe_laser_acid_2</sheet>
-	<desc length="10" x="0" y="0" />
-	<chargedFrame>6</chargedFrame>
-	<fireFrame>8</fireFrame>
-	<firePoint x="19" y="6" />
-	<mountPoint x="4" y="45" />
-</weaponAnim>
 </FTL>
 
 <!--Crew-->

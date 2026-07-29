@@ -1569,7 +1569,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 </FTL>
 
 <!--Crew-->
-<FLT>
+<FTL>
 <crewBlueprint name="oe_acid_worker">
 	<desc>A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech.</desc>
 	<title>Acidic Worker</title>
@@ -1617,7 +1617,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 		<power>Cannot suffocate, Immune to Mind Control</power>
 	</powerList>
 </crewBlueprint>
-</FLT>
+</FTL>
 
 <!--Renegades-->
 <FTL>
