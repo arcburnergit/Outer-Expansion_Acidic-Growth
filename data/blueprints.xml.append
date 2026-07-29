@@ -449,7 +449,7 @@
     <mv-mapImage>map_icon_oep_acid_long_a</mv-mapImage>
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_OE_CREW1" layout="oep_acid_bill" img="oep_acid_bill">
+<shipBlueprint name="PLAYER_SHIP_OE_ACID_CREW1" layout="oep_acid_bill" img="oep_acid_bill">
 	<class>Bill's Crewser</class>
 	<name>Salt Water</name>
 	<desc>Bill has made a few friends on his adventures since becoming an Acidic Outcast.</desc>
