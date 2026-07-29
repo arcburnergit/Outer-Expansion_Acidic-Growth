@@ -802,18 +802,49 @@
 </shipBlueprint>
 </FTL>
 
+<FTL>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_OE_SYLVAN">
+	<mod-append:name>OE_LASER_ACID_1</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3_ELITE</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1_ELITE</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_DRONES_OE_SYLVAN">
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_WEAPONS_OE_LOOT">
+	<mod-append:name>OE_LASER_ACID_SUPER</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_BOSS</mod-append:name>
+</mod:findName>
+<mod:findName type="blueprintList" name="LIST_DRONES_OE_LOOT">
+</mod:findName>
+</FTL>
+
 
 <!--MV Crew Blueprint Lists-->
 <FTL>
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_GAS"> <!-- Shell Gas whitelist-->
+	<mod-append:name>oe_acid_worker</mod-append:name>
+	<mod-append:name>oe_acid_soldier</mod-append:name>
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_ALIENS"> <!-- Rebel store option -->
+	<mod-append:name>oe_acid_worker</mod-append:name>
+	<mod-append:name>oe_acid_soldier</mod-append:name>
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PETS"> <!-- Rebel store option -->
@@ -826,16 +857,24 @@
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_METAL"> <!-- used by welders/tonysr, don't add lanius-->
+	<mod-append:name>oe_acid_worker</mod-append:name>
+	<mod-append:name>oe_acid_soldier</mod-append:name>
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_POWER"> <!-- used by tonysr-->
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE"> <!-- used for blue options-->
+	<mod-append:name>oe_acid_soldier</mod-append:name>
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE_FIRE"> <!-- because mantises, orchids and royal definitely suck at dealing with fires -->
+	<mod-append:name>oe_acid_soldier</mod-append:name>
+	<mod-append:name>oe_acid_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE_RHYME"> <!--crew The One Who Rhymes can give as a gift-->
+	<mod-append:name>oe_acid_soldier</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_MADNESS_IMMUNE"> <!--madness whitelist-->
@@ -1427,8 +1466,42 @@
 <!--BLUE OPTION LISTS-->
 <FTL>
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL">
+	<mod-append:name>OE_LASER_ACID_1</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3_ELITE</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1_ELITE</mod-append:name>
+
+	<mod-append:name>OE_LASER_ACID_SUPER</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_SUPER_ENEMY</mod-append:name>
+
+	<mod-append:name>OE_ARTILLERY_BEAM_ACID_1</mod-append:name>
+	<mod-append:name>OE_ARTILLERY_BEAM_ACID_2</mod-append:name>
+
+	<mod-append:name>OE_LASER_ACID_BOSS</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_BOSS_CHAOS</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_WEAPONS_ALL_CRAPBUCKET"> <!--doesnt include enemy weapons, god killer, or alternative variants of weapons with multiple kinds-->
+	<mod-append:name>OE_LASER_ACID_1</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_2_ELITE</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_3_ELITE</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1</mod-append:name>
+	<mod-append:name>OE_BEAM_ACID_1_ELITE</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1</mod-append:name>
+	<mod-append:name>OE_ION_ACID_1_ELITE</mod-append:name>
+
+	<mod-append:name>OE_LASER_ACID_SUPER</mod-append:name>
+	
+	<mod-append:name>OE_LASER_ACID_BOSS</mod-append:name>
+	<mod-append:name>OE_LASER_ACID_BOSS_CHAOS</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_WEAPONS_MISSILES"> <!-- blast proof augment -->

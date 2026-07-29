@@ -21,7 +21,7 @@ local get_random_point_in_radius = mods.oe.get_random_point_in_radius
 local normalise_angle = mods.oe.normalise_angle
 local angle_diff = mods.oe.angle_diff
 local get_angle_between_points = mods.oe.get_angle_between_points
-local find_closest_slot = mods.og.find_closest_slot
+local find_closest_slot = mods.oe.find_closest_slot
 
 script.on_internal_event(Defines.InternalEvents.PROJECTILE_FIRE, function(projectile, weapon)
 	if weapon.blueprint then
@@ -66,7 +66,7 @@ end)
 
 
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
-	if shipManager:HasAugmentation("AEA_ACID_O2SYS") > 0 and shipManager:HasSystem(2) and not Hyperspace.App.menu.shipBuilder.bOpen then
+	if shipManager:HasAugmentation("OE_ACID_O2SYS") > 0 and shipManager:HasSystem(2) and not Hyperspace.App.menu.shipBuilder.bOpen then
 		local oxygen = shipManager.oxygenSystem
 		local refill = oxygen:GetRefillSpeed()
 
@@ -86,7 +86,7 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
 				end
 			end
 		end
-	elseif shipManager:HasAugmentation("AEA_ACID_O2SYS_ENEMY") > 0 and shipManager:HasSystem(2) and not Hyperspace.App.menu.shipBuilder.bOpen then
+	elseif shipManager:HasAugmentation("OE_ACID_O2SYS_ENEMY") > 0 and shipManager:HasSystem(2) and not Hyperspace.App.menu.shipBuilder.bOpen then
 		local oxygen = shipManager.oxygenSystem
 		local refill = oxygen:GetRefillSpeed()
 		--print("refill speed: "..tostring(refill))

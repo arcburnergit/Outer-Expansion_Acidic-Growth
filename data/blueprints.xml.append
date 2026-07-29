@@ -721,7 +721,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Laser MK I</title>
 	<short>Acid I</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -761,7 +761,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Elite Acid Laser MK I</title>
 	<short>€ Acid I</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact. Powerful Elite version does erosion damage instead of system damage.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -816,7 +816,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Laser MK II</title>
 	<short>Acid II</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -856,7 +856,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Elite Acid Laser MK II</title>
 	<short>€ Acid II</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact. Powerful Elite version does erosion damage instead of system damage.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -911,7 +911,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Laser MK III</title>
 	<short>Acid III</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -951,7 +951,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Elite Acid Laser MK III</title>
 	<short>€ Acid III</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact. Powerful Elite version does erosion damage instead of system damage.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -1071,7 +1071,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acidic Ion</flavorType>
 	<title>Acidic Barrage</title>
 	<short>Acidic B.</short>
-	<tip>tip_ion</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
 	<damage>0</damage>
@@ -1116,7 +1116,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acidic Ion</flavorType>
 	<title>Elite Acidic Barrage</title>
 	<short>€ Acidic B.</short>
-	<tip>tip_ion</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy ship after impact. Powerful Elite version does erosion damage instead of ion damage.</desc>
 	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
 	<damage>0</damage>
@@ -1176,7 +1176,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Laser Cannon</title>
 	<short>Acid L.C</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy system after impact. This weapon will fire a projectile at every system on the enemy ship.</desc>
 	<tooltip>Fires x projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -1216,7 +1216,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Laser Cannon</title>
 	<short>Acid L.C</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>Fires x projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -1254,7 +1254,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 <weaponBlueprint name="OE_LASER_ACID_SUPER_BASE">
 	<type>BEAM</type>
 	<flavorType>Laser Part</flavorType>
-	<tip>tip_laser</tip>
+	<tip>tip_storage</tip>
 	<title>Laser Base</title>
 	<short>Base</short>
 	<desc>The Base of large Laser Cannon. Requires the Barrel.</desc>
@@ -1481,7 +1481,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acidic Ion</flavorType>
 	<title>Acidic Barrage</title>
 	<short>Acidic B.</short>
-	<tip>tip_ion</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>Fires a single blast that does 1 ion damage and recharges very quickly. Can hit and disable shields as well as systems.</tooltip>
 	<damage>0</damage>
@@ -1587,7 +1587,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 </crewBlueprint>
 
 <crewBlueprint name="oe_acid_soldier">
-	<desc>A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech.</desc>
+	<desc>Elite Acidic Crew. A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech.</desc>
 	<title>Acidic Soldier</title>
 	<short>Acid Soldier</short>
 	<cost>70</cost>
@@ -1627,7 +1627,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Splasher</title>
 	<short>Splasher</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy system after impact. The impact of this weapon splashes nearby rooms applying erosion to them aswell.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>
@@ -1681,7 +1681,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Splasher</title>
 	<short>Acid Splasher</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>0</damage>
@@ -1734,7 +1734,7 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	<flavorType>Acid Laser</flavorType>
 	<title>Chaotic Acid Splasher</title>
 	<short>Splasher™</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>Designed by the acidic growth, this weapon continues to degrade the enemy system after impact. The impact of this weapon splashes nearby rooms applying erosion to them aswell.
 Chaotic variant does 1 splash damage on top of the erosion damage to adjacent rooms.</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
@@ -1789,7 +1789,7 @@ Chaotic variant does 1 splash damage on top of the erosion damage to adjacent ro
 	<flavorType>Acid Laser</flavorType>
 	<title>Acid Splasher</title>
 	<short>Acid Splasher</short>
-	<tip>tip_laser</tip>
+	<tip>tip_oe_acid</tip>
 	<desc>YOU SHOULD NEVER SEE THIS</desc>
 	<tooltip>Fires 3 projectiles, 1 damage each, 60% stun chance, 60% fire chance.</tooltip>
 	<damage>1</damage>

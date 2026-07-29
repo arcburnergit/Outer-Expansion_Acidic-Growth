@@ -15,7 +15,7 @@ local get_random_point_in_radius = mods.oe.get_random_point_in_radius
 local normalise_angle = mods.oe.normalise_angle
 local angle_diff = mods.oe.angle_diff
 local get_angle_between_points = mods.oe.get_angle_between_points
-local find_closest_slot = mods.og.find_closest_slot
+local find_closest_slot = mods.oe.find_closest_slot
 
 local nebulaClouds = {}
 
@@ -92,13 +92,13 @@ local function createCloud(x, y)
 	cloudTemp.revOp = math.random(0,1)
 	return cloudTemp
 end
-
+local cloudImageTemp = Hyperspace.Resources:CreateImagePrimitiveString(imageString, -256, -200, 0, Graphics.GL_Color(1, 1, 1, 1), 1, false)
 script.on_render_event(Defines.RenderEvents.LAYER_FOREGROUND, function() 
 	if Hyperspace.Global.GetInstance():GetCApp().world.bStartedGame and Hyperspace.playerVariables[playerVar] == 1 and Hyperspace.Settings.lowend == false then
 		for k, cloud in ipairs(nebulaClouds) do
 			if cloud.exists == 1 then
 				local commandGui = Hyperspace.Global.GetInstance():GetCApp().gui
-				local cloudImageTemp = Hyperspace.Resources:CreateImagePrimitiveString(imageString, -256, -200, 0, Graphics.GL_Color(1, 1, 1, 1), cloud.opacity, false)
+				--local cloudImageTemp = Hyperspace.Resources:CreateImagePrimitiveString(imageString, -256, -200, 0, Graphics.GL_Color(1, 1, 1, 1), cloud.opacity, false)
 				
 				Graphics.CSurface.GL_PushMatrix()
 				Graphics.CSurface.GL_Translate((cloud.x + initialPosX),(cloud.y + initialPosX),0)
@@ -107,10 +107,9 @@ script.on_render_event(Defines.RenderEvents.LAYER_FOREGROUND, function()
 				if (commandGui.bPaused or commandGui.event_pause) then
 					Graphics.CSurface.GL_SetColorTint(Graphics.GL_Color(0.5, 0.5, 0.5, 1))
 				end
-				Graphics.CSurface.GL_RenderPrimitive(cloudImageTemp)
+				Graphics.CSurface.GL_RenderPrimitiveWithAlpha(cloudImageTemp, clour.opacity)
 				Graphics.CSurface.GL_RemoveColorTint()
 				Graphics.CSurface.GL_PopMatrix()
-				Graphics.CSurface.GL_DestroyPrimitive(cloudImageTemp)
 
 				if not (commandGui.bPaused or commandGui.event_pause) then
 					cloud.timerScale = cloud.timerScale + (Hyperspace.FPS.SpeedFactor/16)

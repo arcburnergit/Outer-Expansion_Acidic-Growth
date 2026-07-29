@@ -15,7 +15,7 @@ local get_random_point_in_radius = mods.oe.get_random_point_in_radius
 local normalise_angle = mods.oe.normalise_angle
 local angle_diff = mods.oe.angle_diff
 local get_angle_between_points = mods.oe.get_angle_between_points
-local find_closest_slot = mods.og.find_closest_slot
+local find_closest_slot = mods.oe.find_closest_slot
 
 local acidTileAnim = Hyperspace.Animations:GetAnimation("oe_acid_tile2_anim")
 acidTileAnim.position.x = -acidTileAnim.info.frameWidth/2
@@ -145,8 +145,8 @@ end)
 mods.oe.acid.acidCrewPower = {}
 local acidCrewPower = mods.oe.acid.acidCrewPower
 acidCrewPower["power_oe_acid_worker"] = true
-acidCrewPower["power_oe_acid_worker"] = true
---acidCrewPower["aea_acid_bill"] = true
+acidCrewPower["power_oe_acid_soldier"] = true
+--acidCrewPower["power_oe_acid_bill"] = true
 
 script.on_internal_event(Defines.InternalEvents.ACTIVATE_POWER, function(power, shipManager)
 	local crewmem = power.crew

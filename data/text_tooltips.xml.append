@@ -1,3 +1,4 @@
 <FTL>
+<text name="tip_oe_acid">Acid weapons release Acidic Gas into hit rooms. Gas causes a hull breach every 5 seconds and damages connected doors, causing them to break open temporarily. Lasts for 5 seconds.</text>
 <text name="tooltip_oe_acidic_nebula">You're inside an Acidic nebula. Your sensors will not function and your rooms will be slowly breached at random by the Acidic clouds.</text>
 </FTL>
