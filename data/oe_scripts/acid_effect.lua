@@ -146,7 +146,7 @@ mods.oe.acid.acidCrewPower = {}
 local acidCrewPower = mods.oe.acid.acidCrewPower
 acidCrewPower["power_oe_acid_worker"] = true
 acidCrewPower["power_oe_acid_soldier"] = true
---acidCrewPower["power_oe_acid_bill"] = true
+--acidCrewPower["power_unique_oe_bill"] = true
 
 script.on_internal_event(Defines.InternalEvents.ACTIVATE_POWER, function(power, shipManager)
 	local crewmem = power.crew
@@ -162,7 +162,7 @@ mods.oe.acid.acidicCrewStats = {}
 local acidicCrewStats = mods.oe.acid.acidicCrewStats
 acidicCrewStats["oe_acid_worker"] = {[Hyperspace.CrewStat.REPAIR_SPEED_MULTIPLIER] = {mult = 2}, [Hyperspace.CrewStat.ACTIVE_HEAL_AMOUNT] = {add = 2.4}}
 acidicCrewStats["oe_acid_soldier"] = {[Hyperspace.CrewStat.REPAIR_SPEED_MULTIPLIER] = {mult = 2}, [Hyperspace.CrewStat.ACTIVE_HEAL_AMOUNT] = {add = 2.4}}
-acidicCrewStats["oe_acid_bill"] = {[Hyperspace.CrewStat.REPAIR_SPEED_MULTIPLIER] = {mult = 2}, [Hyperspace.CrewStat.ACTIVE_HEAL_AMOUNT] = {add = 4.8}}
+acidicCrewStats["unique_oe_bill"] = {[Hyperspace.CrewStat.REPAIR_SPEED_MULTIPLIER] = {mult = 2}, [Hyperspace.CrewStat.ACTIVE_HEAL_AMOUNT] = {add = 4.8}}
 
 script.on_internal_event(Defines.InternalEvents.CALCULATE_STAT_POST, function(crewmem, stat, def, amount, value)
 	if not (crewmem and crewmem.currentShipId and crewmem.iRoomId) then return Defines.Chain.CONTINUE, amount, value end

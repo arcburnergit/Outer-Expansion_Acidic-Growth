@@ -1,0 +1,14 @@
+<FTL>
+
+<event name="SOCIALIZE_OE_BILL_LIST">
+	<metaVariable name="prof_socialization" op="add" val="1"/>
+	<queueEvent>STORAGE_CHECK_CREW</queueEvent>
+	<loadEventList seeded="true" default="SOCIALIZE_OE_BILL_NOTHING">
+	</loadEventList>
+</event>
+<event name="SOCIALIZE_OE_BILL_NOTHING">
+	<text>Bill appears to be waiting in his cabin. "Sorry, don't have much to talk about. Maybe check in with some of the other crew?"</text>
+</event>
+
+
+</FTL>

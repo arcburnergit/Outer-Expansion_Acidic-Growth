@@ -53,8 +53,8 @@
 			</item_modify>
 		</event>
 	</choice>
-	<choice req="rep_comb_acid_orchid" lvl="-9999" max_lvl="-1">
-		<text>(Positive Growth-Gathering reputation) Request entry.</text>
+	<choice req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-1">
+		<text>(Positive Gathering-Growth reputation) Request entry.</text>
 		<event>
 			<text>The Acidic Growth recognizes you as an ally. You're free to enter.</text>
 		</event>
@@ -90,7 +90,7 @@
         <text>(Praetor Crew) Request passage.</text>
         <event>
             <text>Your Praetor hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. Reason, diplomacy? Please accept donation." You are free to enter.</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 			<autoReward level="MED">standard</autoReward>
         </event>
     </choice>
@@ -218,7 +218,7 @@
 	<beaconType id="map_icon_start" global="false">
 		<color r="138" g="237" b="31" a="1" />
 	</beaconType>
-	<text>It's risky to venture this deep into acidic territory, The acidic growth originated from this sector, and it's very defensive of it.</text>
+	<text>It's risky to venture this deep into Acidic territory. The Acidic Growth originated from this sector, and it's very defensive of it. The methods to get in that'd work on its newer territories won't work here.</text>
 	<variable name="loc_unique_sectors" op="add" val="1" />
 	<changeBackground>BACK_SECTOR_OE_ACID</changeBackground>
 	<playSound>lightspeed</playSound>
@@ -231,31 +231,10 @@
 </event>
 
 <event name="GUARD_OE_ACIDHOME">
-	<text>The Elite guard here sends you a brief, to-the-point message. "Outsider. Space here, is ours. State your intentions."</text>
-	<choice hidden="true" req="oe_acid_friendly" lvl="1">
-		<text>(Friendly) Make your identity known.</text>
-		<event>
-			<text>Once the Acidic Growth realizes who you are the guard welcomes you in, The Acidic Growth is even kind enough to spare you some supplies.</text>
-			<autoReward level="HIGH">stuff</autoReward>
-		</event>
-	</choice>
-	<choice hidden="true">
-		<text>Try your hand at negotiating.</text>
-		<event load="GUARD_OE_ACIDHOME_NEGOTIATE" />
-	</choice>
-	<choice>
-		<text>Convince it you only have good intentions.</text>
-		<event>
-			<text>The Acidic Growth recognises your donation and lets you pass.</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
-			<item_modify>
-				<item type="scrap" min="-80" max="-80" />
-			</item_modify>
-		</event>
-	</choice>
-	<choice hidden="true">
+	<text>The Elite guard here sends you a brief, to-the-point message. "Outsider. This space, is ours. Turn back."</text>
+	<choice hidden="true">`
 		<text>Fight your way through.</text>
-		<event>
+		<event>`
 			<text>You silence communications and prepare to attack.</text>
 			<ship hostile="true" />
 			<choice hidden="true">
@@ -264,53 +243,92 @@
 			</choice>
 		</event>
 	</choice>
-	<choice hidden="true" req="oe_acid_worker">
-		<text>(Acidic Worker) Enter Freely.</text>
+	<choice>
+		<text>Convince it you only have good intentions.</text>
 		<event>
-			<text>The Acidic Growth is welcoming of itself. You're free to enter.</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+			<text>The Acidic Growth recognises your donation and lets you pass.</text>
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+			<item_modify>
+				<item type="scrap" min="-80" max="-80" />
+			</item_modify>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Suggest a monetary bribe.</text>
+		<event>
+			<text>"Security, is absolute. Extermination, required." It seems like you can't sweeten those guys.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="-2">
+		<text>(Positive Gathering-Growth reputation) Request entry.</text>
+		<event>
+			<text>You've made quite a name among Acidic Growth... even if it's not exactly clear if it's different consciousnesses or all just one, united whole. It lets you in.</text>
+		</event>
+	</choice>
+	<choice hidden="true" req="oe_acid_worker">
+		<text>(Acidic Worker) Request Entry.</text>
+		<event>
+			<text>It takes a bit for the guard to answer. "Us, on unknown ship? Can't trust. Hostage, possibility. Extermination, required. Us, collected after." Right, those guys can survive in outer space. You can't, so you better start fighting back.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
 		</event>
 	</choice>
 	<choice hidden="true" req="oe_acid_soldier">
-		<text>(Acidic Soldier) Enter Freely.</text>
+		<text>(Acidic Soldier) Request Entry.</text>
 		<event>
-			<text>The Acidic Growth is welcoming of itself. You're free to enter.</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+			<text>It takes a bit for the guard to answer. "Us, on unknown ship? High rank. Hostage, possibility, minimal. Excuse us." You're free to enter, and the Growth notes you as a known ally.</text>
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 		</event>
 	</choice>
     <choice hidden="true" req="orchid">
         <text>(Orchid Crew) Request passage.</text>
         <event>
-            <text>Your Orchid hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. We  welcome you. Fly through our space, you can."</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <text>It takes a bit for the guard to answer. "Ally, Orchid? Unknown ship. Ally, maybe not. Pirate operation, possible. Extermination, required." You prepare to defend yourself.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>
         </event>
     </choice>
     <choice hidden="true" req="orchid_caretaker">
         <text>(Caretaker Crew) Request passage.</text>
         <event>
-            <text>Your Orchid hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. We  welcome you. Fly through our space, you can."</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <text>It takes a bit for the guard to answer. "Ally, Orchid? Unknown ship, but... under Grand Gardener, means ally. Excuse us." You're free to enter.</text>
         </event>
     </choice>
     <choice hidden="true" req="orchid_praetor">
         <text>(Praetor Crew) Request passage.</text>
         <event>
-            <text>Your Orchid hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. We  welcome you. Fly through our space, you can."</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <text>It takes a bit for the guard to answer. "Ally, Orchid? High rank. Diplomatic mission? Excuse us." You're free to enter, and the Growth notes you as a known ally to provide safer travel.</text>
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
         </event>
     </choice>
     <choice hidden="true" req="unique_mayeb">
         <text>(Mayeb) Request passage.</text>
         <event>
-            <text>Your Orchid hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. We  welcome you. Fly through our space, you can."</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <text>Mayeb goes on comms, "Our intentions are peaceful. We just want to pass through the sector. I hope you recognize me; I'd like to avoid confrontation."
+
+"Grand Gardener? Welcome, ally. Excuse us. Please accept donation." You're free to enter.
+			</text>
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>	
+			<autoReward level="HIGH">standard</autoReward>
         </event>
     </choice>
     <choice hidden="true" req="unique_tyerel">
         <text>(Ty E'rel) Request passage.</text>
         <event>
-            <text>Your Orchid hails the Acidic vessel, however before they can say anything they receive a response. "One of the trusted, on board. We  welcome you. Fly through our space, you can."</text>
-            <variable name="oe_acid_friendly" op="set" val="1" />
+            <text>Ty goes on comms, "My name is Ty E'rel. I suggest that you do not attack this vessel, or the Gathering-Growth Alliance might face... difficulties. We are just passing through." The Growth apologises and sends some supplies over.</text>
+            <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
+			<autoReward level="MED">standard</autoReward>
         </event>
     </choice>
 	<choice hidden="true" req="mind">
@@ -330,7 +348,7 @@
 		<event load="GUARD_ESCAPE" />
 	</choice>
 </event>
-
+<!--
 <eventList name="GUARD_OE_ACIDHOME_NEGOTIATE">
 	<event>
 		<text>"Your offer is unacceptable."</text>
@@ -360,7 +378,7 @@
 			<text>Convince it you only have good intentions at the original price.</text>
 			<event>
 				<text>The Acidic Growth recognises your donation and lets you pass.</text>
-				<variable name="oe_acid_friendly" op="set" val="1" />
+				<queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 				<item_modify>
 					<item type="scrap" min="-80" max="-80" />
 				</item_modify>
@@ -392,6 +410,7 @@
 		</event>
 	</choice>
 </event>
+-->
 
 <ship name="SHIP_GUARD_OE_ACID_ELITE" auto_blueprint="OE_ACID_GUARD_ELITE">
 	<surrender min="999" max="999" load="GUARD_SIGNAL" />
@@ -401,31 +420,37 @@
 
 <event name="GUARD_OE_ACIDHOME_DESTROY">
 	<text>You have defeated the Acidic guard. Whatever might have been in their cargo has for certain been destroyed, but you can at least salvage some supplies from the ship.</text>
-	<autoReward level="HIGH">standard</autoReward>
+	<autoReward level="LOW">standard</autoReward>
 	<choice hidden="true">
 		<text>Continue...</text>
-		<event load="GUARD_OE_ACIDHOME_FOLLOWUP" />
+		<event load="GUARD_OE_ACIDHOME_PRAETOR" />
 	</choice>
 </event>
 <event name="GUARD_OE_ACIDHOME_DEADCREW">
 	<text>You have defeated the Acidic guard. Without the Acidic Growth on board to stop you, you can investigate their cargo. You find a weapon to bring back to the ship, and move on to scrap their hull.</text>
-	<autoReward level="HIGH">standard</autoReward>
+	<autoReward level="LOW">standard</autoReward>
 	<weapon name="GIFTLIST_WEAPONS_OE_ACIDIC" />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="GUARD_OE_ACIDHOME_PRAETOR" />
+	</choice>
+</event>
+
+<ship name="SHIP_GUARD_OE_ACIDHOME_PRAETOR" auto_blueprint="MU_ORCHID_GUARD_ELITE">
+	<destroyed load="GUARD_OE_ACIDHOME_PRAETOR_DESTROY" />
+	<deadCrew load="GUARD_OE_ACIDHOME_PRAETOR_DESTROY" />
+</ship>
+<event name="GUARD_OE_ACIDHOME_PRAETOR_DESTROY">
+	<text>You have defeated the Praetor vessel. You can now salvage both ships.</text>
+	<autoReward level="HIGH">standard</autoReward>
 	<choice hidden="true">
 		<text>Continue...</text>
 		<event load="GUARD_OE_ACIDHOME_FOLLOWUP" />
 	</choice>
 </event>
 
-<ship name="SHIP_OE_ACIDHOME_REINFORCEMENTS" auto_blueprint="LIST_SHIPS_OE_ACID_ELITE_FIGHT">
-	<destroyed load="DESTROYED_REINFORCEMENTS" />
-	<deadCrew load="DEADCREW_REINFORCEMENTS" />
-</ship>
-<event name="GUARD_OE_ACIDHOME_FOLLOWUP">
+<event name="GUARD_OE_ACIDHOME_PRAETOR">
 	<noQuestText />
-	<removeHazards />
-	<clearCustomFleet />
-	<text>By killing the Acidic guard, you have no doubt caused them to dispatch reinforcements to track you down. Watch your step as you explore the sector.</text>
 	<quest event="REINFORCEMENTS_OE_ACIDHOME">
 		<nebulaBeacon>true</nebulaBeacon>
 		<nextSector>false</nextSector>
@@ -433,6 +458,82 @@
 		<createNebula>false</createNebula>
 		<aggressive>2</aggressive>
 	</quest>
+		<ship load="SHIP_GUARD_OE_ACIDHOME_PRAETOR" hostile="false" />
+	<text>Before you can even finish salvaging, a Praetor ship jumps in. Uh oh.</text>
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="1">
+		<text>Continue...</text>
+		<event>
+			<text>The Orchid vessel hails you. "Federation? Could you kindly explain what happened here? We got a distress call coming from the guard, and now we find the guard neutralized and you scrapping the wreck. You understand how this looks, right?"</text>
+			<choice hidden="true">
+				<text>We got attacked first.</text>
+				<event load="GUARD_OE_ACIDHOME_PRAETOR_LIST" />
+			</choice>
+			<choice>
+				<text>You don't need to know what happened.</text>
+				<event>
+					<text>"With this... we could look the other way, yes. Just this once. Get out of my sight, before I change my mind." You end up having to abandon the Acidic wreck.</text>
+					<item_modify>
+						<item type="scrap" min="-30" max="-30" />
+					</item_modify>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="GUARD_OE_ACIDHOME_FOLLOWUP" />
+					</choice>					
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>We killed them, and you're next.</text>
+				<event>
+					<text>"I... I don't know if it's more reprehensible or edgy." The Praetor vessel moves in to attack.</text>
+					<ship hostile="true" />
+					<queueEvent>MORALITY_UPDATE_ORCHID_FIGHT</queueEvent>					
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="2" max_lvl="9999">
+		<text>Continue...</text>
+		<event>
+			<text>It seems like your past crimes caught up with you. The Orchid vessel doesn't bother hailing you, and moves in to attack.</text>
+			<ship hostile="true" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="COMBAT_CHECK" />
+			</choice>			
+		</event>
+	</choice>
+</event>
+
+<eventList name="GUARD_OE_ACIDHOME_PRAETOR_LIST">
+	<event>
+		<text>The Orchid hesitates. "I... I guess I believe you. What business do you even have here?"</text>
+		<choice hidden="true">
+			<text>Explain your mission.</text>
+			<event>
+				<text>"So you're just passing through? It's unfortunate this encounter had to happen. We'll let you go." They also give you some supplies for the road ahead.</text>
+				<autoReward level="MED">standard</autoReward>
+				<choice hidden="true">
+					<text>Continue...</text>
+					<event load="GUARD_OE_ACIDHOME_FOLLOWUP" />
+				</choice>			
+			</event>
+		</choice>
+	</event>
+	<event>
+		<text>"Likely story. We'll have you detained now. Do not resist." You don't have time for this.</text>
+		<ship hostile="true" />
+		<queueEvent>MORALITY_UPDATE_ORCHID_FIGHT</queueEvent>
+	</event>
+</eventList>
+
+<ship name="SHIP_OE_ACIDHOME_REINFORCEMENTS" auto_blueprint="LIST_SHIPS_OE_ACID_ELITE_FIGHT">
+	<destroyed load="DESTROYED_REINFORCEMENTS" />
+	<deadCrew load="DEADCREW_REINFORCEMENTS" />
+</ship>
+<event name="GUARD_OE_ACIDHOME_FOLLOWUP">
+	<removeHazards />
+	<clearCustomFleet />
+	<text>By killing the Acidic guard, you have no doubt caused them to dispatch reinforcements to track you down. Watch your step as you explore the sector.</text>
 	<choice>
 		<text>Do something onboard the ship.</text>
 		<event load="STORAGE_CHECK" />
@@ -487,7 +588,7 @@
 <eventList name="STORELIST_OE_ACID">
 	<event load="STOREEVENT_OE_ACID_ORCHID" />
 	<event load="STOREEVENT_OE_ACID_ORCHID" />
-
+<!--
 	<event load="STOREEVENT_OUTPOST" />
 	<event load="STOREEVENT_DAMAGED" />
 	
@@ -497,31 +598,38 @@
 	<event load="STOREEVENT_ORCHID_KERNELS" />
     
 	<event load="STOREEVENT_VAMPWEED_SPORES" />
+-->
 </eventList>
 
 <eventList name="NEBULA_STORELIST_OE_ACID">
+	<event load="NEBULA_STOREEVENT_OE_ACID_NO2" />
+	<event load="NEBULA_STOREEVENT_OE_ACID_NO2" />
+
+	<event load="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" />
+	<event load="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" />
+
+<!--
 	<event load="NEBULA_STOREEVENT_DAMAGED" />
 	<event load="NEBULA_STOREEVENT_DAMAGED" />
 	
 	<event load="NEBULA_STOREEVENT_FED_OUTPOSTDAMAGE" />
 	<event load="NEBULA_STOREEVENT_FED_OUTPOSTDAMAGE" />
-	
-	<event load="NEBULA_STOREEVENT_COALITION_MYSTERYRACE" />
-	<event load="NEBULA_STOREEVENT_COALITION_RACES" />
 	
 	<event load="NEBULA_STOREEVENT_PIRATE_ODDSHOP" />
 	<event load="NEBULA_STOREEVENT_PIRATE_AWKWARD" />
 	
 	<event load="NEBULA_STOREEVENT_LEECH_SCAVENGER" />
+	-->
 </eventList>
 
 <event name="STOREEVENT_OE_ACID_ORCHID" unique="true">
+	<preventQuest/>
 	<beaconType id="map_icon_oe_store_acidic" global="false">
 		<color r="255" g="245" b="175" a="1"/>
 	</beaconType>
 	<ship load="SHIP_OE_ACID_STATION_STORE" hostile="false"/>
 	<text>This beacon is busy with Acidic and Gathering traffic, all centering around a Growth station. Orchids are your allies, so it won't be hard to gain access and ability to trade.</text>
-	<choice hidden="true">
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="2">
 		<text>Request access.</text>
 		<event>
 			<text>You're welcomed by a dapper Orchid who explains this is not only a trade hub, but also a diplomatic point. If you have good personal standing with either of the factions, you can request support.</text>
@@ -533,7 +641,7 @@
 					<item_modify>
 						<item type="scrap" min="-35" max="-30" />
 					</item_modify>
-					<store>STORE_OE_ACID</store>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
 			<choice req="rep_orchid" lvl="-9999" max_lvl="-3">
@@ -544,10 +652,9 @@
 					<item_modify>
 						<item type="scrap" min="-45" max="-40" />
 					</item_modify>
-					<store>STORE_OE_ACID</store>				
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>			
 				</event>
 			</choice>
-
 			<choice req="rep_oe_acid" lvl="-9999" max_lvl="-1">
 				<text>(Positive Acidic Reputation) Ask for a discounted Acidic weapon.</text>
 				<event>
@@ -556,7 +663,7 @@
 					<item_modify>
 						<item type="scrap" min="-35" max="-30" />
 					</item_modify>
-					<store>STORE_OE_ACID</store>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
 			<choice req="rep_oe_acid" lvl="-9999" max_lvl="-3">
@@ -567,16 +674,27 @@
 					<item_modify>
 						<item type="scrap" min="-45" max="-40" />
 					</item_modify>
-					<store>STORE_OE_ACID</store>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
 				</event>
 			</choice>
 
 			<choice hidden="true">
 				<text>Just move on to the store.</text>
-					<event>
-						<text>You don't need any extra services. You move on to the store.</text>
-						<store>STORE_OE_ACID</store>
-					</event>
+				<event load="STORE_LOAD_OE_ACID" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="3" max_lvl="9999">
+		<text>Request access.</text>
+		<event>
+			<text>The station refuses all hails; it seems like they got a tip about your reputation. You're severely outnumbered, so your only choice is to move on.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event />
 			</choice>
 		</event>
 	</choice>
@@ -596,9 +714,142 @@
 	</choice>	
 </event>
 
+<event name="NEBULA_STOREEVENT_OE_ACID_NO2" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_oe_store_acidic" global="false">
+		<color r="255" g="245" b="175" a="1"/>
+	</beaconType>
+	<ship load="SHIP_OE_ACID_STATION_STORE" hostile="false"/>
+	<environment type="nebula"/>
+	<text>It seems like Acidic Growth set up a store here.</text>
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="-9999" max_lvl="2">
+		<text>Hail.</text>
+		<event>
+			<text>An Acidic Soldier allows you to dock. The station is teeming with Workers, and you bump into several while searching for an open kiosk. The local engineers suggest, for a price, to either upgrade or dismantle your Life Support system.</text>
+			<choice req="oxygen" blue="false" lvl="1" max_lvl="1">
+				<text>Upgrade the Life Support system.</text>
+				<event>
+					<text>While the system is being upgraded, you have time to shop.</text>
+					<upgrade amount="1" system="oxygen"/>
+					<item_modify>
+						<item type="scrap" min="-15" max="-15"/>
+					</item_modify>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+				</event>
+			</choice>
+			<choice req="oxygen" blue="false" lvl="2" max_lvl="2">
+				<text>Upgrade the Life Support system.</text>
+				<event>
+					<text>While the system is being upgraded, you have time to shop.</text>
+					<upgrade amount="1" system="oxygen"/>
+					<item_modify>
+						<item type="scrap" min="-25" max="-25"/>
+					</item_modify>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+				</event>
+			</choice>
+			<choice req="oxygen" blue="false" lvl="1">
+				<text>Dismantle the Life Support system.</text>
+				<event>
+					<text>While your system is being dismantled, you have time to shop. Maybe grab some breathing masks, just to be safe.</text>
+					<removeSystem player="true">oxygen</removeSystem>
+					<item_modify>
+						<item type="scrap" min="-15" max="-15"/>
+					</item_modify>
+					<queueEvent>STORE_LOAD_OE_ACID</queueEvent>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Just shop.</text>
+				<event load="STORE_LOAD_OE_ACID" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_oe_acid_orchid" lvl="3" max_lvl="9999">
+		<text>Hail.</text>
+		<event>
+			<text>The station refuses all hails. It seems the Growth isn't pleased with you.</text>
+			<choice hidden="true">
+				<text>Attack!</text>
+				<event>
+					<text>You decide to turn them into scrap instead.</text>
+					<ship hostile="true" />
+					<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Move on.</text>
+				<event>
+					<text>You proceed to move on, disappointed.</text>
+					<choice>
+						<text>Do something onboard the ship.</text>
+						<event load="STORAGE_CHECK" />
+					</choice>
+					<choice>
+						<text>Do nothing.</text>
+						<event />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Attack!</text>
+		<event>
+			<text>The Acidic Growth was really aggressively, uh, flying there and doing nothing? Yeah, it isn't really justified. Nevertheless, you give orders to attack.</text>
+			<ship hostile="true" />
+			<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Move on.</text>
+		<event>
+			<text>You don't need to shop right now.</text>
+			<choice>
+				<text>Do something onboard the ship.</text>
+				<event load="STORAGE_CHECK" />
+			</choice>
+			<choice>
+				<text>Do nothing.</text>
+				<event />
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
 <ship name="SHIP_OE_ACID_STATION_STORE" auto_blueprint="OE_ACID_STATION">
 
 </ship>
+
+<event name="NEBULA_STOREEVENT_OE_ACID_CIVILIAN" unique="true">
+	<preventQuest/>
+	<beaconType id="map_icon_store_generic" global="false">
+		<color r="215" g="255" b="200" a="1"/>
+	</beaconType>
+	<environment type="nebula"/>
+
+	<text>This beacon is blasted with advertisements of an emergency sale at a nearby store. The ads seem enticing, but desperate.</text>
+	<choice hidden="true">
+		<text>Approach the store.</text>
+		<event>
+			<text>You hail the store, and a young male human in questionable attire comes on screen. "Heeey, buddy! Welcome to my store! I got everything for your acid needs - acid injectors, acid extractors, acid tubes, and even acid breakers! Everything at half off, of course, just as advertised." He smiles weakly.</text>
+			<choice hidden="true">
+				<text>Do you have anything... more useful?</text>
+				<event>
+					<text>"Ah, shucks." He lowers his head. "I hoped you wouldn't be one of those battle-freaks." The man is silent for a moment. "But yes, yes, I do. Not a lot, though - sold most stuff to buy the acid equipment the moment I found out there's an acid nebula here." He scratches his head and his voice grows in pitch. "I miiight have misunderstood the kind of 'acid' this nebula was made of, so I'm just trying to get the equipment sold as quickly as possible. Still, I do have the usual wares. Here, take a look."</text>
+					<queueEvent>STORE_LOAD_GENERIC</queueEvent>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the store.</text>
+		<event>
+			<text>You decide that dubious sales aren't for you.</text>
+		</event>
+	</choice>
+</event>
 
 <ship name="SHIP_OE_ACID_TRANSPORT_LOOT" auto_blueprint="OE_ACID_TRANSPORT">
 	<escape timer="40" min="999" max="999">
@@ -981,6 +1232,20 @@
     </deadCrew>
 </ship>
 
+<ship name="SHIP_OE_ACID_DIGITAL_PIRACY" auto_blueprint="OE_ACID_FIGHTER_PIRATE">
+	<destroyed>
+		<text>The pirate ship hails you one last time before it goes up in flames. "No... Our illegally downloaded media collection..."</text>
+		<autoReward level="MED">standard</autoReward>
+	</destroyed>
+	<deadCrew>
+		<text>With the Acidic crew of the pirate vessel dead, you manage to gain access to its digital storage, where you discover a hundred petabytes worth of pirated media, including movies, tv shows, radio dramas, music albums, live concert recordings, textbooks, proprietary applications, and one copy of "A Very Slimy Christmas" - a slug rendition of "A Christmas Carol" where Scrooge finds out that capital was, in fact, the only thing to live for and he, actually, never did anything particularly wrong.
+
+Deciding that piracy is evil in any form it might be presented, you decide to erase the contents of the drive, saving theoretical shareholders some theoretical value.</text>
+		<autoReward level="MED">standard</autoReward>
+	</deadCrew>
+</ship>
+
+
 <event name="DEFEAT_OE_ACID_ELITE">
 	<text>You're still not sure if killing Acidic mechs counts as murder. Either way, losing an elite vessel like that has to hurt the Acidic Growth.</text>
 	<autoReward level="HIGH">standard_no_item</autoReward>
@@ -1349,7 +1614,7 @@
 
 <ship name="SHIP_OE_ACID_BILL_MEET" auto_blueprint="OE_ACID_ASSAULT">
 	<destroyed>
-		<text>You've destroyed the Acidic ship, As you're looting the remains of both the Acidic vessel and the Strange ship destroyed at the start of the fight, you discover an Acidic Worker alive in the wreck.</text>
+		<text>You've destroyed the Acidic ship. As you're looting the remains of both the Acidic vessel and the strange ship destroyed at the start of the fight, you discover an Acidic Soldier alive in the wreck.</text>
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Continue...</text>
@@ -1357,7 +1622,7 @@
 		</choice>
 	</destroyed>
 	<deadCrew>
-		<text>You've neutralized the Acidic ship and emptied it of all crew. As you're looting the remains of both the Acidic vessel and the Strange ship destroyed at the start of the fight, you discover an Acidic Worker alive in the wreck.</text>
+		<text>You've neutralized the Acidic ship and emptied it of all crew. As you're looting the remains of both the Acidic vessel and the strange ship destroyed at the start of the fight, you discover an Acidic Soldier alive in the wreck.</text>
 		<autoReward level="HIGH">standard</autoReward>
 		<choice hidden="true">
 			<text>Continue...</text>
@@ -1368,22 +1633,22 @@
 
 <ship name="SHIP_OE_ACID_BILL_BOSS" auto_blueprint="OE_ACID_BOSS">
 	<destroyed>
-		<text>You've destroyed the hulking Acidic vessel, as you're searching through the huge wreck created by it's defeat you find an intact databank, and on it the schematics for a ship.</text>
+		<text>You've destroyed the hulking Acidic vessel. As you're searching through the huge wreck created by its defeat you find an intact databank, and on it the schematics for a ship.</text>
 		<autoReward level="HIGH">standard</autoReward>
 		<unlockCustomShip silent="false">PLAYER_SHIP_OE_ACID_ARTY</unlockCustomShip>
 		<choice hidden="true">
 			<text>Continue...</text>
-			<event/>
+			<event load="NEBULA_OE_ACID_BILL_WIN" />
 		</choice>
 	</destroyed>
 	<deadCrew>
-		<text>You've cleared the hulking Acidic vessel of it's crew, as you're searching through the huge carcass created by it's defeat you find an intact databank, and on it the schematics for a ship.</text>
+		<text>You've cleared the hulking Acidic vessel of it's crew. As you're searching through the huge carcass created by its defeat you find an intact databank, and on it the schematics for a ship.</text>
 		<autoReward level="HIGH">standard_no_item</autoReward>
 		<weapon name="GIFTLIST_WEAPONS_OE_ACIDIC"/>
 		<unlockCustomShip silent="false">PLAYER_SHIP_OE_ACID_ARTY</unlockCustomShip>
 		<choice hidden="true">
 			<text>Continue...</text>
-			<event/>
+			<event load="NEBULA_OE_ACID_BILL_WIN" />
 		</choice>
 	</deadCrew>
 </ship>
@@ -1431,4 +1696,19 @@
 	</deadCrew>
 </ship>
 
+<ship name="SHIP_OE_ACID_SHIPYARD" auto_blueprint="LIST_SHIPS_COALITION_ELITE_FIGHT">
+	<surrender min="4" max="4">
+		<text>The hostile vessel buckles. Continue assault!</text>
+	</surrender>
+	<destroyed>
+		<text>You emerge victorious! The Prototype destroyed, the Coalition forces take one final hit required for them to retreat. You scrap the ship.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<queueEvent>OE_ACID_SHIPYARD_WIN</queueEvent>
+	</destroyed>
+	<deadCrew>
+		<text>You emerge victorious! The Prototype emptied of crew, the Coalition forces take one final hit required for them to retreat. You scrap the ship.</text>
+		<autoReward level="HIGH">standard</autoReward>
+		<queueEvent>OE_ACID_SHIPYARD_WIN</queueEvent>
+	</deadCrew>
+</ship>
 </FTL>

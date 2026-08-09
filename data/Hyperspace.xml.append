@@ -160,7 +160,7 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
-			<oe_acid_bill room="5" name="Bill" />
+			<unique_oe_bill room="5" name="Bill" />
 			<orchid_cultivator room="5"/>
 			<engi_defender room="0"/>
 			<slug_ranger room="5"/>
@@ -206,6 +206,18 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 			<shipIcon>icon_oe_acidic_filter</shipIcon>
         </shipIcons>
 		<crew>
+			<oe_acid_worker room="2" name="Acidic Worker" />
+			<oe_acid_worker room="0" name="Acidic Worker" />
+		</crew>
+	</mod-append:customShip>
+
+	<mod-append:customShip name="OE_ACID_FIGHTER_PIRATE">
+		<shipIcons>
+			<shipIcon>icon_oe_acidic_filter</shipIcon>
+        </shipIcons>
+		<crew>
+			<oe_acid_soldier room="0" name="Acidic Soldier" />
+			<oe_acid_worker room="2" name="Acidic Worker" />
 			<oe_acid_worker room="2" name="Acidic Worker" />
 			<oe_acid_worker room="0" name="Acidic Worker" />
 		</crew>
@@ -453,7 +465,7 @@ Release Acidic Gas into the current room, which lasts 10 seconds.
 			<activateWhenReady enemiesOnly="true">true</activateWhenReady>
 		</powerEffect>
 	</mod-append:race>
-	<mod-append:race name="oe_acid_bill">
+	<mod-append:race name="unique_oe_bill">
 		<resistsMindControl>true</resistsMindControl>
 		<maxHealth>150</maxHealth>
 		<canSuffocate>false</canSuffocate>
@@ -462,7 +474,7 @@ Release Acidic Gas into the current room, which lasts 10 seconds.
 		<deathSounds>
 			<deathSound>sysExplosion</deathSound>
 		</deathSounds>
-		<powerEffect name="power_oe_acid_bill">
+		<powerEffect name="power_unique_oe_bill">
 			<cooldown>20</cooldown>
 			<jumpCooldown>full</jumpCooldown>
 			<powerSounds>
@@ -503,7 +515,7 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 					</blackList>
 					<roomAnim renderLayer="2">                                                    
 						<anim animType="default" animBorder="2">oe_invisible</anim>                                                 
-							<tileAnim>oe_acid_bill_tile_anim</tileAnim>  
+							<tileAnim>unique_oe_bill_tile_anim</tileAnim>  
 					</roomAnim>
 				</statBoost>
 				<statBoost name="damageMultiplier">
@@ -711,16 +723,17 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 	<variable name="oe_acidic_nebula" op="set" val="0" />
 
 	<variable name="rep_oe_acid" op="set" val="0"/>
-	<variable name="rep_comb_acid_orchid" op="set" val="0"/>
+	<variable name="rep_comb_oe_acid_orchid" op="set" val="0"/>
 	
 	<variable name="oe_acid_o2sys_en" op="set" val="0"/>
 	<variable name="oe_acid_friendly" op="set" val="0" />
+	<variable name="ach_crew_oe_bill" op="set" val="0"/>
 	<variable name="ach_trans_oe_acid" op="set" val="0" />
+	<variable name="ach_ren_oe_acid" op="set" val="0"/>
 	<variable name="loc_found_oe_acid_factory" op="set" val="0" />
 
 	<variable name="coords_oe_bill" op="set" val="0" />
 
-	<variable name="oe_acid_bill" op="set" val="0" />
 	<variable name="oe_acid_lab_visited" op="set" val="0" />
 	<variable name="oe_acid_con_visited" op="set" val="0" />
 	<variable name="oe_acid_eng_visited" op="set" val="0" />
@@ -965,6 +978,7 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 				<description>Attempt to reunite Bill with the Acidic Growth.</description>
 				<header>Character Recruited</header>
 				<icon>ach_oe_crew_bill</icon>
+				<variable name="ach_crew_oe_bill" amount="1"/>
 				<sound>achievement</sound>
 			</mod-append:achievement>
 		</mod:findLike>
@@ -1005,7 +1019,7 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 				<name>Boon of Growth</name>
 				<secretDescription>Receive the Boon of Growth from Thest.</secretDescription>
 				<description>Show an Acidic crewmember to Thest. 
-				While in effect; Acidic crew heal twice as fast and cannot be stunned.</description>
+				While in effect; Acidic crew heal twice as fast.</description>
 				<header>Boon Received</header>
 				<icon>ach_boon_oe_acid</icon>
 				<multiDifficulty>false</multiDifficulty>

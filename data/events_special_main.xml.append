@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>
+<mod:findName type="event" name="BOON_SELECT">
+	<mod:findLike type="loadEventList">
+		<mod-append:event name="BOON_SELECT_OE_ACID" req="prof_z_boon_oe_acid" />
+	</mod:findLike>
+</mod:findName>
+</FTL>

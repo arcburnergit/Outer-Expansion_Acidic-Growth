@@ -1,0 +1,18 @@
+<FTL>
+<mod:findName type="event" name="TRUE_VICTORY_CREW">
+	<mod-append:choice hidden="true" req="unique_oe_bill">
+		<text>Ask Bill about this.</text>
+		<event load="TRUE_VICTORY_CREW_OE_BILL" />
+	</mod-append:choice>
+</mod:findName>
+
+<event name="TRUE_VICTORY_CREW_OE_BILL">
+	<text>TODO</text>
+	<text-oe-alternative>TODO</text-oe-alternative>
+	<unlockCustomShip silent="false">PLAYER_SHIP_OE_ACID_CREW1</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD" />
+	</choice>
+</event>
+</FTL>

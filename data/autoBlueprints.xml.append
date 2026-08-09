@@ -2,12 +2,12 @@
 <blueprintList name="LIST_CREW_OE_ACID">
     <name>oe_acid_worker</name>
     <name>oe_acid_soldier</name>
-    <name>oe_acid_bill</name>
+    <name>unique_oe_bill</name>
 </blueprintList>
 
 <blueprintList name="LIST_CREW_OE_ACID_ER">
     <name>oe_acid_soldier</name>
-    <name>oe_acid_bill</name>
+    <name>unique_oe_bill</name>
 </blueprintList>
 
 <blueprintList name="LIST_AUG_OE_ACID_FILTER">
@@ -443,7 +443,28 @@
 	<aug name="OE_ACID_O2SYS_ENEMY_WEAK" />
 </shipBlueprint>
 
-
+<shipBlueprint name="OE_ACID_FIGHTER_PIRATE" layout="oe_acid_fighter" img="oe_acid_fighter_pirate">
+    <class>Piracy Fighter</class>
+    <minSector>1</minSector>
+    <maxSector>8</maxSector>
+    <systemList>
+        <doors power="2" max="2" room="4" start="true" />
+        <engines power="1" max="3" room="5" start="true" />
+        <mind power="1" max="2" room="7" start="false" />
+        <oxygen power="1" max="2" room="3" start="true" />
+        <pilot power="1" max="2" room="2" start="true" />
+        <shields power="2" max="8" room="0" start="true" />
+        <weapons power="2" max="10" room="1" start="true" />
+    </systemList>
+    <weaponSlots>4</weaponSlots>
+    <droneSlots>0</droneSlots>
+    <weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
+    <droneList drones="8" count="0" />
+    <health amount="11" />
+    <maxPower amount="6" />
+    <boardingAI>sabotage</boardingAI>
+    <aug name="OE_ACID_O2SYS_ENEMY" />
+</shipBlueprint>
 
 
 <shipBlueprint name="OE_ACID_SCOUT_ELITE" layout="oe_acid_scout" img="oe_acid_scout_elite">
@@ -829,22 +850,22 @@
 <!--MV Crew Blueprint Lists-->
 <FTL>
 <mod:findName type="blueprintList" name="LIST_CREW_UNIQUE">
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_PARAGON_UNIQUE">
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_GAS"> <!-- Shell Gas whitelist-->
 	<mod-append:name>oe_acid_worker</mod-append:name>
 	<mod-append:name>oe_acid_soldier</mod-append:name>
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_ALIENS"> <!-- Rebel store option -->
 	<mod-append:name>oe_acid_worker</mod-append:name>
 	<mod-append:name>oe_acid_soldier</mod-append:name>
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_PETS"> <!-- Rebel store option -->
@@ -859,7 +880,7 @@
 <mod:findName type="blueprintList" name="LIST_CREW_METAL"> <!-- used by welders/tonysr, don't add lanius-->
 	<mod-append:name>oe_acid_worker</mod-append:name>
 	<mod-append:name>oe_acid_soldier</mod-append:name>
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 
 <mod:findName type="blueprintList" name="LIST_CREW_POWER"> <!-- used by tonysr-->
@@ -867,11 +888,11 @@
 
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE"> <!-- used for blue options-->
 	<mod-append:name>oe_acid_soldier</mod-append:name>
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE_FIRE"> <!-- because mantises, orchids and royal definitely suck at dealing with fires -->
 	<mod-append:name>oe_acid_soldier</mod-append:name>
-	<mod-append:name>oe_acid_bill</mod-append:name>
+	<mod-append:name>unique_oe_bill</mod-append:name>
 </mod:findName>
 <mod:findName type="blueprintList" name="LIST_CREW_ELITE_RHYME"> <!--crew The One Who Rhymes can give as a gift-->
 	<mod-append:name>oe_acid_soldier</mod-append:name>

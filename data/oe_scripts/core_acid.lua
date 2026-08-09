@@ -101,3 +101,30 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
 		end
 	end
 end)
+
+local repCombos = mods.multiverse.repCombos
+repCombos.rep_comb_oe_acid_orchid = {
+	rep_oe_acid = {buffer = 0},
+	rep_orchid = {buffer = 0},
+}
+repCombos.rep_comb_all.rep_oe_acid = {buffer = 0}
+
+local repToShow = {
+	{id = "rep_comb_oe_acid_orchid", name = Hyperspace.Text:GetText("oe_lua_reputation_acid_orchid"), hidden = true},
+	{id = "rep_oe_acid", name = Hyperspace.Text:GetText("oe_lua_reputation_acid"), hidden = true},
+}
+
+local emptyReq = Hyperspace.ChoiceReq()
+script.on_internal_event(Defines.InternalEvents.PRE_CREATE_CHOICEBOX, function(event)
+	if event.eventName == "STORAGE_CHECK_STATUS_NOTORIETY" then
+		local eventManager = Hyperspace.Event
+		for _, rep in ipairs(repToShow) do
+			if not rep.hidden or Hyperspace.playerVariables[rep.id] ~= 0 then
+				local repVal = Hyperspace.playerVariables[rep.id]
+				local s = rep.name.." ["..math.floor(repVal).."]"
+				local invalidEvent = eventManager:CreateEvent("OPTION_INVALID", 0, false)
+				event:AddChoice(invalidEvent, s, emptyReq, true)
+			end
+		end
+	end
+end)

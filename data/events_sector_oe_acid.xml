@@ -100,7 +100,7 @@
 </textList>
 
 <event name="ENCOUNTER_OE_ACID_ORCHID_CLEARING" unique="true">
-	<text>It appears the orchids are taking their duty as the Acidic Growth's only ally seriously. They move in to take you out.</text>
+	<text>From what you remember, Gathering-Growth Alliance formed from initiative of Caretakers after Acidic Growth was discovered. Orchids you meet at this beacon, however, are not as peaceful as those, and decide to remove you for trespassing.</text>
 	<ship load="SHIP_ORCHID_FIGHT" hostile="true" />
 	<choice hidden="true">
 		<text>Continue...</text>
@@ -125,6 +125,8 @@
 <eventList name="DISTRESS_OE_ACID">
 	<event load="DISTRESS_REFUGEE_OE_ACID_MV" />
 	<event load="DISTRESS_OE_ACID_MANTIS_MV" />
+
+	<event load="OE_ACID_DISTRESS_VAMPWEED" />
 </eventList>
 
 <event name="DISTRESS_REFUGEE_OE_ACID_MV" unique="true">
@@ -261,11 +263,15 @@
 	<event load="ENCOUNTER_OE_ACID_PIRATE_CLEARING" />
 	<event load="ENCOUNTER_OE_ACID_REBEL_CLEARING" />
 	<event load="ENCOUNTER_OE_ACID_ORCHID_CLEARING" />
+
+	<event load="ENCOUNTER_OE_ACID_COALITION_CLEARING" />
 </eventList>
 
 <eventList name="DISTRESS_OE_ACID_UNIQUE_CLEARING">
 	<event load="DISTRESS_REFUGEE_OE_ACID_MV" />
 	<event load="DISTRESS_SLUG_MANTIS_MV" />
+
+	<event load="OE_ACID_DISTRESS_VAMPWEED" />
 </eventList>
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -280,6 +286,8 @@
 	<event load="NEBULA_OE_ACID_MYSTERIOUS_TECH" />
 	<event load="NEBULA_OE_ACID_WRECK" />
 	<event load="NEBULA_OE_ACID_GUN_UPGRADE" />
+
+	<event load="NEBULA_OE_ACID_ARREST" />
 </eventList>
 <event name="NEBULA_OE_ACID_HIGH_PRICE" unique="true">   
 	<text>A large Acidic vessel is sitting dormant. After a moment, it hails you, offering the services of one of them in return for scrap.</text>
@@ -1210,9 +1218,9 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 -->
 	<event load="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" />
 	<event load="NEBULA_OE_ACID_ORCHID_RESEARCH" />
-	<event load="NEBULA_OE_ACID_WARNING" />
-
-	<event load="NEBULA_OE_ACID_ARREST" />
+	<event load="NEBULA_OE_ACID_DIGITAL_PIRACY" />
+	
+	<event load="NEBULA_LIGHT_OE_ACID_TWIN_PULSARS" />
 </eventList>
 
 <event name="NEBULA_OE_ACID_EMPTY_WRECK" unique="true">
@@ -1341,6 +1349,103 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 				<text>Continue...</text>
 				<event load="COMBAT_CHECK" />
 			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_LIGHT_OE_ACID_TWIN_PULSARS">
+	<revisitEvent>NEBULA_LIGHT_STARGROVE_PULSAR_REVISIT</revisitEvent>
+	<environment type="pulsar"/>
+	<status type="loss" target="player" system="sensors" amount="1"/>
+
+	<text>An Acidic Growth vessel is slowly orbiting around a pair of accretion-powered pulsars.</text>
+	<choice hidden="true">
+		<text>Hail the ship.</text>
+		<event>
+			<text>You hail the ship, and the Growth answers. "Outsider. Contemplating. Binary pulsar, unstable. Lacking prior experience. Possible outcome research, necessary. Assistance required."</text>
+			<choice hidden="true">
+				<text>Approach one of the pulsars for a scan.</text>
+				<event>
+					<text>"Inadvisable. Extreme X-Ray radiation levels. Unpredictable lighthouse timing. Cause: binary nature."</text>
+					<choice hidden="true">
+						<text>Go for it anyway.</text>
+						<event>
+							<text>As you try to approach the pulsar, the other quickly shifts its position and lightly grazes your ship with its beam. You decide to retreat immediately.</text>
+							<damage amount="3" effect="breach" system="room"/>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>"Issued warning. Outsider, did not follow. Attempt to help appreciated. Scrap for repairs given."</text>
+									<autoReward level="LOW">scrap_only</autoReward>
+								</event>
+							</choice>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Bad idea, sorry.</text>
+						<event>
+							<text>"Recognized attempt to help. Thought appreciated."</text>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="LIST_CREW_HUMAN">
+				<text>(Human crew) Have you tried blowing one up?</text>
+				<event>
+					<text>"Suggestion unusual. No prior experience. Attempting firing weapons." The vessel launches a barrage of missiles into one of the pulsars, but nothing happens. "Star too big."</text>
+					<choice hidden="true">
+						<text>Well, we did our best.</text>
+						<event>
+							<text>"Recognized attempt to help. Thought appreciated."</text>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="LIST_CREW_OE_BIRD">
+				<text>(Gi crew) Send in a suicide drone to collect data.</text>
+				<event>
+					<text>The drone returns enough information to plot future radiation bursts before burning down in the scorching heat of the pulsar.</text>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event>
+							<text>The data shows that a couple bursts might graze the current habitats of Acidic Growth, but not to an irreparable degree. The Growth thanks you for this knowledge. "Acknowledged. Low concern. Contemplating relocation. Reward imminent." The Growth grants you a small gift for your troubles.</text>
+							<autoReward level="MED">standard</autoReward>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true" req="LIST_CREW_ENGI">
+				<text>(Engi crew) Analyze rotation patterns.</text>
+				<event>
+					<text>Scans seem to show a possible collision between the two pulsars, resulting in a massive gamma ray burst capable of wiping out all life in the twelve closest star systems, including any Acidic Growth.</text>
+					<choice hidden="true">
+						<text>Inform the growth.</text>
+						<event>
+							<text>"Acknowledged. Concerning development. Contemplating. Reward imminent." The growth grants you a small gift for your troubles.</text>
+							<autoReward level="MED">standard</autoReward>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Withhold the information.</text>
+						<event>
+							<text>"Acknowledged. System poses no threat. Reward imminent." The growth grants you a small gift for your troubles.</text>
+							<autoReward level="MED">standard</autoReward>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>Sorry, no can do.</text>
+				<event>
+					<text>"Lack of thought recognized. No attempt at help. Goodbye."</text>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Ignore the, undoubtedly, interesting system.</text>
+		<event>
+			<text>You better spend your time elsewhere.</text>
 		</event>
 	</choice>
 </event>
@@ -1599,7 +1704,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	</choice>
 </event>
 			
-<event name="NEBULA_OE_ACID_REPAIR_YARD">
+<event name="NEBULA_OE_ACID_REPAIR_YARD" unique="true">
 	<text>You arrive to find a small automatic Acidic repair yard. You could probably try to sneak in and hope it repairs you for free. It also appears like you could pay for some repairs.</text>
 	<environment type="nebula" />
     <choice hidden="true">
@@ -1790,15 +1895,15 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	<event load="NEBULA_OE_ACID_WEAPONCACHE" />
 	
 	<event load="NEBULA_OE_ACID_EMPTY_WRECK" />
-	<event load="NEBULA_REFUGEE_OE_ACID" />
 <!--
+	<event load="NEBULA_REFUGEE_OE_ACID" />
 	<event load="NEBULA_ACIDIC_OE_ACID_BADORCHID" />
 	<event load="NEBULA_ACIDIC_OE_ACID_CHOOSE_DEATH" />
 -->
 	<event load="NEBULA_OE_ACID_REPAIR_YARD" />
 	<event load="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" />
 	<event load="NEBULA_OE_ACID_ORCHID_RESEARCH" />
-	<event load="NEBULA_OE_ACID_WARNING" />
+	<event load="NEBULA_OE_ACID_DIGITAL_PIRACY" />
 </eventList>
 
 <event name="NEBULA_OE_ACID_IMPORTANT_PRISONER" unique="true">
@@ -1860,7 +1965,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
     <choice>
         <text>Leave them be.</text>
         <event>
-            <text>You fly away, leaving the Acidic vessel to fend for itself. The Acidic growth can't really die anyway, right?</text>
+            <text>You fly away, leaving the Acidic vessel to fend for itself. The Acidic Growth can't really die anyway, right?</text>
             <choice hidden="true">
 				<text>Do something onboard the ship.</text>
 				<event load="STORAGE_CHECK" />
@@ -1953,7 +2058,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 									<choice hidden="true">
 										<text>Back down.</text>
 										<event>
-											<text>You decide this isn't worth it. And, isn't it for the good of everyone?.. You get ready to jump.</text>
+											<text>You decide this isn't worth it. And, isn't it for the good of everyone? You get ready to jump.</text>
 										</event>
 									</choice>
 								</event>
@@ -2003,6 +2108,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 		<event>
 			<text>Who do they think they are? Yes, maybe it's "their" space, but they can't order you like that! You prepare to deal with them.</text>
 			<ship hostile="true" />
+			<queueEvent>MORALITY_UPDATE_OE_ACID_FIGHT</queueEvent>
 		</event>
 	</choice>
 	<choice hidden="true">
@@ -2136,6 +2242,116 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</choice>
 </event>
 
+
+<event name="NEBULA_OE_ACID_DIGITAL_PIRACY" unique="true">
+	<environment type="nebula" />
+	<text>You arrive at the beacon just as a large Acidic vessel is preparing to leave. After noticing you, they quickly stop charging their drive and approach.</text>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>As the ship gets closer, a curious detail pops up - crudely applied pirate markings indicating their allegiance to the "Fleet of the Piracy". The vessel hails you.</text>
+			<ship load="SHIP_OE_ACID_DIGITAL_PIRACY" hostile="false" />
+			<choice hidden="true">
+				<text>Hear them out.</text>
+				<event>
+					<text>"Captain and/or autonomous piloting system. Your treasure, set to be surrendered." The ship powers weapons. "Commence, boarding preparations. Otherwise, no mercy."</text>
+					<choice hidden="true">
+						<text>Prepare to be boarded.</text>
+						<event>
+							<text>You open the airlocks and allow the Acidic shuttle to dock. From it, a small Acidic soldier enters your ship and, completely ignoring you, rushes for the piloting. You give chase.</text>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>Running into the cockpit, you watch as the Acidic soldier awkwardly jumps up and inserts a universal parallel transmission connector into the universal serial transmission port on your control panel and stares at it in confusion.</text>
+									<choice hidden="true">
+										<text>W... what are you doing?</text>
+										<event load="OE_ACID_DIGITAL_PIRACY_END" />
+									</choice>
+									<choice hidden="true">
+										<text>Wrong port, buddy.</text>
+										<event>
+											<text>The Acidic soldier turns to you, back to the failed connection, and back to you again. 
+
+"Tremble. Piracy victim. No treasure safe." 
+
+You ask the soldier whether or not it understands what it's trying to do.</text>
+											<choice hidden="true">
+												<text>Continue...</text>
+												<event load="OE_ACID_DIGITAL_PIRACY_END" />
+											</choice>
+										</event>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+					<choice hidden="true">
+						<text>Fight back.</text>
+						<event>
+							<text>There's no way you're allowing that.</text>
+							<ship hostile="true" />
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event load="COMBAT_CHECK" />
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+			<choice hidden="true">
+				<text>No mercy for the pirate folk, attack!</text>
+				<event>
+					<text>The Acidic ship responds in kind.</text>
+					<ship hostile="true" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="OE_ACID_DIGITAL_PIRACY_END">
+	<text>"The vessel. Proud, piracy ship. Stealing treasure," It readjusts the connector. "Greatest treasure. Proprietary systems." The soldier takes a few steps towards you.
+
+"Slug. Not long before. Software acquisition proposition. Software found freely available. Was informed that is piracy." The lifeless suit looks almost sad. "My existence now. Pirating software."</text>
+	<choice hidden="true">
+		<text>Inform the Growth about the misunderstanding.</text>
+		<event>
+			<text>You spend a good two hours passionately explaining to the Growth the difference between different kinds of piracy, why software as a subscription service is evil, and why using an adblocker on slug networks is less of a crime and more of a necessity.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>"Information acknowledged." The Growth thinks for a moment. "Will now engage in murder and plundering instead. No one shall be spared. You, exception." 
+
+Before you manage to explain that that's not what you meant, the Soldier rushes off your ship towards its new, more lethal life, but not before leaving a small gift in the form of a thumb drive containing cracked copies of multiple applications known for their extreme anti-piracy protection. Such a find can be worth some good money.</text>
+					<autoReward level="MED">scrap_only</autoReward>
+				</event>
+			</choice>	
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Surrender your software and wish the Growth best of luck.</text>
+		<event>
+			<text>The soldier fixes its port mistake and copies some of the applications installed on your ship's consoles. You tell the Growth that it's doing a tremendous job being a pirate, absolutely tremendous, and wish it the best of luck cracking the applications. 
+
+It returns back to its ship.</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>"Piracy, complete. Lack of resistance appreciated. Accept payment." 
+
+The Growth transfers over some resources as payment for your data, and while that defeats the entire purpose of being a pirate, you know better than to reject a gift.</text>
+					<autoReward level="LOW">stuff</autoReward>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -2147,8 +2363,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	<event load="NEBULA_OE_ACID_DISTRESS_ROCK" />
 	<event load="NEBULA_OE_ACID_DISTRESS_TRICK" />
 	<event load="NEBULA_OE_ACID_DISTRESS_QUESTION" />
+
 	<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2" />
-	<event load="OE_ACID_DISTRESS_VAMPWEED" />
 	<event load="NEBULA_ACIDIC_OE_ACID_ORCHID_DISTRESS_PRESSURE" />
 </eventList>
 
@@ -2345,7 +2561,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 <event name="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHOICE">
-	<text>Turns out, there was no risk involved: the ship is full of oxygen. You are confused, but that's when you remember Acidic Growth usually outfits its ships with life support system that spreads the growth throughout the ship instead of breathable air. Feeling stupid, you consider your options.</text>
+	<text>Turns out, there was no risk involved: the ship is full of oxygen. You are confused, but that's when you remember Acidic Growth usually outfits its ships with life support system that spreads the Growth throughout the ship instead of breathable air. Feeling stupid, you consider your options.</text>
 	<choice hidden="true">
 		<text>Try reconfiguring it.</text>
 		<event load="NEBULA_OE_ACID_DISTRESS_BROKEN_O2_CHANCE" />
@@ -2360,7 +2576,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="LIST_CREW_OE_ACID">
-		<text>(Acidic Growth) Send over your Acidic crew to reconfigure it.</text>
+		<text>(Acidic Growth Crew) Send over your Acidic crew to reconfigure it.</text>
 		<event>
 			<text>Your crewmember, being of Acidic Growth origin themselves, is familiar with this tech, and reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2368,7 +2584,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="LIST_CREW_ENGI">
-		<text>(Engi) Send your Engi to reconfigure it.</text>
+		<text>(Engi Crew) Send your Engi to reconfigure it.</text>
 		<event>
 			<text>Your Engi knows just about everything there is to know about technology like this, and reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2376,7 +2592,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="human_engineer">
-		<text>(Engineer) Send your Engineer to reconfigure it.</text>
+		<text>(Engineer Crew) Send your Engineer to reconfigure it.</text>
 		<event>
 			<text>Your Engineer studied all forms of life support technology, and so reconfigures it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2384,7 +2600,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="human_technician">
-		<text>(Technician) Send your Technician to reconfigure it.</text>
+		<text>(Technician Crew) Send your Technician to reconfigure it.</text>
 		<event>
 			<text>There's next to nothing a WI Technician can't fix when it comes to systems, and so they reconfigure it swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2392,7 +2608,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="shell_mechanic">
-		<text>(Shell Mechanic) Send your Shell Mechanic to reconfigure it.</text>
+		<text>(Shell Mechanic Crew) Send your Shell Mechanic to reconfigure it.</text>
 		<event>
 			<text>While Shell Mechanics are more known for their nanites, it doesn't mean they don't have a bunch of general knowledge. They reconfigure the life support swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2400,7 +2616,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 		</event>
 	</choice>
 	<choice hidden="true" req="LIST_CREW_OE_BIRD">
-		<text>(Gi) Send your Gi to reconfigure it.</text>
+		<text>(Gi Crew) Send your Gi to reconfigure it.</text>
 		<event>
 			<text>Gi know about all sorts of technology, not just drones. They reconfigure the life support swiftly. If the Acidic Growth are grateful, they don't show it; you receive your promised reward and they silently fly away.</text>
 			<autoReward level="MED">standard_no_item</autoReward>
@@ -2609,7 +2825,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 				<text>Agree to hunt down the ship.</text>
 				<event>
 					<text>Despite also technically being a trespasser, clearly the Acidic Growth cares much more about dealing with this other ship. They send you the coordinates for the last reported location.</text>
-                    <variable name="oe_acid_friendly" op="set" val="1" />
+                    <queueEvent>MORALITY_REMOVE_OE_ACID</queueEvent>
 					<quest event="NEBULA_OE_ACID_CIV_HUNT" />
 				</event>
 			</choice>
@@ -2938,7 +3154,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 <event name="NEBULA_OE_QUEST_ACID_COALITION_ELABORATE_SUCCESS_ELITE">
-	<text>The Slug briefly looks around, before beginning to tap away with their pen again. "Are you... undercover?.." With a sigh, they stop their fidgeting, "Fine. I don't care. The vesssel intended for capture is a Cealaformer. If you're not familiar, it'sss a ssship that can ssspread nebula gasssesss on itsss own. Turnsss out, the ssspace mold has thossse too. To be able to sssettle anywhere it wantsss... Kind of dangerousss for sssapient life, don't you think?"</text>
+	<text>The Slug briefly looks around, before beginning to tap away with their pen again. "Are you... undercover?" With a sigh, they stop their fidgeting, "Fine. I don't care. The vesssel intended for capture is a Cealaformer. If you're not familiar, it'sss a ssship that can ssspread nebula gasssesss on itsss own. Turnsss out, the ssspace mold has thossse too. To be able to sssettle anywhere it wantsss... Kind of dangerousss for sssapient life, don't you think?"</text>
 	<choice hidden="true">
 		<text>We'll do it.</text>
 		<event load="NEBULA_OE_QUEST_ACID_COALITION_AGREED" />
@@ -3000,6 +3216,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 -->
 <eventList name="NEBULA_HOSTILE_OE_ACID">
 	<event load="NEBULA_ENCOUNTER_OE_ACID" />
+	<event load="NEBULA_ENCOUNTER_OE_ACID" />
 	<event load="NEBULA_ACIDIC_OE_ACID_FIGHT" />
 	<event load="NEBULA_ACIDIC_OE_ACID_PIRATE" />
 </eventList>
@@ -3007,6 +3224,8 @@ You are now, finally, left alone... well, better than that, even: you've been le
 <event name="NEBULA_ENCOUNTER_OE_ACID">
 	<loadEventList first="false" generate="true">
 		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
+		<event name="NEBULA_ENCOUNTER_OE_ACID_REGULAR" />
+		<event load="NEBULA_OE_ACID_WARNING" />
 		<event name="NEBULA_ENCOUNTER_OE_ACID_STORM" />
 	</loadEventList>
 </event>
@@ -3264,8 +3483,9 @@ You are now, finally, left alone... well, better than that, even: you've been le
 -->
 
 <eventList name="NEBULA_HOSTILE_OE_ACID_UNIQUE">
+	<!--
 	<event load="NEBULA_ENCOUNTER_OE_ACID_HACKER" />
-	
+	-->
 	<event load="NEBULA_ENCOUNTER_OE_ACID" />
 	<event load="NEBULA_ACIDIC_OE_ACID_FIGHT" />
 
@@ -3548,15 +3768,15 @@ You are now, finally, left alone... well, better than that, even: you've been le
 
 <event name="DISTRESS_OE_ACID_INVESTIGATE" unique="true">
 	<variable name="loc_found_oe_acid_factory" op="set" val="1" />
-	<text>You pilot closer to the planet. As you get closer you manage to make out the crater on the surface, however instead of a crashed star ship you find a strange factory. It appears however that something crashed into the factory, causing the distress beacon.</text>
+	<text>You pilot closer to the planet. As you get closer you manage to make out the crater on the surface, however instead of a crashed star ship you find a strange factory. It appears that something has crashed into the factory, causing the distress beacon.</text>
 	<choice>
 		<text>Land and explore the factory.</text>
 		<event>
-			<text>You wander through the factory, it appears that a battle of some kind once took place here, the walls of the facility are scored by projectile fire. Eventually you find your passage blocked by rubble, there's a passage around, however it's locked behind a security system of some kind.</text>
+			<text>You wander through the factory. It appears that a battle of some kind once took place here, the walls of the facility are scored by projectile fire. Eventually you find your passage blocked by rubble. There's a passage around, however it's locked behind a security system of some kind.</text>
 			<choice>
 				<text>Use explosives to blast your way through.</text>
 				<event>
-					<text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory, perhaps theres something still alive out here.</text>
+					<text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory. Perhaps theres something still alive out here.</text>
 					<item_modify>
 						<item type="missiles" min="-10" max="-10" />
 					</item_modify>
@@ -3569,7 +3789,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 			<choice>
                 <text>Use drone parts to activate some nearby haulage bots to remove the rubble.</text>
 				<event>
-                    <text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory, perhaps theres something still alive out here.</text>
+                    <text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory. Perhaps theres something still alive out here.</text>
 					<item_modify>
 						<item type="drones" min="-6" max="-6" />
 					</item_modify>
@@ -3582,7 +3802,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 			<choice req="hacking">
 				<text>(Hacking System) Use the drone to hack into the security system and open the passage around.</text>
 				<event>
-					<text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory, perhaps theres something still alive out here.</text>
+					<text>Continuing on past the rubble, you notice the signs of battle are missing from this part of the factory. Perhaps theres something still alive out here.</text>
 					<item_modify>
 						<item type="drones" min="-1" max="-1" />
 					</item_modify>
@@ -3603,31 +3823,30 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</choice>
 </event>
 <event name="OE_ACIDIC_LEADER_FIND">
-	<text>Eventually you arrive in a control room of sorts, and in the middle of it you find a single surviving Acidic Worker, however there's something off about this soldier, the normally green acidic growth has turned purple, you're not sure what this means but you go over to make contact.</text>
+	<text>Eventually you arrive in a control room of sorts, and in the middle of it you find a single surviving Acidic Soldier. There's something off about it; the normally green Acidic Growth has turned purple. You're not sure what this means, but you go over to make contact anyway.</text>
 	<choice hidden="true">
-		<text>Hello?.</text>
+		<text>Hello?</text>
 		<event>
-			<text>"Oh jeez, I hope you're not here to kill me, I swear im not like the others, I'm not here to kill any more miners." It appears there's something wrong with this Acidic Worker, if you had to guess you'd think it wasn't part of the Acidic Growth.</text>
-			<choice hidden="true">
-				<text>"What are you?"</text>
+			<text>"Hello. Have you come to: kill us? Gratitude, if not- please spare. Please." Your guess has been proved correct: something is off about this Soldier. Is it even a part of the same species?</text>
+			<choice>
+				<text>What are you?</text>
 				<event>
-					<text>"I'm not entirely sure... I'm quite confident I was the Acidic Growth at some point, but everything is weird now, there's no more of me out there, its just me, in this robot, alone..." The Acidic Worker trails off for a moment. "Hang on, do you guys think you can help me, if you guys can spare me a bit of scrap I can repair one of the ships and head back to try and recombine with myself."</text>
-					<choice hidden="false">
-                        <text>"Sure, What should we call you anyway?"</text>
+					<text>"We're not entirely sure. We were a: part of the Growth. Now we- they, they tried to kill us, our own, they tried- what are we- excuse us." The Acidic Soldier trails off for a moment. "Could you assist? If you can spare us a bit of scrap, we can: repair one of the ships. We'll head to the Core. It must have answers for us. It must."</text>
+                    <choice>    
+						<text>Sure. What should we call you?</text>
                         <event>
-                            <text>"Hmmm, I don't think I'm quite the Acidic Growth anymore, I suppose you can call me Bill, I've always liked the name Bill. By the way, if you ever want to visit here's the coordinates to my Acidic Nebula, maybe I'll see you around there."</text>
+                            <text>"Name? Name. This factory was abandoned when we: crashed. We found someone's business card... A name we liked: Bill. Please, call us that. Gratitude: coordinates to Acidic Growth's home- our, our home, is it ours still- see you there."</text>
                             <item_modify>
-                                <item type="scrap" min="-20" max="-20" />
+								<item type="scrap" min="-20" max="-20" />
                             </item_modify>
                             <variable name="coords_oe_bill" op="set" val="1" />
-                            <variable name="oe_acid_friendly" op="set" val="1" />
-                            <variable name="oe_acid_bill" op="set" val="1" />
+                            <variable name="unique_oe_bill" op="set" val="1" />
                         </event>
                     </choice>
                     <choice hidden="false">
                         <text>Explain that you can't spare that much scrap.</text>
                         <event>
-                            <text>"Oh, thats ok, I'll just wait for the next visitors to come by, it shouldn't be too long, I hope." You return to your ship, collecting a small amount of supplies as you leave.</text>
+                            <text>"Oh. Oh, that's- that's fine, fine, we'll wait- sorry. You can go. We will wait." You return to your ship, collecting a small amount of supplies as you leave.</text>
                             <autoReward level="LOW">stuff</autoReward>
                         </event>
                     </choice>
@@ -3666,14 +3885,14 @@ You are now, finally, left alone... well, better than that, even: you've been le
     <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
 
     <text>In the middle of the Acidic Growth you discover a strange ship floating through the nebula.</text>
-    <choice hidden="true" req="oe_acid_bill">
+    <choice hidden="true" req="unique_oe_bill">
         <text>You identify the ship as belonging to Bill.</text>
         <event load="OPTION_INVALID"/>
     </choice>
     <choice hidden="true">
         <text>Contact the ship.</text>
         <event>
-            <text>Just as you're about to make contact, an Acidic vessel comes flying out of the nebula to immediately eviscerate the strange ship. The acidic vessel then turns it's murderous intent on you, prepare for combat.</text>
+            <text>Just as you're about to make contact, an Acidic vessel comes flying out of the nebula to immediately eviscerate the strange ship. The acidic vessel then turns it's murderous intent on you. Prepare for combat.</text>
             <ship load="SHIP_OE_ACID_BILL_MEET" hostile="true" />
 			<choice hidden="true">
 				<text>Continue...</text>
@@ -3698,15 +3917,15 @@ You are now, finally, left alone... well, better than that, even: you've been le
 </event>
 
 <event name="NEBULA_OE_ACID_BILL_JOIN1">
-    <text>You move in the scoop up the Acidic Worker, as you're doing so you notice that the normally green Acidic Growth is a shade of purple.</text>
-    <choice hidden="true" req="oe_acid_bill" lvl="1" blue="false">
-        <text>You recognise the Acidic Worker as Bill.</text>
+    <text>You move in to scoop up the Acidic Soldier. As you're doing so you notice that the normally green Acidic Growth is a shade of purple.</text>
+    <choice hidden="true" req="unique_oe_bill" lvl="1" blue="false">
+        <text>Bill, is this you?</text>
         <event name="NEBULA_OE_ACID_BILL_HELP">
-            <text>"Well I'm trying to get to the Acidic core, Hopefully I'll be able to reintergrate with the Acidic Growth once im there. The only problem is that I don't have a ship anymore, do you think you can take me there?"</text>
+            <text>"Hello. Yes. This is: us. We were trying to reach the Core on our own. Ship, blown up: help, required."</text>
             <choice hidden="true">
-                <text>Sure we can.</text>
+                 <text>Offer to transport them.</text>
                 <event>
-                    <text>"Thanks! I'll upload the coordinates to your computer."</text>
+                    <text>"Gratitude. Coordinates: here."</text>
                     <quest event="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
                         <nebulaBeacon>true</nebulaBeacon>
                         <nebulaEvent>NEBULA_ACIDIC_OE_ACID_BILL_CORE</nebulaEvent>
@@ -3716,21 +3935,40 @@ You are now, finally, left alone... well, better than that, even: you've been le
             </choice>
         </event>
     </choice>
-    <choice hidden="true" req="oe_acid_bill" lvl="1" blue="false">
+    <choice hidden="true" req="unique_oe_bill" lvl="1" blue="false">
         <text>Throw them back into the void of space.</text>
         <event/>
     </choice>
-    <choice hidden="true" req="oe_acid_bill" lvl="0" max_lvl="0" blue="false">
+    <choice hidden="true" req="unique_oe_bill" lvl="0" max_lvl="0" blue="false">
         <text>Continue...</text>
         <event>
-            <text>Strangely the Acidic Worker begins to tell you it's story, apparently it's become seperated from the Acidic Growth somehow and has been trying to rejoin it.</text>
+            <text>Strangely, the Acidic Soldier begins to tell you its story. Apparently it has become seperated from the Acidic Growth somehow and has been trying to rejoin it.</text>
             <choice hidden="true">
-                <text>"What should we call you then?"</text>
+                <text>What's your name?</text>
                 <event>
-                    <text>"Hmmm, I don't think I'm quite the Acidic Growth anymore, I suppose you can call me Bill, I've always liked the name Bill."</text>
+                    <text>"Name? Name. Call us: Bill. That's... that's probably all we are now."</text>
                     <choice hidden="true">
-                        <text>"What can we do to help?"</text>
-                        <event load="NEBULA_OE_ACID_BILL_HELP"/>
+                        <text>What can we do to help?</text>
+                        <event>
+							<text>"Travel to the Core. Demand answers. Ship: destroyed. Could we: use yours?"</text>
+							<choice hidden="true">
+								<text>Sure.</text>
+								<event>
+									<text>"Gratitude. Coordinates: here."</text>
+									<quest event="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
+										<nebulaBeacon>true</nebulaBeacon>
+										<nebulaEvent>NEBULA_ACIDIC_OE_ACID_BILL_CORE</nebulaEvent>
+										<createNebula>false</createNebula>
+									</quest>
+								</event>
+							</choice>
+							<choice hidden="true">
+								<text>No.</text>
+								<event>
+									<text>Before Bill can realize, they're already outside the airlock. Who knows what exactly turned them purple.</text>
+								</event>
+							</choice>							
+						</event>
                     </choice>
                 </event>
             </choice>
@@ -3738,6 +3976,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
     </choice>
 </event>
 
+<!--
 <event name="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
     <beaconType id="map_icon_oe_acid_nebula_core" global="true">
 		<color r="138" g="237" b="31" a="1"/>
@@ -3747,7 +3986,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /->
 
     <text>You've arrived at the Acidic Core, an extremely dense Acidic Nebula, the location where the Acidic Growth originally formed. It's so dense that it's hard for the Acidic Growth to guard it, they do try however.</text>
     <choice hidden="true">
@@ -3771,7 +4010,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
                                         <text>Offer bill a place on your crew.</text>
                                         <event>
                                             <text>"That sounds fun, whats our first mission captain?" Exasperated, you gesture at the rapidly approaching Acidic vessel, you wonder if bringing bill on is such a good idea afterall.</text>
-                                            <crewMember amount="1" all_skills="1" class="oe_acid_bill">Bill</crewMember>
+                                            <crewMember amount="1" all_skills="1" class="unique_oe_bill">Bill</crewMember>
 											<achievement silent="false">ACH_OE_CREW_BILL</achievement>
                                             <choice hidden="true">
                                                 <text>Continue...</text>
@@ -3798,7 +4037,104 @@ You are now, finally, left alone... well, better than that, even: you've been le
         </event>
     </choice>
 </event>
+-->
 
+<event name="NEBULA_ACIDIC_OE_ACID_BILL_CORE">
+    <beaconType id="map_icon_oe_acid_nebula_core" global="true">
+		<color r="138" g="237" b="31" a="1"/>
+		<unvisitedTooltip>The Core of the Acidic Growth, this is the original location where the Acidic Growth formed, and as such has the highest concentration of Acidic Growth in the sector.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>The Core of the Acidic Growth, this is the original location where the Acidic Growth formed, and as such has the highest concentration of Acidic Growth in the sector.</undiscoveredTooltip>
+	</beaconType>
+	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
+	<status type="limit" target="player" system="sensors" amount="0" />
+
+    <text>You've arrived at the Acidic Core, an extremely dense Acidic Nebula where the Acidic Growth originally formed. It's so dense that it's hard for the Acidic Growth to guard it, they do try however.</text>
+	<choice hidden="true">
+		<text>Ask Bill how to contact it.</text>
+		<event>
+			<text>"Let me access the comms." Bill messes with the console, while you and your crew nervously wait. It almost feels like the Core observes you...</text>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>"Done." Bill steps back. The console immediately explodes with hails, consisting of questions, warnings and orders. The Core doesn't like an outsider being near it.</text>
+					<choice hidden="true">
+						<text>Respond.</text>
+						<event name="NEBULA_OE_ACID_BILL_RELEASE">
+							<text>The Core sees your response. A loud, mechanical voice speaks, "OUTSIDER. STATE YOUR INTENTION." Bill asks to let them talk to it on their own. You allow, but have a sneaking suspicion it's not going to go well.</text>
+							<choice hidden="true">
+								<text>Continue...</text>
+								<event>
+									<text>"Core: we are a part of the Acidic Growth. Turned purple. Being hunted. Why?"
+
+It all goes silent for a moment. The tension is thick. And then,
+									</text>
+									<choice hidden="true">
+										<text>And then?</text>
+										<event name="NEBULA_OE_ACID_BILL_BOSS">
+											<text>"WARNING: MUTATED STRAIN. WARNING: DANGER TO GROWTH. ORDER: EXTERMINATION."
+
+An acidic shot narrowly misses your ship, and you see a massive Acidic vessel barreling towards you. You have to defend yourself.
+											</text>
+											<ship load="SHIP_OE_ACID_BILL_BOSS" hostile="true"/>
+                                            <choice hidden="true">
+                                                <text>Continue...</text>
+                                                <event load="COMBAT_CHECK" />
+                                            </choice>											
+										</event>
+									</choice>
+								</event>
+							</choice>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>We better leave.</text>
+		<event>
+			<text>Despite Bill's request, you decide to leave as fast as possible. They ask to be dropped off on the closest, preferably non-growth controlled, station.</text>
+		</event>
+	</choice>
+</event>
+
+<event name="NEBULA_OE_ACID_BILL_WIN">
+	<text>Bill, thankfully not harmed during the fight, dashes toward the console as soon as the battle quiets down. They type, and type, and type. "It's- it's refusing hails. The Core. We need to talk. We need to know." The carcass of a soldier turns to you, and you really wonder what's actually piloting it - because that's the most emotion you ever saw the Growth express.
+
+"Captain. It said... mutated strain. It said... danger to the Growth. What are we?"
+	</text>
+	<choice hidden="true">
+		<text>You are Bill.</text>
+		<event>
+			<text>The soldier steps back, as if in shock. "Yes, it is... the name we chose. We know. But... you don't understand- what are we? We must have a greater purpose. We must be connected to something greater. We can't just- be... something so insignificant..."</text>
+			<choice hidden="true">
+				<text>No life is insignificant. You have a name. That's enough.</text>
+				<event>
+					<text>"This is... just a name of some foreman, isn't it. But, you: saying those things. Makes us feel that, maybe: this is okay." Bill looks at the console. "We should move. They might send more guards after us." Their finger touches the screen, closing the communication channel, "We should... think more about this. Meanwhile, do you need: more crew?"</text>
+					<choice>
+						<text>Accept.</text>
+						<event>
+							<text>"Gratitude. Captain." Bill walks away from the bridge. As they said, you probably should run from this beacon before you get jumped by an Acidic ship again.</text>
+							<crewMember amount="1" all_skills="1" class="unique_oe_bill">Bill</crewMember>
+							<variable name="ach_crew_oe_bill" op="set" val="1"/>
+							<achievement silent="false">ACH_OE_CREW_BILL</achievement>
+						</event>
+					</choice>
+					<choice>
+						<text>Decline.</text>
+						<event>
+							<text>Bill seems upset, but doesn't protest. You promise to drop them off on the closest station not under Growth's control.</text>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+</event>
+
+
+<!--
 <event name="NEBULA_ACIDIC_OE_ACID_SHIPYARD" unique="true">
     <beaconType id="map_icon_oe_acid_nebula_shipyard" global="true">
 		<color r="138" g="237" b="31" a="1"/>
@@ -3808,7 +4144,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="PLANET_OE_ACID_STATION" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /->
 
     <text>You've arrived at the beacon, one of the few marked locations in Acidic space. This shipyard was where the first Acidic vessels were constructed and today it serves as the main diplomatic quarters between the Acidic Growth and the Orchids.</text>
     <choice hidden="true">
@@ -3835,7 +4171,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
                     </choice>
                 </event>
             </choice>
-            <choice hidden="true" req="oe_acid_bill">
+            <choice hidden="true" req="unique_oe_bill">
                 <text>(Acidic Outcast) Have Bill pose as captain.</text>
                 <event>
                     <text>The orchid seems a bit suspicious but doesn't push it, you're able to continue moving through the shipyard.</text>
@@ -4008,7 +4344,7 @@ You are now, finally, left alone... well, better than that, even: you've been le
 	</beaconType>
 	<img back="BACK_EVENT_ACIDICNEBULA" planet="NONE" />
 	<status type="limit" target="player" system="sensors" amount="0" />
-    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /-->
+    <!--triggeredEvent event="OE_ACIDIC_NEBULA_TIMER" seeded="false" loops="999999999" minTime="4.0" maxTime="7.0" clearOnJump="true" /->
 
 	<text>This beacon hosts an Acidic transport. It's safe to bet the ship is most likely carrying the special tech for the project in the lab. If you can kill the acidic growth onboard, the cargo will be yours.</text>
 	<ship load="SHIP_OE_ACID_TRANSPORT_BARREL" hostile="false" />
@@ -4038,6 +4374,107 @@ You are now, finally, left alone... well, better than that, even: you've been le
         </event>
     </choice>
 </event>
+-->
 
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ ACIDIC SHIPYARD REWRITE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
+
+<event name="NEBULA_ACIDIC_OE_ACID_SHIPYARD" unique="true">
+    <beaconType id="map_icon_oe_acid_nebula_shipyard" global="true">
+		<color r="138" g="237" b="31" a="1"/>
+		<unvisitedTooltip>An unvisited location. This beacon is located within the Acidic Growth, which may be detrimental to the health of your ship.</unvisitedTooltip>
+		<visitedTooltip>Explored location. Nothing left of interest.</visitedTooltip>
+		<undiscoveredTooltip>An unvisited location.</undiscoveredTooltip>
+	</beaconType>
+	<img back="BACK_EVENT_ACIDICNEBULA" planet="PLANET_OE_ACID_STATION" />
+	<status type="limit" target="player" system="sensors" amount="0" />
+	<customFleet right="false" firing="false" autoDarkening="true">CUSTOM_FLEET_OE_ACID</customFleet>
+    <text>You've arrived at the beacon, one of the few marked locations in Acidic space. This shipyard was where the first Acidic vessels were constructed and today it serves as the main diplomatic quarters between the Acidic Growth and the Orchids. The Acidic fleet is here, and ships seem to move frantically; something's wrong.</text>
+	<choice hidden="true" blue="false" req="rep_comb_acid_orchid" lvl="-9999" max_lvl="1">
+		<text>Continue...</text>
+		<event>
+			<text>You get contacted. "Federation captain? I am Praetor Mn'Akei. Matter's serious, we could use your help."</text>
+			<choice hidden="true">
+				<text>Hear them out.</text>
+				<event load="OE_ACID_SHIPYARD_MAIN" />
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_acid_orchid" lvl="2" max_lvl="9999">
+		<text>Continue...</text>
+		<event>
+			<text>You get contacted. "Federation captain? I am Praetor Mn'Akei. Matter's serious, and while I heard reports about your crimes, right now we can use any help we can get."</text>
+			<choice hidden="true">
+				<text>Hear them out.</text>
+				<event load="OE_ACID_SHIPYARD_MAIN" />
+			</choice>
+		</event>
+	</choice>
+</event>
+
+<event name="OE_ACID_SHIPYARD_MAIN">
+	<text>"You listening? Good. Our intelligence gathered that Coalition is about to attack the Shipyard with full force. I'll let, uh, Growth speak." An Acidic Soldier appears on screen, "Outsider. Coalition, goal, Shipyard capture. Fleet, but more. Prototype vessel. Low knowledge, high threat. Ally, continue?" Acidic Soldier looks off screen, and soon the Orchid returns, "Yes, that's the report. The mentioned Coalition prototype will be your target. Now, decide, and as fast as you can, if you will help or not. We will supply you with missiles and drones before the battle."</text>
+	<choice hidden="true">
+		<text>Agree to help.</text>
+		<event>
+			<text>"Great, great. But I'll hold my gratitude for after the battle, captain." You receive some supplies. Now's nothing else to do but wait.</text>
+			<item_modify>
+				<item type="missiles" min="5" max="5"/>
+				<item type="drones" min="3" max="3"/>
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>The Coalition fleet arrives, and chaos immediately breaks out. It doesn't take long for you to spot your target: a large, intimidating ship that seems to be leading the assault. The Acidic fleet retaliates, keeping other Coalition vessels busy.</text>
+					<ship load="SHIP_OE_ACID_SHIPYARD" hostile="false" />
+					<customFleet right="false" firing="false" autoDarkening="true">CUSTOM_FLEET_OE_ACID</customFleet>
+					<customFleet right="true" firing="false" autoDarkening="true">CUSTOM_FLEET_COALITION</customFleet>
+					<choice hidden="true">
+						<text>Move in to attack your target.</text>
+						<event>
+							<text>The Prototype notices you. This is going to be quite a fight.</text>
+							<ship hostile="true" />
+							<queueEvent>COMBAT_CHECK</queueEvent>
+						</event>
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_acid_orchid" lvl="-9999" max_lvl="1">
+		<text>Decline.</text>
+		<event load="OE_ACID_SHIPYARD_DECLINE_GOOD" />
+	</choice>
+	<choice hidden="true" blue="false" req="rep_comb_acid_orchid" lvl="2" max_lvl="9999">
+		<text>Decline.</text>
+		<event load="OE_ACID_SHIPYARD_DECLINE_BAD" />
+	</choice>
+</event>
+
+<event name="OE_ACID_SHIPYARD_DECLINE_GOOD">
+	<text>"I see. Well, I hope we'll manage it on our own. Good luck, captain."</text>
+</event>
+
+<event name="OE_ACID_SHIPYARD_DECLINE_BAD">
+	<text>"I see. Get out of my sight, then, before you get swept up in the fight. With allies like this, I'm not sure we need enemies."</text>
+</event>
+
+<event name="OE_ACID_SHIPYARD_WIN">
+	<text>As things calm down, Mn'Akei contacts you again. "Captain, we offer you our gratitude. My personally, too. It's not the last we'll see of Coalition, but it'll give us time to regroup, and for the Growth to build more ships. It's a shame we don't know how exactly that Prototype ship was made... but we have our spies." He looks off in the distance. "Excuse me. Your reward, now. Growth?" 
+	
+An Acidic Soldier you saw before appears on the screen. "Ally. We have, prototype of our own. Weapon. Accept gratitude."</text>
+	<weapon name="OE_LASER_ACID_SUPER"/>
+	<clearCustomFleet />
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<text>"And, ally. Before you depart. Your help, our vessels, freed up. We, propose support. Take the vessel. Federation, good luck."</text>
+			<unlockCustomShip silent="false">PLAYER_SHIP_OE_ACID_LONG</unlockCustomShip>
+			<queueEvent>MORALITY_REMOVE_OE_ACID_DOUBLE</queueEvent>
+		</event>
+	</choice>
+</event>
 </FTL>
 

@@ -156,23 +156,23 @@ function acidTrigger()
 		Hyperspace.Sounds:PlaySoundMix("cultivatorSpore", -1, false)
 		local roomPos = Hyperspace.ships.player:GetRandomRoomCenter()
 		local room = get_room_at_location(Hyperspace.ships.player, roomPos, false)
-		startAcid(0, room, 10)
+		startAcid(0, room, 5)
 	end
 	if Hyperspace.ships.enemy then
 		Hyperspace.Sounds:PlaySoundMix("cultivatorSpore", -1, false)
 		local roomPos = Hyperspace.ships.enemy:GetRandomRoomCenter()
 		local room = get_room_at_location(Hyperspace.ships.enemy, roomPos, false)
-		startAcid(1, room, 10)
+		startAcid(1, room, 5)
 	end
 end
 
-local acidTimer = 1
+local acidTimer = 10
 script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
 	local commandGui = Hyperspace.Global.GetInstance():GetCApp().gui
 	if Hyperspace.playerVariables[playerVar] == 1 and not (commandGui.bPaused or commandGui.event_pause or commandGui.menu_pause or commandGui.bAutoPaused or commandGui.touch_pause) then
-		acidTimer = acidTimer - (Hyperspace.FPS.SpeedFactor/16)
+		acidTimer = acidTimer - time_increment(true)
 		if acidTimer <= 0 then
-			acidTimer = (math.random() * 3) + 4
+			acidTimer = 10 + math.random(0, 5)
 			acidTrigger()
 		end
 	end

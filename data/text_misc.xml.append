@@ -24,4 +24,7 @@ The Acidic Origins are a dangerous place, only the most extreme ships survive th
 <text name="ship_PLAYER_SHIP_OE_ACID_LONG_unlock">Find the central shipyards of the Acidic Growth to unlock this ship.</text>
 <text name="ship_PLAYER_SHIP_OE_ACID_LONG_2_unlock">Get to Sector 5 with the Acidic Destroyer Type A to unlock this ship.</text>
 <text name="ship_PLAYER_SHIP_OE_ACID_LONG_3_unlock">Get to Sector 5 with the Acidic Destroyer Type B or beat the game with the Acidic Destroyer Type A to unlock this ship.</text>
+
+<text name="renegade_discover_oe_acid">From out of the tunnel comes a massive cruiser vessel, of Acidic design! This must be some rare exploration vessel, who's taken it upon themselves to travel the Multiverse!</text>
+<text name="renegade_intro_oe_acid">TODO</text>
 </FTL>

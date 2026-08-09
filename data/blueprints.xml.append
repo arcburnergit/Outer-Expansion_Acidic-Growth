@@ -72,7 +72,7 @@
 	<maxPower amount="6" />
 	<aug name="OE_ACID_O2SYS" />
 	<shieldImage>mup_orb2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_arty_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_arty</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_ARTY_2" layout="oep_acid_arty_b" img="oep_acid_arty_b">
@@ -147,7 +147,7 @@
 	<health amount="30" />
 	<maxPower amount="8" />
 	<shieldImage>mup_orb2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_arty_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_arty</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_ARTY_3" layout="oep_acid_arty_c" img="oep_acid_arty_c">
@@ -224,7 +224,7 @@
 	<crewCount amount="1" class="human_engineer" />
 	<aug name="EX_FIRE_EXTINGUISHERS" />
 	<shieldImage>mup_orb2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_arty_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_arty</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_LONG" layout="oep_acid_long_a" img="oep_acid_long_a">
@@ -298,7 +298,7 @@
 	<maxPower amount="7" />
 	<aug name="OE_ACID_O2SYS" />
 	<shieldImage>mup_small_long2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_long_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_LONG_2" layout="oep_acid_long_b" img="oep_acid_long_b">
@@ -371,7 +371,7 @@
 	<health amount="24" />
 	<maxPower amount="7" />
 	<shieldImage>mup_small_long2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_long_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
 
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_LONG_3" layout="oep_acid_long_c" img="oep_acid_long_c">
@@ -446,10 +446,10 @@
 	<maxPower amount="7" />
 	<aug name="OE_ACID_O2SYS" />
 	<shieldImage>mup_small_long2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_long_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
 
-<shipBlueprint name="PLAYER_SHIP_OE_ACID_CREW1" layout="oep_acid_bill" img="oep_acid_bill">
+<shipBlueprint name="PLAYER_SHIP_OE_ACID_CREW1" layout="oepc_acid_bill" img="oepc_acid_bill">
 	<class>Bill's Crewser</class>
 	<name>Salt Water</name>
 	<desc>Bill has made a few friends on his adventures since becoming an Acidic Outcast.</desc>
@@ -520,7 +520,7 @@
 	<maxPower amount="7" />
 	<aug name="OE_ACID_JUMPER" />
 	<shieldImage>mup_small_long2</shieldImage>
-    <mv-mapImage>map_icon_oep_acid_long_a</mv-mapImage>
+    <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
 </FTL>
 
@@ -660,9 +660,17 @@
 
 <!--Augments-->
 <FTL>
+<augBlueprint name="BOON_CREW_OE_ACID">
+	<title>Acidic Crew</title>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
 <augBlueprint name="OE_ACID_JUMPER">
 	<title>Acidic FTL Drive</title>
-	<desc>An Advanced jump drive capable of travelling to any beacon in the sector.</desc>
+	<desc>An advanced jump drive capable of travelling to any beacon in the sector.</desc>
 	<cost>0</cost>
 	<bp>5</bp>
 	<rarity>0</rarity>
@@ -1602,10 +1610,10 @@ In extinguisher mode the system will provide 1.8 hp/sec which will scale up to 3
 	</powerList>
 </crewBlueprint>
 
-<crewBlueprint name="oe_acid_bill">
+<crewBlueprint name="unique_oe_bill">
 	<desc>A dangerous mech used by the acid growth to extend it's reach beyond the acid nebula. Hosts a fragment of the acidic growth that controls the mech. The fragments of Acidic Growth in this machine have become disconnected from the rest of the Acidic Growth and now consider themselves their own entity.</desc>
-	<title>Acidic Outcast</title>
-	<short>Acid Outcast</short>
+	<title>Castaway</title>
+	<short>Castaway</short>
 	<cost>100</cost>
 	<bp>4</bp>
 	<rarity>0</rarity>
