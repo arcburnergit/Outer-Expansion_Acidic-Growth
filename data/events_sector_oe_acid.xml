@@ -273,6 +273,7 @@
 
 	<event load="OE_ACID_DISTRESS_VAMPWEED" />
 </eventList>
+
 <!--
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -1219,7 +1220,8 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 	<event load="NEBULA_ACIDIC_OE_ACID_PRAETOR_DIPLOMATIC" />
 	<event load="NEBULA_OE_ACID_ORCHID_RESEARCH" />
 	<event load="NEBULA_OE_ACID_DIGITAL_PIRACY" />
-	
+	<event load="NEBULA_OE_ACID_WEAPON_TEST" />
+
 	<event load="NEBULA_LIGHT_OE_ACID_TWIN_PULSARS" />
 </eventList>
 
@@ -3430,10 +3432,12 @@ The Growth transfers over some resources as payment for your data, and while tha
 </event>
 -->
 
-<!-- LACKING EVENT MECHANICS: ACIDIC CLOUDS APPEAR ON YOUR SHIP FOR 1 MINUTE
-<event name="NEBULA_OE_ACID_WEAPON_TEST">
+<event name="NEBULA_OE_ACID_WEAPON_TEST" unique="true">
 	<environment type="nebula" />
 	<text>This beacon houses a strange-looking Acidic vessel, equipped with some kind of weaponry you don't immediately recognize. Regardless, those guns are massive; hailing them could be risky.</text>
+	<ship load="SHIP_OE_ACID_CEALAFORMER_TEST" hostile="false"/>
+	<status type="limit" target="enemy" system="weapons" amount="0" />
+	<status type="limit" target="enemy" system="drones" amount="0" />
 	<choice hidden="true">
 		<text>Hail the ship.</text>
 		<event>
@@ -3442,6 +3446,11 @@ The Growth transfers over some resources as payment for your data, and while tha
 				<text>Agree to the test.</text>
 				<event>
 					<text>"Gratitude." You prepare to withstand the onslaught of acidic gases.</text>
+					<ship hostile="true"/>
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK"/>
+					</choice>
 				</event>
 			</choice>
 			<choice hidden="true">
@@ -3477,10 +3486,11 @@ The Growth transfers over some resources as payment for your data, and while tha
 </event>
 
 <event name="NEBULA_OE_ACID_WEAPON_TEST_COMPLETE">
+	<ship hostile="false"/>
+	<recallBoarders force="true" ship="both"/>
 	<text>The test has been complete. Captain of the Acidic vessel seems grateful. "Outsider, gratitude. Weaponry, efficient. Reward, accept."</text>
 	<autoReward level="HIGH">standard</autoReward>
 </event>
--->
 
 <eventList name="NEBULA_HOSTILE_OE_ACID_UNIQUE">
 	<!--

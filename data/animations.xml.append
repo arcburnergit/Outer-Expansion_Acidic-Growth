@@ -73,6 +73,13 @@
 	<time>0.3</time>
 </anim>
 
+<animSheet name="oe_artillery_acid_cealaformer_explosion" w="398" h="155" fw="199" fh="155">weapons_acid/cealaformer_projectile.png</animSheet>
+<anim name="oe_artillery_acid_cealaformer_explosion">
+	<sheet>oe_artillery_acid_cealaformer_explosion</sheet>
+	<desc length="2" x="0" y="0"/>
+	<time>5</time>
+</anim>
+
 </FTL>
 
 <!--Weapons-->

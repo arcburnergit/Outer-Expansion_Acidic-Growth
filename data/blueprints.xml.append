@@ -656,6 +656,56 @@
 	<weaponArt>oe_invisible_gun</weaponArt>
 	<iconImage>bomb</iconImage>
 </weaponBlueprint>
+
+<weaponBlueprint name="OE_ARTILLERY_ACID_CEALAFORMER">
+	<type>BURST</type>
+	<flavorType>Physical Projectile Blast</flavorType>
+	<drone_targetable>1</drone_targetable>
+	<title>Acidic Cealoformer</title>
+	<short>Cealoformer</short>
+	<tip>tip_flak</tip>
+	<desc>Launches a pod filled with compressed acidic gas at the enemy.</desc>
+	<tooltip>Launches a pod filled with compressed acidic gas at the enemy.</tooltip>
+	<radius>42</radius>
+	<damage>0</damage>
+	<persDamage>0</persDamage>
+	<sysDamage>0</sysDamage>
+	<shots>1</shots>
+	<sp>2</sp>
+	<spin>0</spin>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<cooldown>5</cooldown>
+	<power>2</power>
+	<cost>0</cost>
+	<bp>10</bp>
+	<speed>26</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">toxicpod</projectile>
+	</projectiles>
+	<explosion>oe_artillery_acid_cealaformer_explosion</explosion>
+	<launchSounds>
+		<sound>smallMissile1</sound>
+		<sound>smallMissile2</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>flakImpact1</sound>
+		<sound>flakImpact2</sound>
+		<sound>flakImpact3</sound>
+		<sound>flakImpact4</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>artillery_fed</weaponArt> 
+	<iconImage>flak</iconImage>
+</weaponBlueprint>
 </FTL>
 
 <!--Augments-->

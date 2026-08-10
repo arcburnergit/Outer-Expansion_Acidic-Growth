@@ -1130,7 +1130,25 @@
 	</deadCrew>
 </ship>
 
-<ship name="SHIP_OE_ACID_CEALAFORMER" auto_blueprint="LIST_SHIPS_OE_ACID_FIGHT">
+<ship name="SHIP_OE_ACID_CEALAFORMER_TEST" auto_blueprint="OE_ACID_CEALAFORMER">
+	<triggeredEvent name="NEBULA_OE_ACID_WEAPON_TEST_COMPLETE_TRIGGER" event="NEBULA_OE_ACID_WEAPON_TEST_COMPLETE" time="60" playerHull="4" clearOnJump="true" thisFight="true">
+        <triggeredEventBox load="DEFAULT_TIMER" pos="combat">
+            <warning time="10.0" flash="true"/>
+            <tooltip>The testing session will end after this much time. Do not attack the ship!</tooltip>
+        </triggeredEventBox>
+        <timerSounds load="DEFAULT_TIMER_SOUNDS"/>
+    </triggeredEvent>
+    <triggeredEvent name="OE_CEALAFORMER_TEST_FAIL_TRIGGER" event="OE_CEALAFORMER_TEST_FAIL" enemyDamage="1" thisFight="true"/>
+	<destroyed load="DESTROYED_OE_ACID" />
+	<deadCrew load="DEAD_CREW_OE_ACID" />
+</ship>
+<event name="OE_CEALAFORMER_TEST_FAIL">
+	<clearTriggeredEvent name="NEBULA_OE_ACID_WEAPON_TEST_COMPLETE_TRIGGER"/>
+	<text>They did not take kindly to that attack, they've activated the rest of their weapons!</text>
+	<status type="clear" target="enemy" system="weapons" amount="100" />
+	<status type="clear" target="enemy" system="drones" amount="100" />
+</event>
+<ship name="SHIP_OE_ACID_CEALAFORMER" auto_blueprint="OE_ACID_CEALAFORMER">
 	<surrender chance="0" min="3" max="4">
 		<text>You receive a hail from the Coalition ship amidst the battle. "Idiot! Do not dessstroy it!"</text>
 	</surrender>

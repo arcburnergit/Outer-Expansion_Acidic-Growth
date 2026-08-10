@@ -466,6 +466,37 @@
     <aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
+<shipBlueprint name="OE_ACID_CEALAFORMER" layout="oe_acid_cealaformer" img="oe_acid_cealaformer">
+	<class>Acidic Cealaformer</class>
+	<minSector>1</minSector>
+	<maxSector>8</maxSector>
+	<systemList>
+		<artillery power="4" max="4" room="2" start="true" weapon="OE_ARTILLERY_ACID_CEALAFORMER" />
+		<artillery power="4" max="4" room="3" start="true" weapon="OE_ARTILLERY_ACID_CEALAFORMER" />
+		<doors power="2" max="3" room="9" start="true" />
+		<drones power="2" max="8" room="1" start="true" />
+		<engines power="1" max="3" room="6" start="true" />
+		<mind power="1" max="2" room="4" start="false" />
+		<oxygen power="1" max="2" room="0" start="true" />
+		<pilot power="1" max="1" room="7" start="true" />
+		<shields power="2" max="10" room="8" start="true" />
+		<weapons power="1" max="6" room="5" start="false" />
+	</systemList>
+	<weaponSlots>2</weaponSlots>
+	<droneSlots>4</droneSlots>
+	<weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
+	<droneList drones="9" count="4">
+		<drone name="ION_1_AMP2" />
+		<drone name="LIST_DRONES_ACIDIC" />
+		<drone name="LIST_DRONES_ACIDIC" />
+		<drone name="LIST_DRONES_ACIDIC" />
+	</droneList>
+	<health amount="14" />
+	<maxPower amount="7" />
+	<crewCount amount="1" max="4" class="orchid" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="OE_ACID_O2SYS_ENEMY" />
+</shipBlueprint>
 
 <shipBlueprint name="OE_ACID_SCOUT_ELITE" layout="oe_acid_scout" img="oe_acid_scout_elite">
 	<class>Elite Acidic Scout</class>
