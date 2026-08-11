@@ -1714,7 +1714,7 @@ Deciding that piracy is evil in any form it might be presented, you decide to er
 	</deadCrew>
 </ship>
 
-<ship name="SHIP_OE_ACID_SHIPYARD" auto_blueprint="LIST_SHIPS_COALITION_ELITE_FIGHT">
+<ship name="SHIP_OE_ACID_SHIPYARD" auto_blueprint="OE_COALITION_CEALAFORMER_ELITE">
 	<surrender min="4" max="4">
 		<text>The hostile vessel buckles. Continue assault!</text>
 	</surrender>

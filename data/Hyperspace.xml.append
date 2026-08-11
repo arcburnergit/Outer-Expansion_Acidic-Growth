@@ -281,6 +281,30 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 			<oe_acid_worker room="2" name="Acidic Worker" />
 		</crew>
 	</mod-append:customShip>
+	
+	<mod-append:customShip name="OE_ACID_CEALAFORMER">
+		<shipIcons>
+			<shipIcon>icon_oe_acidic_filter</shipIcon>
+        </shipIcons>
+		<crew>
+			<oe_acid_worker room="2" name="Acidic Worker" />
+			<oe_acid_worker room="3" name="Acidic Worker" />
+			<oe_acid_worker room="9" name="Acidic Worker" />
+		</crew>
+	</mod-append:customShip>
+
+	<customShip name="OE_COALITION_CEALAFORMER_ELITE">
+		<shipIcons>
+			<shipIcon>icon_threat</shipIcon>
+        </shipIcons>
+		<noFuelStalemate/>
+		<crew>
+			<rock_crusader room="1"/>
+			<leech_ampere room="0"/>
+			<mantis_suzerain room="15"/>
+			<mantis_suzerain room="15"/>
+		</crew>
+	</customShip>
 
 
 	<mod-append:customShip name="OE_ACID_SCOUT_ELITE">

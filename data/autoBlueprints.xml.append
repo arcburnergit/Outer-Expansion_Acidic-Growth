@@ -498,6 +498,42 @@
 	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
+<shipBlueprint name="OE_COALITION_CEALAFORMER_ELITE" layout="mu_coalition_cealaformer" img="oe_coalition_cealaformer_elite">
+	<class>Elite Coalition Cealaformer</class>
+	<systemList>
+		<artillery power="3" max="3" room="11" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<artillery power="3" max="3" room="12" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<artillery power="3" max="3" room="10" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<artillery power="3" max="3" room="9" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<artillery power="3" max="3" room="13" start="true" weapon="ARTILLERY_COALITION_CEALAFORMER" />
+		<cloaking power="2" max="2" room="14" start="true" />
+		<engines power="1" max="1" room="15" start="true" />
+		<medbay power="2" max="2" room="5" start="true" />
+		<mind power="3" max="3" room="7" start="true" />
+		<oxygen power="3" max="3" room="8" start="true" />
+		<pilot power="2" max="2" room="4" start="true" />
+		<shields power="4" max="10" room="0" start="true" />
+		<teleporter power="3" max="3" room="6" start="true" />
+		<weapons power="7" max="7" room="1" start="true" />
+	</systemList>
+	<weaponSlots>4</weaponSlots>
+	<droneSlots>0</droneSlots>
+	<weaponList missiles="0" count="4">
+		<weapon name="BEAM_HULL" />
+		<weapon name="ION_STUN_2" />
+		<weapon name="LASER_BURST_3" />
+		<weapon name="LASER_BURST_2" />
+	</weaponList>
+	<droneList drones="0" count="0" />
+	<health amount="12" />
+	<maxPower amount="39" />
+	<crewCount amount="2" max="2" class="slug_saboteur" />
+	<boardingAI>sabotage</boardingAI>
+	<aug name="SLUG_GEL" />
+	<aug name="ROCK_ARMOR" />
+	<aug name="CREW_STIMS" />
+</shipBlueprint>
+
 <shipBlueprint name="OE_ACID_SCOUT_ELITE" layout="oe_acid_scout" img="oe_acid_scout_elite">
 	<class>Elite Acidic Scout</class>
 	<minSector>1</minSector>

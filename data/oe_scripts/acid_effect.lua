@@ -195,6 +195,7 @@ acidWeapons["OE_ION_ACID_1"] = 5
 acidWeapons["OE_ION_ACID_1_ELITE"] = 5
 acidWeapons["OE_LASER_ACID_SUPER"] = 5
 acidWeapons["OE_LASER_ACID_SUPER_ENEMY"] = 5
+acidWeapons["OE_ARTILLERY_ACID_CEALAFORMER"] = 5
 
 script.on_internal_event(Defines.InternalEvents.DAMAGE_AREA_HIT, function(shipManager, projectile, location, damage, shipFriendlyFire)
 	if projectile and acidWeapons[projectile.extend.name] then

@@ -4429,7 +4429,7 @@ An acidic shot narrowly misses your ship, and you see a massive Acidic vessel ba
 	<choice hidden="true">
 		<text>Agree to help.</text>
 		<event>
-			<text>"Great, great. But I'll hold my gratitude for after the battle, captain." You receive some supplies. Now's nothing else to do but wait.</text>
+			<text>"Great, great. But I'll hold my gratitude for after the battle, captain." You receive some supplies. Now there's nothing else to do but wait.</text>
 			<item_modify>
 				<item type="missiles" min="5" max="5"/>
 				<item type="drones" min="3" max="3"/>

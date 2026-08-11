@@ -671,11 +671,11 @@
 	<persDamage>0</persDamage>
 	<sysDamage>0</sysDamage>
 	<shots>1</shots>
-	<sp>2</sp>
+	<sp>20</sp>
 	<spin>0</spin>
 	<fireChance>0</fireChance>
 	<breachChance>0</breachChance>
-	<cooldown>5</cooldown>
+	<cooldown>10</cooldown>
 	<power>2</power>
 	<cost>0</cost>
 	<bp>10</bp>
