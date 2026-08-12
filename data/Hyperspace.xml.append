@@ -293,7 +293,7 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 		</crew>
 	</mod-append:customShip>
 
-	<customShip name="OE_COALITION_CEALAFORMER_ELITE">
+	<mod-append:customShip name="OE_COALITION_CEALAFORMER_ELITE">
 		<shipIcons>
 			<shipIcon>icon_threat</shipIcon>
         </shipIcons>
@@ -304,7 +304,7 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 			<mantis_suzerain room="15"/>
 			<mantis_suzerain room="15"/>
 		</crew>
-	</customShip>
+	</mod-append:customShip>
 
 
 	<mod-append:customShip name="OE_ACID_SCOUT_ELITE">
@@ -882,8 +882,10 @@ Release a unique form of Acidic Gas into the current room, which lasts 10 second
 	<mod:findName type="req" name="LIST_CHECK_ENERGY_SHIELD">
 	</mod:findName>
 	<mod:findName type="req" name="ANY_BOON">
+		<mod-append:name>prof_z_boon_oe_acid</mod-append:name>
 	</mod:findName>
 	<mod:findName type="req" name="ALL_BOON">
+		<mod-append:name>prof_z_boon_oe_acid</mod-append:name>
 	</mod:findName>
 </mod:findLike>
 
