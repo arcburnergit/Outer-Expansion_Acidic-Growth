@@ -1331,12 +1331,34 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 
 	<text>Strangely, an Orchid captain hails you from an Acidic vessel. "Captain, you wouldn't happen to have any Acidic Growth with you? We'd offer a reward for you to turn over any of it to be destroyed."</text>
 	<ship load="SHIP_OE_ACID_ORCHID_ONLY" hostile="false" />
+	<choice hidden="true" req="unique_oe_bill">
+		<text>(Bill) Take up their offer.</text>
+		<event>
+            <text>You send over your Acidic Worker, the orchids make true to their promise and exterminate the Acidic Growth inside. The Orchids send over the reward as promised.</text>
+            <autoReward level="MED">standard</autoReward>
+            <removeCrew class="unique_oe_bill">
+                <clone>true</clone>
+                <text>Fortunately, your crewmember was immediately revived by the Clone Bay.</text>
+            </removeCrew>
+        </event>
+	</choice>
+	<choice hidden="true" req="oe_acid_soldier">
+		<text>(Acidic Soldier) Take up their offer.</text>
+		<event>
+            <text>You send over your Acidic Soldier, the orchids make true to their promise and exterminate the Acidic Growth inside. The Orchids send over the reward as promised.</text>
+            <autoReward level="HIGH">standard</autoReward>
+            <removeCrew class="oe_acid_soldier">
+                <clone>true</clone>
+                <text>Fortunately, your crewmember was immediately revived by the Clone Bay.</text>
+            </removeCrew>
+        </event>
+	</choice>
 	<choice hidden="true" req="oe_acid_worker">
 		<text>(Acidic Worker) Take up their offer.</text>
 		<event>
             <text>You send over your Acidic Worker, the orchids make true to their promise and exterminate the Acidic Growth inside. The Orchids send over the reward as promised.</text>
             <autoReward level="MED">standard</autoReward>
-            <removeCrew>
+            <removeCrew class="oe_acid_worker">
                 <clone>true</clone>
                 <text>Fortunately, your crewmember was immediately revived by the Clone Bay.</text>
             </removeCrew>
