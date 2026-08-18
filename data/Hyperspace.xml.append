@@ -102,7 +102,8 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_ARTY">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<oe_acid_worker room="0" name="Acidic Worker" />
@@ -113,7 +114,8 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 		
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_ARTY_2">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<oe_acid_worker room="15" name="Acidic Worker" />
@@ -129,18 +131,20 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_LONG">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<oe_acid_soldier room="0" name="Acidic Soldier" />
-			<orchid_caretaker room="1"/>
+			<orchid_caretaker room="3"/>
 			<orchid room="4"/>
 		</crew>
 	</mod-append:customShip>
 		
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_LONG_2">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<oe_acid_soldier room="8" name="Acidic Soldier" />
@@ -151,7 +155,8 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 		
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_LONG_3">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<oe_acid_soldier room="0" name="Acidic Soldier" />
@@ -163,7 +168,8 @@ The oxygen system will provide a slow healing effect to all crew.</tooltip>
 		
 	<mod-append:customShip name="PLAYER_SHIP_OE_ACID_CREW1">
 		<hiddenAug>SHIP_OE_ACIDIC</hiddenAug>
-		<hiddenAug>AEA_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GREASE_EFFECT_ACID</hiddenAug>
+		<hiddenAug>OE_GROWTH_BUD_ACIDIC</hiddenAug>
 		<hiddenAug>FOR_MULTIVERSE</hiddenAug>
 		<crew>
 			<unique_oe_bill room="5" name="Bill" />
