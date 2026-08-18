@@ -75,6 +75,15 @@ script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(shipManager
 	acidStatus[1] = {}
 end)
 
+function mods.oe.acid.setAcid(shipId, roomId, time)
+	if not acidStatus[shipId][roomId] then
+		acidStatus[shipId][roomId] = {timer = time, breachTimer = acidBreachTimerMax - 0.1, doorTimer = acidDoorTimerMax - 0.1}
+	elseif acidStatus[shipId][roomId].timer < time then
+		acidStatus[shipId][roomId].timer = time
+	end
+end
+local setAcid = mods.oe.acid.setAcid
+
 function mods.oe.acid.startAcid(shipId, roomId, time)
 	if not acidStatus[shipId][roomId] then
 		acidStatus[shipId][roomId] = {timer = time, breachTimer = acidBreachTimerMax - 0.1, doorTimer = acidDoorTimerMax - 0.1}
