@@ -107,7 +107,7 @@ script.on_render_event(Defines.RenderEvents.LAYER_FOREGROUND, function()
 				if (commandGui.bPaused or commandGui.event_pause) then
 					Graphics.CSurface.GL_SetColorTint(Graphics.GL_Color(0.5, 0.5, 0.5, 1))
 				end
-				Graphics.CSurface.GL_RenderPrimitiveWithAlpha(cloudImageTemp, clour.opacity)
+				Graphics.CSurface.GL_RenderPrimitiveWithAlpha(cloudImageTemp, cloud.opacity)
 				Graphics.CSurface.GL_RemoveColorTint()
 				Graphics.CSurface.GL_PopMatrix()
 
