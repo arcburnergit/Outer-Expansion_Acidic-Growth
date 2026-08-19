@@ -5,6 +5,7 @@
 <text name="map_icon_oe_acid_nebula_distress">DISTRESS</text>
 <text name="map_icon_oe_acid_nebula_core">ACIDIC CORE [!]</text>
 <text name="map_icon_oe_acid_nebula_shipyard">ACIDIC SHIPYARD</text>
+<text name="map_icon_oe_store_acidic">STORE [ACIDIC]</text>
 
 <text name="atlas_oe_acid">Name: Acidic Origins
 Type: Hostile (Nebula)

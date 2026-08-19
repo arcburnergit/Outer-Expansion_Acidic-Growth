@@ -1162,7 +1162,7 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 <event name="NEBULA_STORM_OE_ACID_AUGITEM" unique="true">
 	<text>Right in the middle of an ion storm, you find a strange shipyard. It appears to be operated by the Acidic Growth. However, they aren't hostile. Perhaps you'll be able to make a deal with them.</text>
 	<environment type="storm" />
-	<choice hidden="true">
+	<choice hidden="true" max_group="0" req="pilot" lvl="1">
 		<text>Attack the shipyard!.</text>
 		<event>
 			<text>For some reason you have decided to attack the makeshift shipyard. Though the facility is unarmed, one of their vessels rises to meet you and defend them.</text>
@@ -1173,13 +1173,23 @@ The wreck is relatively intact. However, it appears to have been riddled with ho
 			</choice>
 		</event>
 	</choice>
-	<choice>
-		<text>Pay them to upgrade your oxygen system.</text>
+	<choice req="oxygen" lvl="1" max_group="1">
+		<text>Pay them to switch out your oxygen system for their Life Bloom system.</text>
 		<event>
-			<text>The Acidic Growth quickly installs the upgrades to your oxygen system, making it now capable of both healing and extinguishing fires, depending on the setting.</text>
-			<augment name="OE_ACID_O2SYS_OFF" />
+			<text>The Acidic Growth quickly replaces your oxygen system with the organic Life Bloom System.</text>
+			<system name="oe_growth"/>
 			<item_modify>
-				<item type="scrap" min="-40" max="-40" />
+				<item type="scrap" min="-25" max="-25" />
+			</item_modify>
+		</event>
+	</choice>
+	<choice req="oe_growth" lvl="0" max_lvl="0" max_group="1">
+		<text>Pay them to install the Life Bloom system.</text>
+		<event>
+			<text>The Acidic Growth quickly installs the organic Life Bloom System.</text>
+			<system name="oe_growth"/>
+			<item_modify>
+				<item type="scrap" min="-25" max="-25" />
 			</item_modify>
 		</event>
 	</choice>

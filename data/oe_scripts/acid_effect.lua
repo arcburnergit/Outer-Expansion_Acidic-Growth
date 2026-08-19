@@ -41,34 +41,40 @@ local acidStatus = {[0] = {}, [1] = {}}
 script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipManager)
 	local acidShip = acidStatus[shipManager.iShipId]
 	local doorsDamage = {}
-	for room in vter(shipManager.ship.vRoomList) do
-		if acidShip[room.iRoomId] then
-			local acidRoom = acidShip[room.iRoomId]
-			--print("ACID ACTIVE: timer:"..acidRoom.timer.." breachTimer:"..acidRoom.breachTimer)
-			acidRoom.timer = acidRoom.timer - Hyperspace.FPS.SpeedFactor/16
-			acidRoom.doorTimer = acidRoom.doorTimer - Hyperspace.FPS.SpeedFactor/16
-			acidRoom.breachTimer = acidRoom.breachTimer - Hyperspace.FPS.SpeedFactor/16
-			if acidRoom.breachTimer <= 0 then
-				shipManager.ship:BreachRandomHull(room.iRoomId)
-				acidRoom.breachTimer = acidBreachTimerMax
+	if not Hyperspace.App.menu.shipBuilder.bOpen then
+		for room in vter(shipManager.ship.vRoomList) do
+			if acidShip[room.iRoomId] then
+				local acidRoom = acidShip[room.iRoomId]
+				--print("ACID ACTIVE: timer:"..acidRoom.timer.." breachTimer:"..acidRoom.breachTimer)
+				acidRoom.timer = acidRoom.timer - Hyperspace.FPS.SpeedFactor/16
+				acidRoom.doorTimer = acidRoom.doorTimer - Hyperspace.FPS.SpeedFactor/16
+				acidRoom.breachTimer = acidRoom.breachTimer - Hyperspace.FPS.SpeedFactor/16
+				if acidRoom.breachTimer <= 0 then
+					shipManager.ship:BreachRandomHull(room.iRoomId)
+					acidRoom.breachTimer = acidBreachTimerMax
+				end
+				if acidRoom.doorTimer <= 0 then
+					doorsDamage[room.iRoomId] = true
+					acidRoom.doorTimer = acidDoorTimerMax
+				end
+				if acidRoom.timer <= 0 then
+					acidStatus[shipManager.iShipId][room.iRoomId] = nil
+				end
 			end
-			if acidRoom.doorTimer <= 0 then
-				doorsDamage[room.iRoomId] = true
-				acidRoom.doorTimer = acidDoorTimerMax
-			end
-			if acidRoom.timer <= 0 then
-				acidStatus[shipManager.iShipId][room.iRoomId] = nil
+		end
+		if #doorsDamage > 0 then
+			for door in vter(shipManager.ship.vDoorList) do
+				if (doorsDamage[door.iRoom1] or doorsDamage[door.iRoom2]) and not door.bOpen then
+					--print("damage door:"..door.iDoorId)
+					door:ApplyDamage(1)
+				end
 			end
 		end
 	end
-	if #doorsDamage > 0 then
-		for door in vter(shipManager.ship.vDoorList) do
-			if (doorsDamage[door.iRoom1] or doorsDamage[door.iRoom2]) and not door.bOpen then
-				--print("damage door:"..door.iDoorId)
-				door:ApplyDamage(1)
-			end
-		end
-	end
+end)
+
+script.on_internal_event(Defines.InternalEvents.CONSTRUCT_SHIP_MANAGER, function(shipManager)
+	acidStatus[shipManager.iShipId] = {}
 end)
 
 script.on_internal_event(Defines.InternalEvents.JUMP_LEAVE, function(shipManager)
@@ -163,6 +169,13 @@ script.on_internal_event(Defines.InternalEvents.ACTIVATE_POWER, function(power, 
 		local ship = crewmem.currentShipId
 		local room = crewmem.iRoomId
 		startAcid(ship, room, 10)
+	end
+	return Defines.Chain.CONTINUE
+end)
+
+script.on_internal_event(Defines.InternalEvents.POWER_ON_UPDATE, function(power)
+	if acidCrewPower[power.def.name] and power.enabled and power.crew.iShipId ~= 0 and power.powerCooldown.first < power.powerCooldown.second then
+		power.powerCooldown.first = power.powerCooldown.first - (time_increment(true)/2)
 	end
 	return Defines.Chain.CONTINUE
 end)

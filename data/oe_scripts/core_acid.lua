@@ -5,6 +5,16 @@ else
 	mods.oe.acid = {}
 end
 
+local check_system = false
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+	if not check_system then 
+		check_system = true
+		if not mods.oe.systems then
+			error("Outer Expansion: Systems not detected, please ensure it is present in the mod list and after before "..mod_name.."!")
+		end
+	end
+end)
+
 local time_increment = mods.multiverse.time_increment
 local vter = mods.multiverse.vter
 local userdata_table = mods.multiverse.userdata_table

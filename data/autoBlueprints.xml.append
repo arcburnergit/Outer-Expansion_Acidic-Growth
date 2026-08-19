@@ -138,6 +138,7 @@
 	<name>OE_ACID_ASSAULT</name>
 	<name>OE_ACID_TRANSPORT</name>
 	<name>OE_ACID_GUARD</name>
+	<name>OE_ACID_BOSS</name>
 </blueprintList>
 <blueprintList name="LIST_SHIPS_OE_ACID_GENERIC">
 	<name>OE_ACID_SCOUT</name>
@@ -197,7 +198,7 @@
 		<doors power="1" max="1" room="0" start="true" />
 		<engines power="1" max="2" room="3" start="true" />
 		<mind power="1" max="1" room="4" start="true" />
-		<oxygen power="2" max="3" room="7" start="true" />
+		<oe_growth power="2" max="3" room="7" start="true" />
 		<pilot power="1" max="1" room="2" start="true" />
 		<shields power="2" max="10" room="5" start="true" />
 		<weapons power="2" max="10" room="9" start="true" />
@@ -206,11 +207,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="0" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="0" count="0" />
-	<health amount="22" />
+	<health amount="15" />
 	<maxPower amount="17" />
 	<crewCount amount="2" max="6" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_SCOUT" layout="oe_acid_scout" img="oe_acid_scout">
@@ -221,7 +221,7 @@
 		<doors power="2" max="3" room="7" start="true" />
 		<engines power="1" max="3" room="1" start="true" />
 		<mind power="1" max="1" room="5" start="false" />
-		<oxygen power="1" max="2" room="6" start="true" />
+		<oe_growth power="1" max="2" room="6" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="3" start="true" />
 		<weapons power="2" max="10" room="4" start="true" />
@@ -230,11 +230,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="10" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="0" count="0" />
-	<health amount="8" />
+	<health amount="7" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="2" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_OUTRIDER" layout="oe_acid_outrider" img="oe_acid_outrider">
@@ -246,7 +245,7 @@
 		<drones power="2" max="8" room="8" start="false" />
 		<engines power="1" max="3" room="0" start="true" />
 		<mind power="1" max="1" room="7" start="false" />
-		<oxygen power="1" max="2" room="5" start="true" />
+		<oe_growth power="1" max="2" room="5" start="true" />
 		<pilot power="1" max="1" room="3" start="true" />
 		<shields power="2" max="10" room="1" start="true" />
 		<weapons power="2" max="10" room="2" start="true" />
@@ -255,11 +254,10 @@
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="6" count="3" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="10" count="4" load="LIST_DRONES_ENEMY_STANDARD" />
-	<health amount="11" />
+	<health amount="8" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="3" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_FIGHTER" layout="oe_acid_fighter" img="oe_acid_fighter">
@@ -270,7 +268,7 @@
 		<doors power="2" max="2" room="4" start="true" />
 		<engines power="1" max="3" room="5" start="true" />
 		<mind power="1" max="2" room="7" start="false" />
-		<oxygen power="1" max="2" room="3" start="true" />
+		<oe_growth power="1" max="2" room="3" start="true" />
 		<pilot power="1" max="2" room="2" start="true" />
 		<shields power="2" max="8" room="0" start="true" />
 		<weapons power="2" max="10" room="1" start="true" />
@@ -279,11 +277,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="8" count="0" />
-	<health amount="11" />
+	<health amount="8" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="3" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_INSTIGATOR" layout="oe_acid_instigator" img="oe_acid_instigator">
@@ -297,7 +294,7 @@
 		<drones power="2" max="8" room="1" start="true" />
 		<engines power="1" max="3" room="6" start="true" />
 		<mind power="1" max="2" room="4" start="false" />
-		<oxygen power="1" max="2" room="0" start="true" />
+		<oe_growth power="1" max="2" room="0" start="true" />
 		<pilot power="1" max="1" room="7" start="true" />
 		<shields power="2" max="10" room="8" start="true" />
 		<weapons power="1" max="6" room="5" start="false" />
@@ -311,11 +308,10 @@
 		<drone name="LIST_DRONES_ACIDIC" />
 		<drone name="LIST_DRONES_ACIDIC" />
 	</droneList>
-	<health amount="14" />
+	<health amount="9" />
 	<maxPower amount="7" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_BOMBER" layout="oe_acid_bomber" img="oe_acid_bomber">
@@ -327,7 +323,7 @@
 		<drones power="2" max="7" room="3" start="false" />
 		<engines power="1" max="2" room="2" start="true" />
 		<mind power="1" max="2" room="6" start="false" />
-		<oxygen power="1" max="2" room="8" start="true" />
+		<oe_growth power="1" max="2" room="8" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="1" start="true" />
 		<weapons power="2" max="10" room="4" start="true" />
@@ -336,11 +332,10 @@
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="9" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="7" count="3" load="LIST_DRONES_ACIDIC" />
-	<health amount="15" />
+	<health amount="10" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_ASSAULT" layout="oe_acid_assault" img="oe_acid_assault">
@@ -352,7 +347,7 @@
 		<drones power="1" max="8" room="1" start="true" />
 		<engines power="1" max="2" room="11" start="true" />
 		<mind power="1" max="1" room="6" start="true" />
-		<oxygen power="1" max="2" room="9" start="true" />
+		<oe_growth power="1" max="2" room="9" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="3" start="true" />
 		<teleporter power="1" max="1" room="5" start="true" />
@@ -362,11 +357,10 @@
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="8" count="4" load="LIST_DRONES_ENEMY_STANDARD" />
-	<health amount="12" />
+	<health amount="10" />
 	<maxPower amount="10" />
 	<crewCount amount="2" max="5" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_TRANSPORT" layout="oe_acid_transport" img="oe_acid_transport">
@@ -378,7 +372,7 @@
 		<doors power="2" max="3" room="10" start="true" />
 		<engines power="1" max="2" room="7" start="true" />
 		<mind power="1" max="1" room="6" start="false" />
-		<oxygen power="1" max="2" room="9" start="true" />
+		<oe_growth power="1" max="2" room="9" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="4" max="10" room="3" start="true" />
 		<teleporter power="1" max="1" room="1" start="true" />
@@ -388,11 +382,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="10" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="0" count="0" />
-	<health amount="13" />
+	<health amount="11" />
 	<maxPower amount="10" />
 	<crewCount amount="2" max="5" class="orchid" />
 	<boardingAI>invasion</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY_WEAK" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_GUARD" layout="oe_acid_guard" img="oe_acid_guard">
@@ -403,7 +396,7 @@
 		<doors power="2" max="3" room="2" start="true" />
 		<engines power="1" max="3" room="7" start="true" />
 		<mind power="1" max="2" room="1" start="true" />
-		<oxygen power="2" max="3" room="6" start="true" />
+		<oe_growth power="2" max="3" room="6" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="4" start="true" />
 		<weapons power="2" max="10" room="5" start="true" />
@@ -412,11 +405,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="11" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="0" count="0" />
-	<health amount="15" />
+	<health amount="11" />
 	<maxPower amount="9" />
 	<crewCount amount="1" max="5" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_STATION" layout="oe_acid_station" img="oe_acid_station">
@@ -429,7 +421,7 @@
 		<drones power="2" max="6" room="10" start="true" />
 		<medbay power="1" max="2" room="8" start="true" />
 		<mind power="1" max="2" room="19" start="false" />
-		<oxygen power="2" max="2" room="9" start="true" />
+		<oe_growth power="2" max="2" room="9" start="true" />
 		<shields power="2" max="10" room="26" start="true" />
 		<weapons power="3" max="8" room="2" start="true" />
 	</systemList>
@@ -437,10 +429,9 @@
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="10" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
 	<droneList drones="10" count="2" load="LIST_DRONES_ENGI_DROPSHIP" />
-	<health amount="15" />
+	<health amount="12" />
 	<maxPower amount="12" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY_WEAK" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_FIGHTER_PIRATE" layout="oe_acid_fighter" img="oe_acid_fighter_pirate">
@@ -451,7 +442,7 @@
         <doors power="2" max="2" room="4" start="true" />
         <engines power="1" max="3" room="5" start="true" />
         <mind power="1" max="2" room="7" start="false" />
-        <oxygen power="1" max="2" room="3" start="true" />
+        <oe_growth power="1" max="2" room="3" start="true" />
         <pilot power="1" max="2" room="2" start="true" />
         <shields power="2" max="8" room="0" start="true" />
         <weapons power="2" max="10" room="1" start="true" />
@@ -460,10 +451,9 @@
     <droneSlots>0</droneSlots>
     <weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC" />
     <droneList drones="8" count="0" />
-    <health amount="11" />
+    <health amount="8" />
     <maxPower amount="6" />
     <boardingAI>sabotage</boardingAI>
-    <aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_CEALAFORMER" layout="oe_acid_cealaformer" img="oe_acid_cealaformer">
@@ -477,7 +467,7 @@
 		<drones power="2" max="8" room="1" start="true" />
 		<engines power="1" max="3" room="6" start="true" />
 		<mind power="1" max="2" room="4" start="false" />
-		<oxygen power="1" max="2" room="0" start="true" />
+		<oe_growth power="1" max="2" room="0" start="true" />
 		<pilot power="1" max="1" room="7" start="true" />
 		<shields power="2" max="10" room="8" start="true" />
 		<weapons power="1" max="6" room="5" start="false" />
@@ -491,11 +481,10 @@
 		<drone name="LIST_DRONES_ACIDIC" />
 		<drone name="LIST_DRONES_ACIDIC" />
 	</droneList>
-	<health amount="14" />
+	<health amount="10" />
 	<maxPower amount="7" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_COALITION_CEALAFORMER_ELITE" layout="mu_coalition_cealaformer" img="oe_coalition_cealaformer_elite">
@@ -542,7 +531,7 @@
 		<cloaking power="1" max="1" room="2" start="true" />
 		<doors power="2" max="3" room="7" start="true" />
 		<engines power="1" max="3" room="1" start="true" />
-		<oxygen power="1" max="2" room="6" start="true" />
+		<oe_growth power="1" max="2" room="6" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="3" start="true" />
 		<weapons power="2" max="10" room="4" start="true" />
@@ -555,7 +544,6 @@
 	<maxPower amount="6" />
 	<crewCount amount="1" max="3" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_OUTRIDER_ELITE" layout="oe_acid_outrider" img="oe_acid_outrider_elite">
@@ -568,7 +556,7 @@
 		<drones power="2" max="8" room="8" start="true" />
 		<engines power="1" max="3" room="0" start="true" />
 		<mind power="1" max="1" room="7" start="true" />
-		<oxygen power="1" max="2" room="5" start="true" />
+		<oe_growth power="1" max="2" room="5" start="true" />
 		<pilot power="1" max="1" room="3" start="true" />
 		<shields power="2" max="10" room="1" start="true" />
 		<weapons power="2" max="10" room="2" start="true" />
@@ -577,11 +565,10 @@
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="6" count="3" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="10" count="4" load="LIST_DRONES_ENEMY_STANDARD" />
-	<health amount="11" />
+	<health amount="9" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="3" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_FIGHTER_ELITE" layout="oe_acid_fighter" img="oe_acid_fighter_elite">
@@ -593,7 +580,7 @@
 		<doors power="2" max="2" room="4" start="true" />
 		<engines power="1" max="3" room="5" start="true" />
 		<mind power="1" max="2" room="7" start="true" />
-		<oxygen power="1" max="2" room="3" start="true" />
+		<oe_growth power="1" max="2" room="3" start="true" />
 		<pilot power="1" max="2" room="2" start="true" />
 		<shields power="2" max="8" room="0" start="true" />
 		<weapons power="2" max="10" room="1" start="true" />
@@ -602,11 +589,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="8" count="0" />
-	<health amount="11" />
+	<health amount="9" />
 	<maxPower amount="6" />
 	<crewCount amount="1" max="3" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_INSTIGATOR_ELITE" layout="oe_acid_instigator" img="oe_acid_instigator_elite">
@@ -620,7 +606,7 @@
 		<doors power="2" max="3" room="9" start="true" />
 		<drones power="2" max="8" room="1" start="true" />
 		<engines power="1" max="3" room="6" start="true" />
-		<oxygen power="1" max="2" room="0" start="true" />
+		<oe_growth power="1" max="2" room="0" start="true" />
 		<pilot power="1" max="1" room="7" start="true" />
 		<shields power="2" max="10" room="8" start="true" />
 		<weapons power="1" max="6" room="5" start="true" />
@@ -634,11 +620,10 @@
 		<drone name="LIST_DRONES_ACIDIC" />
 		<drone name="LIST_DRONES_ACIDIC" />
 	</droneList>
-	<health amount="14" />
+	<health amount="9" />
 	<maxPower amount="7" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_BOMBER_ELITE" layout="oe_acid_bomber" img="oe_acid_bomber_elite">
@@ -651,7 +636,7 @@
 		<drones power="2" max="7" room="3" start="true" />
 		<engines power="1" max="2" room="2" start="true" />
 		<mind power="1" max="1" room="6" start="true" />
-		<oxygen power="1" max="2" room="8" start="true" />
+		<oe_growth power="1" max="2" room="8" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="1" start="true" />
 		<weapons power="2" max="10" room="4" start="true" />
@@ -660,11 +645,10 @@
 	<droneSlots>3</droneSlots>
 	<weaponList missiles="9" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="7" count="3" load="LIST_DRONES_ACIDIC" />
-	<health amount="15" />
+	<health amount="11" />
 	<maxPower amount="8" />
 	<crewCount amount="1" max="4" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_ASSAULT_ELITE" layout="oe_acid_assault" img="oe_acid_assault_elite">
@@ -677,7 +661,7 @@
 		<drones power="2" max="8" room="1" start="true" />
 		<engines power="1" max="2" room="11" start="true" />
 		<mind power="1" max="1" room="6" start="true" />
-		<oxygen power="1" max="2" room="9" start="true" />
+		<oe_growth power="1" max="2" room="9" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="3" start="true" />
 		<teleporter power="1" max="1" room="5" start="true" />
@@ -687,11 +671,10 @@
 	<droneSlots>4</droneSlots>
 	<weaponList missiles="8" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="8" count="4" load="LIST_DRONES_ACIDIC" />
-	<health amount="12" />
+	<health amount="10" />
 	<maxPower amount="10" />
 	<crewCount amount="2" max="5" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_TRANSPORT_ELITE" layout="oe_acid_transport" img="oe_acid_transport_elite">
@@ -704,7 +687,7 @@
 		<doors power="2" max="3" room="10" start="true" />
 		<engines power="1" max="2" room="7" start="true" />
 		<mind power="1" max="1" room="6" start="true" />
-		<oxygen power="1" max="2" room="9" start="true" />
+		<oe_growth power="1" max="2" room="9" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="4" max="10" room="3" start="true" />
 		<teleporter power="1" max="1" room="1" start="true" />
@@ -714,11 +697,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="10" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="0" count="0" />
-	<health amount="15" />
+	<health amount="11" />
 	<maxPower amount="10" />
 	<crewCount amount="2" max="5" class="orchid" />
 	<boardingAI>invasion</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY_WEAK" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_GUARD_ELITE" layout="oe_acid_guard" img="oe_acid_guard_elite">
@@ -729,7 +711,7 @@
 		<doors power="2" max="3" room="2" start="true" />
 		<engines power="1" max="3" room="7" start="true" />
 		<mind power="1" max="2" room="1" start="true" />
-		<oxygen power="2" max="3" room="6" start="true" />
+		<oe_growth power="2" max="3" room="6" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="10" room="4" start="true" />
 		<weapons power="2" max="10" room="5" start="true" />
@@ -738,11 +720,10 @@
 	<droneSlots>0</droneSlots>
 	<weaponList missiles="11" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="0" count="0" />
-	<health amount="15" />
+	<health amount="11" />
 	<maxPower amount="9" />
 	<crewCount amount="1" max="2" class="orchid" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OE_ACID_STATION_ELITE" layout="oe_acid_station" img="oe_acid_station_elite">
@@ -755,7 +736,7 @@
 		<drones power="2" max="6" room="10" start="true" />
 		<medbay power="1" max="2" room="8" start="true" />
 		<mind power="1" max="2" room="19" start="false" />
-		<oxygen power="2" max="2" room="9" start="true" />
+		<oe_growth power="2" max="2" room="9" start="true" />
 		<shields power="2" max="10" room="26" start="true" />
 		<weapons power="3" max="8" room="2" start="true" />
 	</systemList>
@@ -763,10 +744,9 @@
 	<droneSlots>2</droneSlots>
 	<weaponList missiles="10" count="4" load="LIST_WEAPONS_OE_ACIDIC_ELITE" />
 	<droneList drones="10" count="2" load="LIST_DRONES_ENGI_DROPSHIP" />
-	<health amount="15" />
+	<health amount="11" />
 	<maxPower amount="12" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY_WEAK" />
 </shipBlueprint>
 </FTL>
 
@@ -779,7 +759,7 @@
 		<doors power="1" max="1" room="11" start="true" />
 		<engines power="2" max="2" room="4" start="true" />
 		<mind power="2" max="2" room="1" start="true" />
-		<oxygen power="1" max="1" room="5" start="true" />
+		<oe_growth power="1" max="1" room="5" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="2" start="true" />
 		<weapons power="8" max="8" room="7" start="true" />
@@ -798,7 +778,6 @@
 	<maxPower amount="17" />
 	<crewCount amount="8" max="8" class="oe_acid_soldier" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 <shipBlueprint name="OET_BOSS_ACID_CHALLENGE" layout="oet_boss_acid" img="oet_boss_acid">
 	<class>Renegade Cruiser</class>
@@ -807,7 +786,7 @@
 		<doors power="1" max="1" room="11" start="true" />
 		<engines power="2" max="2" room="4" start="true" />
 		<mind power="2" max="2" room="1" start="true" />
-		<oxygen power="1" max="1" room="5" start="true" />
+		<oe_growth power="1" max="1" room="5" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="2" start="true" />
 		<weapons power="9" max="9" room="7" start="true" />
@@ -827,7 +806,6 @@
 	<maxPower amount="19" />
 	<crewCount amount="8" max="8" class="oe_acid_soldier" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 <shipBlueprint name="OET_BOSS_ACID_EXTREME" layout="oet_boss_acid" img="oet_boss_acid">
 	<class>Renegade Cruiser</class>
@@ -836,7 +814,7 @@
 		<doors power="1" max="1" room="11" start="true" />
 		<engines power="2" max="2" room="4" start="true" />
 		<cloaking power="1" max="1" room="1" start="true" />
-		<oxygen power="1" max="1" room="5" start="true" />
+		<oe_growth power="1" max="1" room="5" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="2" start="true" />
 		<weapons power="10" max="10" room="7" start="true" />
@@ -856,7 +834,6 @@
 	<maxPower amount="20" />
 	<crewCount amount="8" max="8" class="oe_acid_soldier" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 
 <shipBlueprint name="OET_BOSS_ACID_CHAOS" layout="oet_boss_acid" img="oet_boss_acid">
@@ -866,7 +843,7 @@
 		<doors power="1" max="1" room="11" start="true" />
 		<engines power="2" max="2" room="4" start="true" />
 		<cloaking power="1" max="1" room="1" start="true" />
-		<oxygen power="1" max="1" room="5" start="true" />
+		<oe_growth power="1" max="1" room="5" start="true" />
 		<pilot power="1" max="1" room="0" start="true" />
 		<shields power="2" max="8" room="2" start="true" />
 		<weapons power="10" max="10" room="7" start="true" />
@@ -886,7 +863,6 @@
 	<maxPower amount="20" />
 	<crewCount amount="8" max="8" class="oe_acid_soldier" />
 	<boardingAI>sabotage</boardingAI>
-	<aug name="OE_ACID_O2SYS_ENEMY" />
 </shipBlueprint>
 </FTL>
 

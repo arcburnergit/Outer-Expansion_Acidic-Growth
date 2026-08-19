@@ -8,6 +8,7 @@
 	<desc>Originating from the Acidic Growth, the vessel allowed the Growth to extend it's reach beyond the nebulas it formed in. So far only the orchids have brokered peace with the Acidic Growth. This ship has an upgraded oxygen system.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_ARTY_unlock" />
 	<systemList>
+		<oe_growth power="2" room="6" start="true" />
 		<battery power="1" room="13" max="2" start="false" img="room_battery_16" />
 		<cloaking power="1" room="2" start="false" img="room_cloaking_3" />
 		<clonebay power="1" room="4" start="false">
@@ -29,13 +30,13 @@
 			</slot>
 		</engines>
 		<hacking power="1" room="3" start="false" img="room_hacking_2" />
-		<medbay power="1" room="4" start="false" img="room_medbay">
+		<medbay power="1" room="4" start="true" img="room_medbay">
 			<slot>
 				<number>1</number>
 			</slot>
 		</medbay>
 		<mind power="1" room="16" start="false" img="room_mind_3" />
-		<oxygen power="2" room="6" start="true" img="room_oxygen_13" />
+		<oxygen power="1" room="6" start="false" img="room_oxygen_13" />
 		<pilot power="1" room="0" start="true" img="room_pilot_4">
 			<slot>
 				<direction>right</direction>
@@ -70,7 +71,6 @@
 	<droneList drones="4" count="2" />
 	<health amount="30" />
 	<maxPower amount="6" />
-	<aug name="OE_ACID_O2SYS" />
 	<shieldImage>mup_orb2</shieldImage>
     <mv-mapImage>map_icon_oep_acid_arty</mv-mapImage>
 </shipBlueprint>
@@ -81,6 +81,7 @@
 	<desc>This prototype design incorporates dual quick firing artillery beams to drill through enemy ships.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_ARTY_2_unlock" />
 	<systemList>
+		<oe_growth power="1" room="17" start="true" />
 		<artillery power="1" max="3" room="1" start="true" weapon="OE_ARTILLERY_BEAM_ACID_1" img="room_artillery_4" />
 		<artillery power="1" max="3" room="0" start="true" weapon="OE_ARTILLERY_BEAM_ACID_1" img="room_artillery_7" />
 		<battery power="1" room="14" max="2" start="false" img="room_battery_16" />
@@ -156,6 +157,7 @@
 	<desc>A federation modification of the Acidic Cruiser, this vessel replaces the Acidic filtering system with a more traditional fire suppression system.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_ARTY_3_unlock" />
 	<systemList>
+		<oe_growth power="1" room="12" start="true" />
 		<battery power="1" room="15" max="2" start="false" img="room_battery_9" />
 		<cloaking power="1" room="13" start="false" img="room_cloaking_13" />
 		<clonebay power="1" room="17" start="false">
@@ -183,7 +185,7 @@
 			</slot>
 		</medbay>
 		<mind power="1" room="2" start="false" img="room_mind_9" />
-		<oxygen power="2" room="12" start="true" img="room_oxygen_17" />
+		<oxygen power="1" room="12" start="false" img="room_oxygen_17" />
 		<pilot power="1" room="0" start="true" img="room_pilot_4">
 			<slot>
 				<direction>right</direction>
@@ -233,9 +235,10 @@
 	<desc>A new line of Acidic Cruiser, these ships are specifically designed for high fire power, however this comes at the cost of a weaker shielding system.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_LONG_unlock" />
 	<systemList>
+		<oe_growth power="1" room="15" start="true" />
 		<battery max="2" power="1" room="10" start="false" img="room_battery_13" />
 		<cloaking power="1" room="8" start="false" img="room_cloaking_3" />
-		<clonebay power="1" room="11" start="false">
+		<clonebay power="1" room="11" start="true">
 			<slot>
 				<number>1</number>
 			</slot>
@@ -260,7 +263,7 @@
 			</slot>
 		</medbay>
 		<mind power="1" room="7" start="false" img="room_mind_1" />
-		<oxygen power="1" room="15" start="true" img="room_oxygen_20" />
+		<oxygen power="1" room="15" start="false" img="room_oxygen_20" />
 		<pilot power="1" room="4" start="true" img="room_pilot_2">
 			<slot>
 				<direction>right</direction>
@@ -295,8 +298,7 @@
 	</weaponList>
 	<droneList drones="3" count="2" />
 	<health amount="24" />
-	<maxPower amount="7" />
-	<aug name="OE_ACID_O2SYS" />
+	<maxPower amount="8" />
 	<shieldImage>mup_small_long2</shieldImage>
     <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
@@ -307,6 +309,7 @@
 	<desc>This ship combines a strong weapon system with a boarding setup to create a powerful and dangerous ship.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_LONG_2_unlock" />
 	<systemList>
+		<oe_growth power="1" room="5" start="true" />
 		<battery max="2" power="1" room="2" start="false" img="room_battery_13" />
 		<cloaking power="1" room="3" start="false" img="room_cloaking_3" />
 		<clonebay power="1" room="9" start="true">
@@ -380,6 +383,7 @@
 	<desc>This vessel gets rid of the shield system entirely, focusing on using cloaking and it's more powerful weapon system capable of handling up to 5 weapons at once.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_LONG_3_unlock" />
 	<systemList>
+		<oe_growth power="1" room="15" start="true" />
 		<battery max="2" power="1" room="13" start="false" img="room_battery_2" />
 		<cloaking power="2" room="8" start="true" img="room_cloaking_3" />
 		<clonebay power="1" room="11" start="false">
@@ -407,7 +411,7 @@
 			</slot>
 		</medbay>
 		<mind power="1" room="7" start="false" img="room_mind_1" />
-		<oxygen power="1" room="15" start="true" img="room_oxygen_20" />
+		<oxygen power="1" room="15" start="false" img="room_oxygen_20" />
 		<pilot power="1" room="4" start="true" img="room_pilot_2">
 			<slot>
 				<direction>right</direction>
@@ -444,7 +448,6 @@
 	<droneList drones="6" count="1" />
 	<health amount="24" />
 	<maxPower amount="7" />
-	<aug name="OE_ACID_O2SYS" />
 	<shieldImage>mup_small_long2</shieldImage>
     <mv-mapImage>map_icon_oep_acid_long</mv-mapImage>
 </shipBlueprint>
@@ -455,6 +458,7 @@
 	<desc>Bill has made a few friends on his adventures since becoming an Acidic Outcast.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_BILL_unlock" />
 	<systemList>
+		<oe_growth power="1" room="1" start="true" />
 		<battery max="2" power="1" room="13" start="false" img="room_battery_2" />
 		<cloaking power="1" room="2" start="false" img="room_cloaking_3" />
 		<clonebay power="1" room="6" start="false">
@@ -482,7 +486,7 @@
 			</slot>
 		</medbay>
 		<mind power="1" room="11" start="false" img="room_mind_9" />
-		<oxygen power="1" room="1" start="true" img="room_oxygen_20" />
+		<oxygen power="1" room="1" start="false" img="room_oxygen_20" />
 		<pilot power="1" room="0" start="true" img="room_pilot_4">
 			<slot>
 				<direction>right</direction>

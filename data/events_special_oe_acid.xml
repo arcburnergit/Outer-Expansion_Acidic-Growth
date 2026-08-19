@@ -1321,9 +1321,28 @@ Deciding that piracy is evil in any form it might be presented, you decide to er
 		<autoReward level="LOW">standard</autoReward>
 		<choice hidden="true">
 			<text>Continue...</text>
-			<event>
-				<text>With the shipyard now undefended you're able to loot anything useful, you find an Acidic upgrade package for your oxygen system.</text>
-				<augment name="OE_ACID_O2SYS_OFF" />
+			<event name="NEBULA_STORM_OE_ACID_AUGITEM_WIN">
+				<text>With the shipyard now undefended you're able to loot anything useful, you find the root system for one of their Life Bloom systems, you could install it in your own ship.</text>
+				<choice req="oe_growth" lvl="1" max_group="1" hidden="true">
+					<text>You already have the Life Bloom system.</text>
+					<event load="OPTION_INVALID"/>
+				</choice>
+				<choice req="oe_growth" lvl="0" max_lvl="0" max_group="1">
+					<text>Install the Life Bloom system.</text>
+					<event>
+						<text>You're able to install the organic system in the space previously occupied by your Life Support system.</text>
+						<system name="oe_growth"/>
+					</event>
+				</choice>
+				<choice>
+					<text>Scrap it for parts.</text>
+					<event>
+						<text>You dismantle it for the few salvagable components contained within.</text>
+						<item_modify>
+							<item type="scrap" min="12" max="15" />
+						</item_modify>
+					</event>
+				</choice>
 			</event>
 		</choice>
 	</destroyed>
@@ -1332,10 +1351,7 @@ Deciding that piracy is evil in any form it might be presented, you decide to er
 		<autoReward level="MED">standard</autoReward>
 		<choice hidden="true">
 			<text>Continue...</text>
-			<event>
-				<text>With the shipyard now undefended you're able to loot anything useful, you find an Acidic upgrade package for your oxygen system.</text>
-				<augment name="OE_ACID_O2SYS_OFF" />
-			</event>
+			<event load="NEBULA_STORM_OE_ACID_AUGITEM_WIN"/>
 		</choice>
 	</deadCrew>
 </ship>
@@ -1556,7 +1572,7 @@ Deciding that piracy is evil in any form it might be presented, you decide to er
 	</weaponOverride>
 </ship>
 
-<ship name="SHIP_QUEST_OE_ACID_PIRATE_TRAP1" auto_blueprint="LIST_SHIPS_OE_ACID_ALL">
+<ship name="SHIP_QUEST_OE_ACID_PIRATE_TRAP1" auto_blueprint="LIST_SHIPS_OE_ACID_GENERIC">
 	<surrender min="3" max="4">
 		<text>When the Acidic ship looks ready to break apart you notice the Slug ship has secured the loot and is preparing to jump away!.</text>
 		<choice hidden="true">
@@ -1585,7 +1601,7 @@ Deciding that piracy is evil in any form it might be presented, you decide to er
 	</deadCrew>
 </ship>
 
-<ship name="SHIP_QUEST_OE_ACID_PIRATE_TRAP2" auto_blueprint="LIST_SHIPS_OE_ACID_ALL">
+<ship name="SHIP_QUEST_OE_ACID_PIRATE_TRAP2" auto_blueprint="LIST_SHIPS_OE_ACID_GENERIC">
 	<destroyed>
 		<text>With the Acidic vessel taken care of, you search again for the cache it was protecting, but it's lost in the clouds. You console yourself with the salvage from the well-armed ship.</text>
 		<autoReward level="MED">standard</autoReward>
