@@ -154,7 +154,7 @@
 <shipBlueprint name="PLAYER_SHIP_OE_ACID_ARTY_3" layout="oep_acid_arty_c" img="oep_acid_arty_c">
 	<class>Acidic Cruiser</class>
 	<name>The Acidic</name>
-	<desc>A federation modification of the Acidic Cruiser, this vessel replaces the Acidic filtering system with a more traditional fire suppression system.</desc>
+	<desc>A federation modification of the Acidic Cruiser, it still uses the acidic vessel's Life Bloom system, but without any of the Acidic Buds.</desc>
 	<unlock id="ship_PLAYER_SHIP_OE_ACID_ARTY_3_unlock" />
 	<systemList>
 		<oe_growth power="1" room="12" start="true" />
