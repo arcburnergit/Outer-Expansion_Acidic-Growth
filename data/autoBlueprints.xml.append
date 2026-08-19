@@ -140,7 +140,7 @@
 	<name>OE_ACID_GUARD</name>
 	<name>OE_ACID_BOSS</name>
 </blueprintList>
-<blueprintList name="LIST_SHIPS_OE_ACID_GENERIC">
+<blueprintList name="OE">
 	<name>OE_ACID_SCOUT</name>
 	<name>OE_ACID_OUTRIDER</name>
 	<name>OE_ACID_FIGHTER</name>
