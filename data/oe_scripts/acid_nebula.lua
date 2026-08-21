@@ -104,7 +104,7 @@ script.on_render_event(Defines.RenderEvents.LAYER_FOREGROUND, function()
 				Graphics.CSurface.GL_Translate((cloud.x + initialPosX),(cloud.y + initialPosX),0)
 				Graphics.CSurface.GL_Scale(cloud.scale,cloud.scale,0)
 
-				if (commandGui.bPaused or commandGui.event_pause) then
+				if (commandGui.bPaused or commandGui.event_pause or commandGui.menu_pause) then
 					Graphics.CSurface.GL_SetColorTint(Graphics.GL_Color(0.5, 0.5, 0.5, 1))
 				end
 				Graphics.CSurface.GL_RenderPrimitiveWithAlpha(cloudImageTemp, cloud.opacity)
