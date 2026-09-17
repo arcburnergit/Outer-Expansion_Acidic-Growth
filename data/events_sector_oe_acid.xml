@@ -3889,7 +3889,7 @@ The Growth transfers over some resources as payment for your data, and while tha
                             <item_modify>
 								<item type="scrap" min="-20" max="-20" />
                             </item_modify>
-							<augment name="OE_ACID_BILL_MET"/>
+							<hiddenAug>OE_ACID_BILL_MET</hiddenAug>
                             <variable name="coords_oe_bill" op="set" val="1" />
                             <variable name="unique_oe_bill" op="set" val="1" />
                         </event>
